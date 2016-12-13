@@ -10,7 +10,6 @@
                 buttonImageOnly: true,
                 buttonImage: 'http://www.google.com/help/hc/images/sites_icon_calendar_small.gif'
             });
-            <%--var value = document.getElementById('<%=txtDate.ClientID%>').value--%>
         });
     </script>
 
