@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Въведете автомобил" Language="C#" MasterPageFile="~/Site.master" AutoEventWireup="true" CodeFile="InsertCar.aspx.cs" Inherits="CarDiaryWeb.InsertCar" %>
+﻿<%@ Page Title="Въведете автомобил" Language="C#" MasterPageFile="~/Site.master" AutoEventWireup="true" CodeBehind="InsertCar.aspx.cs" Inherits="CarDiaryWeb.InsertCar" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="Server">
 
