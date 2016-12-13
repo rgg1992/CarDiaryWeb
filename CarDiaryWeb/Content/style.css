@@ -1,0 +1,182 @@
+﻿.column {
+    width: 20%;
+    /*float:left;*/
+    min-width: 50px;
+}
+
+#table1 {
+    margin-top: 20px;
+}
+
+.cell {
+    width: 5%;
+}
+
+#dvPreview {
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod=image);
+    min-height: 400px;
+    min-width: 400px;
+    display: none;
+}
+
+.divWaiting {
+    position: absolute;
+    background-color: #FAFAFA;
+    z-index: 2147483647 !important;
+    opacity: 0.8;
+    overflow: hidden;
+    text-align: center;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    padding-top: 20%;
+}
+
+.dropdown {
+    display: inline-block;
+    border-radius: 10px;
+    border: solid 2px;
+    border-color: cornflowerblue;
+}
+
+.textbox {
+    display: inline-block;
+    border-radius: 10px;
+    border: solid 2px;
+    border-color: cornflowerblue;
+    padding-left: 2px;
+}
+
+
+.btn {
+    background: #3498db;
+    background-image: -webkit-linear-gradient(top, #3498db, #2980b9);
+    background-image: -moz-linear-gradient(top, #3498db, #2980b9);
+    background-image: -ms-linear-gradient(top, #3498db, #2980b9);
+    background-image: -o-linear-gradient(top, #3498db, #2980b9);
+    background-image: linear-gradient(to bottom, #3498db, #2980b9);
+    -webkit-border-radius: 28;
+    -moz-border-radius: 28;
+    border-radius: 28px;
+    font-family: Arial;
+    color: #ffffff;
+    font-size: 20px;
+    padding: 10px 20px 10px 20px;
+    text-decoration: none;
+}
+
+    .btn:hover {
+        background: #3cb0fd;
+        background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
+        background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
+        background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
+        background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
+        background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+        text-decoration: none;
+    }
+
+.file-upload {
+    background: #3498db;
+    background-image: -webkit-linear-gradient(top, #3498db, #2980b9);
+    background-image: -moz-linear-gradient(top, #3498db, #2980b9);
+    background-image: -ms-linear-gradient(top, #3498db, #2980b9);
+    background-image: -o-linear-gradient(top, #3498db, #2980b9);
+    background-image: linear-gradient(to bottom, #3498db, #2980b9);
+    -webkit-border-radius: 28;
+    -moz-border-radius: 28;
+    border-radius: 28px;
+    font-family: Arial;
+    color: #ffffff;
+    font-size: 20px;
+    padding: 10px 20px 10px 20px;
+    text-decoration: none;
+}
+
+    .file-upload:hover {
+        background: #3cb0fd;
+        background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
+        background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
+        background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
+        background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
+        background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+        text-decoration: none;
+    }
+
+/* The button size */
+.file-upload {
+    height: 50px;
+}
+
+    .file-upload, .file-upload span {
+        width: 250px;
+    }
+
+        .file-upload input {
+            top: 0;
+            left: 0;
+            margin-top: -4%;
+            font-size: 20px;
+            font-weight: bold;
+            /* Loses tab index in webkit if width is set to 0 */
+            opacity: 0;
+            filter: alpha(opacity=0);
+        }
+
+        .file-upload strong {
+            font: normal 20px Tahoma,sans-serif;
+            text-align: center;
+            vertical-align: top;
+        }
+
+        .file-upload span {
+            top: 0;
+            left: 0;
+            display: inline-block;
+            /* Adjust button text vertical alignment */
+        }
+
+h2 {
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    color: cornflowerblue;
+    font-weight: bold;
+}
+
+.linkbtn:hover {
+    color: cornflowerblue !important;
+    background-color: white;
+}
+
+.linkbtn:link {
+    color: black;
+    text-decoration: none;
+}
+
+
+h5 {
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    color: #2956B2;
+    font-weight: bold;
+}
+
+h6 {
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    color: #2956B2;
+    font-weight: bold;
+}
+
+.listitem:before {
+    content: "\2605";
+}
+.menu {
+    border-radius: 28px;
+    font-family: Arial;
+    color: #ffffff;
+    font-size: 20px;
+    padding: 10px 20px 10px 20px;
+    text-decoration: none;
+}
+
+    .menu:hover {
+        text-decoration: none;
+    }

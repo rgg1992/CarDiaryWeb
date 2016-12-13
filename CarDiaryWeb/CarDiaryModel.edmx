@@ -1,0 +1,418 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="CarDiaryModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="car">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="brand" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="model" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="year" Type="int" Nullable="false" />
+          <Property Name="engine" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="fuel" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="h_powers" Type="int" Nullable="false" />
+          <Property Name="image" Type="nvarchar" MaxLength="500" />
+          <Property Name="user_name" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="car_brands">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="car_brand" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="car_model" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="car_diary_log">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="operation_dtm" Type="datetime" Nullable="false" />
+          <Property Name="operation" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="table_name" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="ip_user" Type="varchar" MaxLength="300" Nullable="false" />
+        </EntityType>
+        <EntityType Name="fuel_consumption">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="car_id" Type="int" Nullable="false" />
+          <Property Name="refuel_date" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="mileage" Type="int" />
+          <Property Name="fuel_type" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="distance" Type="int" Nullable="false" />
+          <Property Name="liters" Type="float" Nullable="false" />
+          <Property Name="unit_price" Type="float" Nullable="false" />
+          <Property Name="total_cost" Type="float" Nullable="false" />
+          <Property Name="average_cons_per_100_km" Type="float" />
+        </EntityType>
+        <EntityType Name="other_costs">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="car_id" Type="int" Nullable="false" />
+          <Property Name="category" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="cost_date" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="mileage" Type="int" />
+          <Property Name="total_cost" Type="float" Nullable="false" />
+          <Property Name="notes" Type="nvarchar" MaxLength="1000" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'aspnet-CarDiaryWeb-20161208095329.dbo.v_FuelCons' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="v_FuelCons">
+          <Key>
+            <PropertyRef Name="car_id" />
+          </Key>
+          <Property Name="car_id" Type="int" Nullable="false" />
+          <Property Name="fill_ups" Type="int" />
+          <Property Name="min_cons" Type="float" />
+          <Property Name="distance" Type="int" />
+          <Property Name="price_per_km" Type="nvarchar" MaxLength="4000" />
+        </EntityType>
+        <Association Name="FK__fuel_cons__car_i__3F466844">
+          <End Role="car" Type="Self.car" Multiplicity="1" />
+          <End Role="fuel_consumption" Type="Self.fuel_consumption" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="car">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="fuel_consumption">
+              <PropertyRef Name="car_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__other_cos__car_i__403A8C7D">
+          <End Role="car" Type="Self.car" Multiplicity="1" />
+          <End Role="other_costs" Type="Self.other_costs" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="car">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="other_costs">
+              <PropertyRef Name="car_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Function Name="getAvgCons" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="getCarIDsForUser" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="user" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="getFuelConsumptionsForCar" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="getOtherCostsForCar" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="id" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="getTotalCostPerMonth" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="id" Type="int" Mode="In" />
+        </Function>
+        <EntityContainer Name="CarDiaryModelStoreContainer">
+          <EntitySet Name="car" EntityType="Self.car" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="car_brands" EntityType="Self.car_brands" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="car_diary_log" EntityType="Self.car_diary_log" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="fuel_consumption" EntityType="Self.fuel_consumption" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="other_costs" EntityType="Self.other_costs" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="v_FuelCons" EntityType="Self.v_FuelCons" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [v_FuelCons].[car_id] AS [car_id], 
+    [v_FuelCons].[fill_ups] AS [fill_ups], 
+    [v_FuelCons].[min_cons] AS [min_cons], 
+    [v_FuelCons].[distance] AS [distance], 
+    [v_FuelCons].[price_per_km] AS [price_per_km]
+    FROM [dbo].[v_FuelCons] AS [v_FuelCons]</DefiningQuery>
+          </EntitySet>
+          <AssociationSet Name="FK__fuel_cons__car_i__3F466844" Association="Self.FK__fuel_cons__car_i__3F466844">
+            <End Role="car" EntitySet="car" />
+            <End Role="fuel_consumption" EntitySet="fuel_consumption" />
+          </AssociationSet>
+          <AssociationSet Name="FK__other_cos__car_i__403A8C7D" Association="Self.FK__other_cos__car_i__403A8C7D">
+            <End Role="car" EntitySet="car" />
+            <End Role="other_costs" EntitySet="other_costs" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="CarDiaryModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="car">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="brand" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="model" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="year" Type="Int32" Nullable="false" />
+          <Property Name="engine" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="fuel" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="h_powers" Type="Int32" Nullable="false" />
+          <Property Name="image" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="user_name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="fuel_consumption" Relationship="Self.FK__fuel_cons__car_i__3F466844" FromRole="car" ToRole="fuel_consumption" />
+          <NavigationProperty Name="other_costs" Relationship="Self.FK__other_cos__car_i__403A8C7D" FromRole="car" ToRole="other_costs" />
+        </EntityType>
+        <EntityType Name="car_brands">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="car_brand" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="car_model" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="car_diary_log">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="operation_dtm" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="operation" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="table_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ip_user" Type="String" MaxLength="300" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityType Name="fuel_consumption">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="car_id" Type="Int32" Nullable="false" />
+          <Property Name="refuel_date" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="mileage" Type="Int32" />
+          <Property Name="fuel_type" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="distance" Type="Int32" Nullable="false" />
+          <Property Name="liters" Type="Double" Nullable="false" />
+          <Property Name="unit_price" Type="Double" Nullable="false" />
+          <Property Name="total_cost" Type="Double" Nullable="false" />
+          <Property Name="average_cons_per_100_km" Type="Double" />
+          <NavigationProperty Name="car" Relationship="Self.FK__fuel_cons__car_i__3F466844" FromRole="fuel_consumption" ToRole="car" />
+        </EntityType>
+        <EntityType Name="other_costs">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="car_id" Type="Int32" Nullable="false" />
+          <Property Name="category" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="cost_date" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="mileage" Type="Int32" />
+          <Property Name="total_cost" Type="Double" Nullable="false" />
+          <Property Name="notes" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="car" Relationship="Self.FK__other_cos__car_i__403A8C7D" FromRole="other_costs" ToRole="car" />
+        </EntityType>
+        <EntityType Name="v_FuelCons">
+          <Key>
+            <PropertyRef Name="car_id" />
+          </Key>
+          <Property Name="car_id" Type="Int32" Nullable="false" />
+          <Property Name="fill_ups" Type="Int32" />
+          <Property Name="min_cons" Type="Double" />
+          <Property Name="distance" Type="Int32" />
+          <Property Name="price_per_km" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <Association Name="FK__fuel_cons__car_i__3F466844">
+          <End Role="car" Type="Self.car" Multiplicity="1" />
+          <End Role="fuel_consumption" Type="Self.fuel_consumption" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="car">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="fuel_consumption">
+              <PropertyRef Name="car_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__other_cos__car_i__403A8C7D">
+          <End Role="car" Type="Self.car" Multiplicity="1" />
+          <End Role="other_costs" Type="Self.other_costs" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="car">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="other_costs">
+              <PropertyRef Name="car_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="Entities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="car" EntityType="Self.car" />
+          <EntitySet Name="car_brands" EntityType="Self.car_brands" />
+          <EntitySet Name="car_diary_log" EntityType="Self.car_diary_log" />
+          <EntitySet Name="fuel_consumption" EntityType="Self.fuel_consumption" />
+          <EntitySet Name="other_costs" EntityType="Self.other_costs" />
+          <EntitySet Name="v_FuelCons" EntityType="Self.v_FuelCons" />
+          <AssociationSet Name="FK__fuel_cons__car_i__3F466844" Association="Self.FK__fuel_cons__car_i__3F466844">
+            <End Role="car" EntitySet="car" />
+            <End Role="fuel_consumption" EntitySet="fuel_consumption" />
+          </AssociationSet>
+          <AssociationSet Name="FK__other_cos__car_i__403A8C7D" Association="Self.FK__other_cos__car_i__403A8C7D">
+            <End Role="car" EntitySet="car" />
+            <End Role="other_costs" EntitySet="other_costs" />
+          </AssociationSet>
+          <FunctionImport Name="getAvgCons" ReturnType="Collection(Double)">
+            <Parameter Name="id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="getCarIDsForUser" ReturnType="Collection(Int32)">
+            <Parameter Name="user" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="getFuelConsumptionsForCar" EntitySet="fuel_consumption" ReturnType="Collection(CarDiaryModel.fuel_consumption)">
+            <Parameter Name="id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="getOtherCostsForCar" EntitySet="other_costs" ReturnType="Collection(CarDiaryModel.other_costs)">
+            <Parameter Name="id" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="getTotalCostPerMonth" ReturnType="Collection(CarDiaryModel.getTotalCostPerMonth_Result)">
+            <Parameter Name="id" Mode="In" Type="Int32" />
+          </FunctionImport>
+        </EntityContainer>
+        <ComplexType Name="getFuelConsumptionsForCar_Result">
+          <Property Type="Int32" Name="id" Nullable="false" />
+          <Property Type="Int32" Name="car_id" Nullable="false" />
+          <Property Type="String" Name="refuel_date" Nullable="false" MaxLength="50" />
+          <Property Type="Int32" Name="mileage" Nullable="true" />
+          <Property Type="String" Name="fuel_type" Nullable="false" MaxLength="50" />
+          <Property Type="Int32" Name="distance" Nullable="false" />
+          <Property Type="Double" Name="liters" Nullable="false" />
+          <Property Type="Double" Name="unit_price" Nullable="false" />
+          <Property Type="Double" Name="total_cost" Nullable="false" />
+          <Property Type="Double" Name="average_cons_per_100_km" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="getOtherCostsForCar_Result">
+          <Property Type="Int32" Name="id" Nullable="false" />
+          <Property Type="Int32" Name="car_id" Nullable="false" />
+          <Property Type="String" Name="category" Nullable="false" MaxLength="100" />
+          <Property Type="String" Name="cost_date" Nullable="false" MaxLength="100" />
+          <Property Type="Int32" Name="mileage" Nullable="true" />
+          <Property Type="Double" Name="total_cost" Nullable="false" />
+          <Property Type="String" Name="notes" Nullable="true" MaxLength="1000" />
+        </ComplexType>
+        <ComplexType Name="getTotalCostPerMonth_Result">
+          <Property Type="Double" Name="TOTAL" Nullable="true" />
+          <Property Type="DateTime" Name="PERIOD" Nullable="true" Precision="23" />
+        </ComplexType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="CarDiaryModelStoreContainer" CdmEntityContainer="Entities">
+          <EntitySetMapping Name="car">
+            <EntityTypeMapping TypeName="CarDiaryModel.car">
+              <MappingFragment StoreEntitySet="car">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="brand" ColumnName="brand" />
+                <ScalarProperty Name="model" ColumnName="model" />
+                <ScalarProperty Name="year" ColumnName="year" />
+                <ScalarProperty Name="engine" ColumnName="engine" />
+                <ScalarProperty Name="fuel" ColumnName="fuel" />
+                <ScalarProperty Name="h_powers" ColumnName="h_powers" />
+                <ScalarProperty Name="image" ColumnName="image" />
+                <ScalarProperty Name="user_name" ColumnName="user_name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="car_brands">
+            <EntityTypeMapping TypeName="CarDiaryModel.car_brands">
+              <MappingFragment StoreEntitySet="car_brands">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="car_brand" ColumnName="car_brand" />
+                <ScalarProperty Name="car_model" ColumnName="car_model" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="car_diary_log">
+            <EntityTypeMapping TypeName="CarDiaryModel.car_diary_log">
+              <MappingFragment StoreEntitySet="car_diary_log">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="operation_dtm" ColumnName="operation_dtm" />
+                <ScalarProperty Name="operation" ColumnName="operation" />
+                <ScalarProperty Name="table_name" ColumnName="table_name" />
+                <ScalarProperty Name="ip_user" ColumnName="ip_user" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="fuel_consumption">
+            <EntityTypeMapping TypeName="CarDiaryModel.fuel_consumption">
+              <MappingFragment StoreEntitySet="fuel_consumption">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="car_id" ColumnName="car_id" />
+                <ScalarProperty Name="refuel_date" ColumnName="refuel_date" />
+                <ScalarProperty Name="mileage" ColumnName="mileage" />
+                <ScalarProperty Name="fuel_type" ColumnName="fuel_type" />
+                <ScalarProperty Name="distance" ColumnName="distance" />
+                <ScalarProperty Name="liters" ColumnName="liters" />
+                <ScalarProperty Name="unit_price" ColumnName="unit_price" />
+                <ScalarProperty Name="total_cost" ColumnName="total_cost" />
+                <ScalarProperty Name="average_cons_per_100_km" ColumnName="average_cons_per_100_km" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="other_costs">
+            <EntityTypeMapping TypeName="CarDiaryModel.other_costs">
+              <MappingFragment StoreEntitySet="other_costs">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="car_id" ColumnName="car_id" />
+                <ScalarProperty Name="category" ColumnName="category" />
+                <ScalarProperty Name="cost_date" ColumnName="cost_date" />
+                <ScalarProperty Name="mileage" ColumnName="mileage" />
+                <ScalarProperty Name="total_cost" ColumnName="total_cost" />
+                <ScalarProperty Name="notes" ColumnName="notes" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="v_FuelCons">
+            <EntityTypeMapping TypeName="CarDiaryModel.v_FuelCons">
+              <MappingFragment StoreEntitySet="v_FuelCons">
+                <ScalarProperty Name="car_id" ColumnName="car_id" />
+                <ScalarProperty Name="fill_ups" ColumnName="fill_ups" />
+                <ScalarProperty Name="min_cons" ColumnName="min_cons" />
+                <ScalarProperty Name="distance" ColumnName="distance" />
+                <ScalarProperty Name="price_per_km" ColumnName="price_per_km" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="getAvgCons" FunctionName="CarDiaryModel.Store.getAvgCons" />
+          <FunctionImportMapping FunctionImportName="getCarIDsForUser" FunctionName="CarDiaryModel.Store.getCarIDsForUser" />
+          <FunctionImportMapping FunctionImportName="getFuelConsumptionsForCar" FunctionName="CarDiaryModel.Store.getFuelConsumptionsForCar">
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="getOtherCostsForCar" FunctionName="CarDiaryModel.Store.getOtherCostsForCar">
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="getTotalCostPerMonth" FunctionName="CarDiaryModel.Store.getTotalCostPerMonth">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="CarDiaryModel.getTotalCostPerMonth_Result">
+                <ScalarProperty Name="TOTAL" ColumnName="TOTAL" />
+                <ScalarProperty Name="PERIOD" ColumnName="PERIOD" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

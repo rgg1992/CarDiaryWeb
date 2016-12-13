@@ -1,0 +1,108 @@
+********** 12.12.2016 г. 11:34:07 **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at System.Nullable`1.get_Value()
+   at CarDiaryWeb.DatabaseUtility.getAvgCons(Int32 carId) in C:\Users\radoslav.gavrailov\documents\visual studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 89
+
+********** 12.12.2016 г. 11:34:08 **********
+Exception Type: System.InvalidOperationException
+Exception: The cast to value type 'System.Double' failed because the materialized value is null. Either the result type's generic parameter or the query must use a nullable type.
+Source: DB.cs
+Stack Trace: 
+   at System.Data.Entity.Core.Common.Internal.Materialization.Shaper.ErrorHandlingValueReader`1.GetValue(DbDataReader reader, Int32 ordinal)
+   at lambda_method(Closure , Shaper )
+   at System.Data.Entity.Core.Common.Internal.Materialization.Coordinator`1.ReadNextElement(Shaper shaper)
+   at System.Data.Entity.Core.Common.Internal.Materialization.Shaper`1.SimpleEnumerator.MoveNext()
+   at System.Data.Entity.Internal.LazyEnumerator`1.MoveNext()
+   at System.Linq.Enumerable.Single[TSource](IEnumerable`1 source)
+   at System.Data.Entity.Core.Objects.ELinq.ObjectQueryProvider.<GetElementFunction>b__3[TResult](IEnumerable`1 sequence)
+   at System.Data.Entity.Core.Objects.ELinq.ObjectQueryProvider.ExecuteSingle[TResult](IEnumerable`1 query, Expression queryRoot)
+   at System.Data.Entity.Core.Objects.ELinq.ObjectQueryProvider.System.Linq.IQueryProvider.Execute[TResult](Expression expression)
+   at System.Data.Entity.Internal.Linq.DbQueryProvider.Execute[TResult](Expression expression)
+   at System.Linq.Queryable.Sum(IQueryable`1 source)
+   at CarDiaryWeb.DatabaseUtility.getLitersConsumed(Int32 carId) in C:\Users\radoslav.gavrailov\documents\visual studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 286
+
+********** 12.12.2016 г. 11:34:15 **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at System.Nullable`1.get_Value()
+   at CarDiaryWeb.DatabaseUtility.getPreviousMileage(Int32 carId) in C:\Users\radoslav.gavrailov\documents\visual studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 156
+
+********** 12.12.2016 г. 11:34:32 **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at System.Nullable`1.get_Value()
+   at CarDiaryWeb.DatabaseUtility.getPreviousMileage(Int32 carId) in C:\Users\radoslav.gavrailov\documents\visual studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 156
+
+********** 12.12.2016 г. 11:34:41 **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at System.Nullable`1.get_Value()
+   at CarDiaryWeb.DatabaseUtility.getPreviousMileage(Int32 carId) in C:\Users\radoslav.gavrailov\documents\visual studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 156
+
+********** 12.12.2016 г. 11:34:57 **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at System.Nullable`1.get_Value()
+   at CarDiaryWeb.DatabaseUtility.getPreviousMileage(Int32 carId) in C:\Users\radoslav.gavrailov\documents\visual studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 156
+
+********** 12.12.2016 г. 11:34:58 **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at System.Nullable`1.get_Value()
+   at CarDiaryWeb.DatabaseUtility.getPreviousMileage(Int32 carId) in C:\Users\radoslav.gavrailov\documents\visual studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 156
+
+********** 12.12.2016 г. 11:35:00 **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at System.Nullable`1.get_Value()
+   at CarDiaryWeb.DatabaseUtility.getPreviousMileage(Int32 carId) in C:\Users\radoslav.gavrailov\documents\visual studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 156
+
+********** 12.12.2016 г. 11:35:02 **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at System.Nullable`1.get_Value()
+   at CarDiaryWeb.DatabaseUtility.getPreviousMileage(Int32 carId) in C:\Users\radoslav.gavrailov\documents\visual studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 156
+
+********** 12.12.2016 г. 11:35:02 **********
+Exception Type: System.InvalidOperationException
+Exception: The cast to value type 'System.Int32' failed because the materialized value is null. Either the result type's generic parameter or the query must use a nullable type.
+Source: DB.cs
+Stack Trace: 
+   at System.Data.Entity.Core.Common.Internal.Materialization.Shaper.ErrorHandlingValueReader`1.GetValue(DbDataReader reader, Int32 ordinal)
+   at lambda_method(Closure , Shaper )
+   at System.Data.Entity.Core.Common.Internal.Materialization.Coordinator`1.ReadNextElement(Shaper shaper)
+   at System.Data.Entity.Core.Common.Internal.Materialization.Shaper`1.SimpleEnumerator.MoveNext()
+   at System.Data.Entity.Internal.LazyEnumerator`1.MoveNext()
+   at System.Linq.Enumerable.Single[TSource](IEnumerable`1 source)
+   at System.Data.Entity.Core.Objects.ELinq.ObjectQueryProvider.<GetElementFunction>b__3[TResult](IEnumerable`1 sequence)
+   at System.Data.Entity.Core.Objects.ELinq.ObjectQueryProvider.ExecuteSingle[TResult](IEnumerable`1 query, Expression queryRoot)
+   at System.Data.Entity.Core.Objects.ELinq.ObjectQueryProvider.System.Linq.IQueryProvider.Execute[TResult](Expression expression)
+   at System.Data.Entity.Internal.Linq.DbQueryProvider.Execute[TResult](Expression expression)
+   at System.Linq.Queryable.Max[TSource](IQueryable`1 source)
+   at CarDiaryWeb.DatabaseUtility.getFuelConsumptionLastDate(Int32 carId) in C:\Users\radoslav.gavrailov\documents\visual studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 197
+

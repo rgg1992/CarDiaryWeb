@@ -1,0 +1,812 @@
+********** 8.12.2016 г. 15:52:31 **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at CarDiaryWeb.DatabaseUtility.getAvgCons(Int32 carId) in C:\Users\radoslav.gavrailov\Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 90
+
+********** 8.12.2016 г. 15:59:16 **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at CarDiaryWeb.DatabaseUtility.getAvgCons(Int32 carId) in C:\Users\radoslav.gavrailov\Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 90
+
+********** 8.12.2016 г. 16:01:11 **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at CarDiaryWeb.DatabaseUtility.getAvgCons(Int32 carId) in C:\Users\radoslav.gavrailov\Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 90
+
+********** 8.12.2016 г. 16:01:13 **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at CarDiaryWeb.DatabaseUtility.getAvgCons(Int32 carId) in C:\Users\radoslav.gavrailov\Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 90
+
+********** 8.12.2016 г. 16:01:17 **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at CarDiaryWeb.DatabaseUtility.getAvgCons(Int32 carId) in C:\Users\radoslav.gavrailov\Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 90
+
+********** 8.12.2016 г. 17:34:59 **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at CarDiaryWeb.DatabaseUtility.getAvgCons(Int32 carId) in C:\Users\radoslav.gavrailov\Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 90
+
+********** 8.12.2016 г. 17:35:00 **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at CarDiaryWeb.DatabaseUtility.getAvgCons(Int32 carId) in C:\Users\radoslav.gavrailov\Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 90
+
+********** 8.12.2016 г. 17:35:00 **********
+Exception Type: System.InvalidOperationException
+Exception: The cast to value type 'System.Double' failed because the materialized value is null. Either the result type's generic parameter or the query must use a nullable type.
+Source: DB.cs
+Stack Trace: 
+   at System.Data.Entity.Core.Common.Internal.Materialization.Shaper.ErrorHandlingValueReader`1.GetValue(DbDataReader reader, Int32 ordinal)
+   at lambda_method(Closure , Shaper )
+   at System.Data.Entity.Core.Common.Internal.Materialization.Coordinator`1.ReadNextElement(Shaper shaper)
+   at System.Data.Entity.Core.Common.Internal.Materialization.Shaper`1.SimpleEnumerator.MoveNext()
+   at System.Data.Entity.Internal.LazyEnumerator`1.MoveNext()
+   at System.Linq.Enumerable.Single[TSource](IEnumerable`1 source)
+   at System.Data.Entity.Core.Objects.ELinq.ObjectQueryProvider.<GetElementFunction>b__3[TResult](IEnumerable`1 sequence)
+   at System.Data.Entity.Core.Objects.ELinq.ObjectQueryProvider.ExecuteSingle[TResult](IEnumerable`1 query, Expression queryRoot)
+   at System.Data.Entity.Core.Objects.ELinq.ObjectQueryProvider.System.Linq.IQueryProvider.Execute[TResult](Expression expression)
+   at System.Data.Entity.Internal.Linq.DbQueryProvider.Execute[TResult](Expression expression)
+   at System.Linq.Queryable.Sum(IQueryable`1 source)
+   at CarDiaryWeb.DatabaseUtility.getLitersConsumed(Int32 carId) in C:\Users\radoslav.gavrailov\Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 287
+
+********** 8.12.2016 г. 17:35:11 **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at CarDiaryWeb.DatabaseUtility.getAvgCons(Int32 carId) in C:\Users\radoslav.gavrailov\Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 90
+
+********** 8.12.2016 г. 17:35:16 **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at CarDiaryWeb.DatabaseUtility.getAvgCons(Int32 carId) in C:\Users\radoslav.gavrailov\Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 90
+
+********** 8.12.2016 г. 17:35:16 **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at CarDiaryWeb.DatabaseUtility.getAvgCons(Int32 carId) in C:\Users\radoslav.gavrailov\Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 90
+
+********** 8.12.2016 г. 17:35:16 **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at CarDiaryWeb.DatabaseUtility.getAvgCons(Int32 carId) in C:\Users\radoslav.gavrailov\Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 90
+
+********** 8.12.2016 г. 17:35:16 **********
+Exception Type: System.InvalidOperationException
+Exception: The cast to value type 'System.Double' failed because the materialized value is null. Either the result type's generic parameter or the query must use a nullable type.
+Source: DB.cs
+Stack Trace: 
+   at System.Data.Entity.Core.Common.Internal.Materialization.Shaper.ErrorHandlingValueReader`1.GetValue(DbDataReader reader, Int32 ordinal)
+   at lambda_method(Closure , Shaper )
+   at System.Data.Entity.Core.Common.Internal.Materialization.Coordinator`1.ReadNextElement(Shaper shaper)
+   at System.Data.Entity.Core.Common.Internal.Materialization.Shaper`1.SimpleEnumerator.MoveNext()
+   at System.Data.Entity.Internal.LazyEnumerator`1.MoveNext()
+   at System.Linq.Enumerable.Single[TSource](IEnumerable`1 source)
+   at System.Data.Entity.Core.Objects.ELinq.ObjectQueryProvider.<GetElementFunction>b__3[TResult](IEnumerable`1 sequence)
+   at System.Data.Entity.Core.Objects.ELinq.ObjectQueryProvider.ExecuteSingle[TResult](IEnumerable`1 query, Expression queryRoot)
+   at System.Data.Entity.Core.Objects.ELinq.ObjectQueryProvider.System.Linq.IQueryProvider.Execute[TResult](Expression expression)
+   at System.Data.Entity.Internal.Linq.DbQueryProvider.Execute[TResult](Expression expression)
+   at System.Linq.Queryable.Sum(IQueryable`1 source)
+   at CarDiaryWeb.DatabaseUtility.getLitersConsumed(Int32 carId) in C:\Users\radoslav.gavrailov\Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 287
+
+********** 8.12.2016 г. 17:35:18 **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at CarDiaryWeb.DatabaseUtility.getAvgCons(Int32 carId) in C:\Users\radoslav.gavrailov\Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 90
+
+********** 8.12.2016 г. 17:35:18 **********
+Exception Type: System.InvalidOperationException
+Exception: The cast to value type 'System.Double' failed because the materialized value is null. Either the result type's generic parameter or the query must use a nullable type.
+Source: DB.cs
+Stack Trace: 
+   at System.Data.Entity.Core.Common.Internal.Materialization.Shaper.ErrorHandlingValueReader`1.GetValue(DbDataReader reader, Int32 ordinal)
+   at lambda_method(Closure , Shaper )
+   at System.Data.Entity.Core.Common.Internal.Materialization.Coordinator`1.ReadNextElement(Shaper shaper)
+   at System.Data.Entity.Core.Common.Internal.Materialization.Shaper`1.SimpleEnumerator.MoveNext()
+   at System.Data.Entity.Internal.LazyEnumerator`1.MoveNext()
+   at System.Linq.Enumerable.Single[TSource](IEnumerable`1 source)
+   at System.Data.Entity.Core.Objects.ELinq.ObjectQueryProvider.<GetElementFunction>b__3[TResult](IEnumerable`1 sequence)
+   at System.Data.Entity.Core.Objects.ELinq.ObjectQueryProvider.ExecuteSingle[TResult](IEnumerable`1 query, Expression queryRoot)
+   at System.Data.Entity.Core.Objects.ELinq.ObjectQueryProvider.System.Linq.IQueryProvider.Execute[TResult](Expression expression)
+   at System.Data.Entity.Internal.Linq.DbQueryProvider.Execute[TResult](Expression expression)
+   at System.Linq.Queryable.Sum(IQueryable`1 source)
+   at CarDiaryWeb.DatabaseUtility.getLitersConsumed(Int32 carId) in C:\Users\radoslav.gavrailov\Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 287
+
+********** 8.12.2016 г. 17:35:21 **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at CarDiaryWeb.DatabaseUtility.getAvgCons(Int32 carId) in C:\Users\radoslav.gavrailov\Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 90
+
+********** 8.12.2016 г. 17:35:21 **********
+Exception Type: System.InvalidOperationException
+Exception: The cast to value type 'System.Double' failed because the materialized value is null. Either the result type's generic parameter or the query must use a nullable type.
+Source: DB.cs
+Stack Trace: 
+   at System.Data.Entity.Core.Common.Internal.Materialization.Shaper.ErrorHandlingValueReader`1.GetValue(DbDataReader reader, Int32 ordinal)
+   at lambda_method(Closure , Shaper )
+   at System.Data.Entity.Core.Common.Internal.Materialization.Coordinator`1.ReadNextElement(Shaper shaper)
+   at System.Data.Entity.Core.Common.Internal.Materialization.Shaper`1.SimpleEnumerator.MoveNext()
+   at System.Data.Entity.Internal.LazyEnumerator`1.MoveNext()
+   at System.Linq.Enumerable.Single[TSource](IEnumerable`1 source)
+   at System.Data.Entity.Core.Objects.ELinq.ObjectQueryProvider.<GetElementFunction>b__3[TResult](IEnumerable`1 sequence)
+   at System.Data.Entity.Core.Objects.ELinq.ObjectQueryProvider.ExecuteSingle[TResult](IEnumerable`1 query, Expression queryRoot)
+   at System.Data.Entity.Core.Objects.ELinq.ObjectQueryProvider.System.Linq.IQueryProvider.Execute[TResult](Expression expression)
+   at System.Data.Entity.Internal.Linq.DbQueryProvider.Execute[TResult](Expression expression)
+   at System.Linq.Queryable.Sum(IQueryable`1 source)
+   at CarDiaryWeb.DatabaseUtility.getLitersConsumed(Int32 carId) in C:\Users\radoslav.gavrailov\Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 287
+
+********** 8.12.2016 г. 17:35:22 **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at CarDiaryWeb.DatabaseUtility.getAvgCons(Int32 carId) in C:\Users\radoslav.gavrailov\Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 90
+
+********** 8.12.2016 г. 17:35:22 **********
+Exception Type: System.InvalidOperationException
+Exception: The cast to value type 'System.Double' failed because the materialized value is null. Either the result type's generic parameter or the query must use a nullable type.
+Source: DB.cs
+Stack Trace: 
+   at System.Data.Entity.Core.Common.Internal.Materialization.Shaper.ErrorHandlingValueReader`1.GetValue(DbDataReader reader, Int32 ordinal)
+   at lambda_method(Closure , Shaper )
+   at System.Data.Entity.Core.Common.Internal.Materialization.Coordinator`1.ReadNextElement(Shaper shaper)
+   at System.Data.Entity.Core.Common.Internal.Materialization.Shaper`1.SimpleEnumerator.MoveNext()
+   at System.Data.Entity.Internal.LazyEnumerator`1.MoveNext()
+   at System.Linq.Enumerable.Single[TSource](IEnumerable`1 source)
+   at System.Data.Entity.Core.Objects.ELinq.ObjectQueryProvider.<GetElementFunction>b__3[TResult](IEnumerable`1 sequence)
+   at System.Data.Entity.Core.Objects.ELinq.ObjectQueryProvider.ExecuteSingle[TResult](IEnumerable`1 query, Expression queryRoot)
+   at System.Data.Entity.Core.Objects.ELinq.ObjectQueryProvider.System.Linq.IQueryProvider.Execute[TResult](Expression expression)
+   at System.Data.Entity.Internal.Linq.DbQueryProvider.Execute[TResult](Expression expression)
+   at System.Linq.Queryable.Sum(IQueryable`1 source)
+   at CarDiaryWeb.DatabaseUtility.getLitersConsumed(Int32 carId) in C:\Users\radoslav.gavrailov\Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 287
+
+********** 8.12.2016 г. 17:35:23 **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at CarDiaryWeb.DatabaseUtility.getAvgCons(Int32 carId) in C:\Users\radoslav.gavrailov\Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 90
+
+********** 8.12.2016 г. 17:35:23 **********
+Exception Type: System.InvalidOperationException
+Exception: The cast to value type 'System.Double' failed because the materialized value is null. Either the result type's generic parameter or the query must use a nullable type.
+Source: DB.cs
+Stack Trace: 
+   at System.Data.Entity.Core.Common.Internal.Materialization.Shaper.ErrorHandlingValueReader`1.GetValue(DbDataReader reader, Int32 ordinal)
+   at lambda_method(Closure , Shaper )
+   at System.Data.Entity.Core.Common.Internal.Materialization.Coordinator`1.ReadNextElement(Shaper shaper)
+   at System.Data.Entity.Core.Common.Internal.Materialization.Shaper`1.SimpleEnumerator.MoveNext()
+   at System.Data.Entity.Internal.LazyEnumerator`1.MoveNext()
+   at System.Linq.Enumerable.Single[TSource](IEnumerable`1 source)
+   at System.Data.Entity.Core.Objects.ELinq.ObjectQueryProvider.<GetElementFunction>b__3[TResult](IEnumerable`1 sequence)
+   at System.Data.Entity.Core.Objects.ELinq.ObjectQueryProvider.ExecuteSingle[TResult](IEnumerable`1 query, Expression queryRoot)
+   at System.Data.Entity.Core.Objects.ELinq.ObjectQueryProvider.System.Linq.IQueryProvider.Execute[TResult](Expression expression)
+   at System.Data.Entity.Internal.Linq.DbQueryProvider.Execute[TResult](Expression expression)
+   at System.Linq.Queryable.Sum(IQueryable`1 source)
+   at CarDiaryWeb.DatabaseUtility.getLitersConsumed(Int32 carId) in C:\Users\radoslav.gavrailov\Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 287
+
+********** 8.12.2016 г. 17:35:24 **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at CarDiaryWeb.DatabaseUtility.getAvgCons(Int32 carId) in C:\Users\radoslav.gavrailov\Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 90
+
+********** 8.12.2016 г. 17:35:24 **********
+Exception Type: System.InvalidOperationException
+Exception: The cast to value type 'System.Double' failed because the materialized value is null. Either the result type's generic parameter or the query must use a nullable type.
+Source: DB.cs
+Stack Trace: 
+   at System.Data.Entity.Core.Common.Internal.Materialization.Shaper.ErrorHandlingValueReader`1.GetValue(DbDataReader reader, Int32 ordinal)
+   at lambda_method(Closure , Shaper )
+   at System.Data.Entity.Core.Common.Internal.Materialization.Coordinator`1.ReadNextElement(Shaper shaper)
+   at System.Data.Entity.Core.Common.Internal.Materialization.Shaper`1.SimpleEnumerator.MoveNext()
+   at System.Data.Entity.Internal.LazyEnumerator`1.MoveNext()
+   at System.Linq.Enumerable.Single[TSource](IEnumerable`1 source)
+   at System.Data.Entity.Core.Objects.ELinq.ObjectQueryProvider.<GetElementFunction>b__3[TResult](IEnumerable`1 sequence)
+   at System.Data.Entity.Core.Objects.ELinq.ObjectQueryProvider.ExecuteSingle[TResult](IEnumerable`1 query, Expression queryRoot)
+   at System.Data.Entity.Core.Objects.ELinq.ObjectQueryProvider.System.Linq.IQueryProvider.Execute[TResult](Expression expression)
+   at System.Data.Entity.Internal.Linq.DbQueryProvider.Execute[TResult](Expression expression)
+   at System.Linq.Queryable.Sum(IQueryable`1 source)
+   at CarDiaryWeb.DatabaseUtility.getLitersConsumed(Int32 carId) in C:\Users\radoslav.gavrailov\Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 287
+
+********** 8.12.2016 г. 17:35:24 **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at CarDiaryWeb.DatabaseUtility.getAvgCons(Int32 carId) in C:\Users\radoslav.gavrailov\Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 90
+
+********** 8.12.2016 г. 17:35:24 **********
+Exception Type: System.InvalidOperationException
+Exception: The cast to value type 'System.Double' failed because the materialized value is null. Either the result type's generic parameter or the query must use a nullable type.
+Source: DB.cs
+Stack Trace: 
+   at System.Data.Entity.Core.Common.Internal.Materialization.Shaper.ErrorHandlingValueReader`1.GetValue(DbDataReader reader, Int32 ordinal)
+   at lambda_method(Closure , Shaper )
+   at System.Data.Entity.Core.Common.Internal.Materialization.Coordinator`1.ReadNextElement(Shaper shaper)
+   at System.Data.Entity.Core.Common.Internal.Materialization.Shaper`1.SimpleEnumerator.MoveNext()
+   at System.Data.Entity.Internal.LazyEnumerator`1.MoveNext()
+   at System.Linq.Enumerable.Single[TSource](IEnumerable`1 source)
+   at System.Data.Entity.Core.Objects.ELinq.ObjectQueryProvider.<GetElementFunction>b__3[TResult](IEnumerable`1 sequence)
+   at System.Data.Entity.Core.Objects.ELinq.ObjectQueryProvider.ExecuteSingle[TResult](IEnumerable`1 query, Expression queryRoot)
+   at System.Data.Entity.Core.Objects.ELinq.ObjectQueryProvider.System.Linq.IQueryProvider.Execute[TResult](Expression expression)
+   at System.Data.Entity.Internal.Linq.DbQueryProvider.Execute[TResult](Expression expression)
+   at System.Linq.Queryable.Sum(IQueryable`1 source)
+   at CarDiaryWeb.DatabaseUtility.getLitersConsumed(Int32 carId) in C:\Users\radoslav.gavrailov\Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 287
+
+********** 8.12.2016 г. 17:35:27 **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at CarDiaryWeb.DatabaseUtility.getAvgCons(Int32 carId) in C:\Users\radoslav.gavrailov\Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 90
+
+********** 8.12.2016 г. 17:35:27 **********
+Exception Type: System.InvalidOperationException
+Exception: The cast to value type 'System.Double' failed because the materialized value is null. Either the result type's generic parameter or the query must use a nullable type.
+Source: DB.cs
+Stack Trace: 
+   at System.Data.Entity.Core.Common.Internal.Materialization.Shaper.ErrorHandlingValueReader`1.GetValue(DbDataReader reader, Int32 ordinal)
+   at lambda_method(Closure , Shaper )
+   at System.Data.Entity.Core.Common.Internal.Materialization.Coordinator`1.ReadNextElement(Shaper shaper)
+   at System.Data.Entity.Core.Common.Internal.Materialization.Shaper`1.SimpleEnumerator.MoveNext()
+   at System.Data.Entity.Internal.LazyEnumerator`1.MoveNext()
+   at System.Linq.Enumerable.Single[TSource](IEnumerable`1 source)
+   at System.Data.Entity.Core.Objects.ELinq.ObjectQueryProvider.<GetElementFunction>b__3[TResult](IEnumerable`1 sequence)
+   at System.Data.Entity.Core.Objects.ELinq.ObjectQueryProvider.ExecuteSingle[TResult](IEnumerable`1 query, Expression queryRoot)
+   at System.Data.Entity.Core.Objects.ELinq.ObjectQueryProvider.System.Linq.IQueryProvider.Execute[TResult](Expression expression)
+   at System.Data.Entity.Internal.Linq.DbQueryProvider.Execute[TResult](Expression expression)
+   at System.Linq.Queryable.Sum(IQueryable`1 source)
+   at CarDiaryWeb.DatabaseUtility.getLitersConsumed(Int32 carId) in C:\Users\radoslav.gavrailov\Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 287
+
+********** 8.12.2016 г. 17:35:36 **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at CarDiaryWeb.DatabaseUtility.getAvgCons(Int32 carId) in C:\Users\radoslav.gavrailov\Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 90
+
+********** 8.12.2016 г. 17:35:36 **********
+Exception Type: System.InvalidOperationException
+Exception: The cast to value type 'System.Double' failed because the materialized value is null. Either the result type's generic parameter or the query must use a nullable type.
+Source: DB.cs
+Stack Trace: 
+   at System.Data.Entity.Core.Common.Internal.Materialization.Shaper.ErrorHandlingValueReader`1.GetValue(DbDataReader reader, Int32 ordinal)
+   at lambda_method(Closure , Shaper )
+   at System.Data.Entity.Core.Common.Internal.Materialization.Coordinator`1.ReadNextElement(Shaper shaper)
+   at System.Data.Entity.Core.Common.Internal.Materialization.Shaper`1.SimpleEnumerator.MoveNext()
+   at System.Data.Entity.Internal.LazyEnumerator`1.MoveNext()
+   at System.Linq.Enumerable.Single[TSource](IEnumerable`1 source)
+   at System.Data.Entity.Core.Objects.ELinq.ObjectQueryProvider.<GetElementFunction>b__3[TResult](IEnumerable`1 sequence)
+   at System.Data.Entity.Core.Objects.ELinq.ObjectQueryProvider.ExecuteSingle[TResult](IEnumerable`1 query, Expression queryRoot)
+   at System.Data.Entity.Core.Objects.ELinq.ObjectQueryProvider.System.Linq.IQueryProvider.Execute[TResult](Expression expression)
+   at System.Data.Entity.Internal.Linq.DbQueryProvider.Execute[TResult](Expression expression)
+   at System.Linq.Queryable.Sum(IQueryable`1 source)
+   at CarDiaryWeb.DatabaseUtility.getLitersConsumed(Int32 carId) in C:\Users\radoslav.gavrailov\Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 287
+
+********** 8.12.2016 г. 17:52:33 **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at CarDiaryWeb.DatabaseUtility.getAvgCons(Int32 carId) in C:\Users\radoslav.gavrailov\Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 90
+
+********** 8.12.2016 г. 17:52:51 **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at CarDiaryWeb.DatabaseUtility.getAvgCons(Int32 carId) in C:\Users\radoslav.gavrailov\Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 90
+
+********** 8.12.2016 г. 17:52:52 **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at CarDiaryWeb.DatabaseUtility.getAvgCons(Int32 carId) in C:\Users\radoslav.gavrailov\Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 90
+
+********** 8.12.2016 г. 17:52:52 **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at CarDiaryWeb.DatabaseUtility.getPreviousMileage(Int32 carId) in C:\Users\radoslav.gavrailov\Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 157
+
+********** 8.12.2016 г. 17:52:54 **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at CarDiaryWeb.DatabaseUtility.getPreviousMileage(Int32 carId) in C:\Users\radoslav.gavrailov\Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 157
+
+********** 8.12.2016 г. 17:52:56 **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at CarDiaryWeb.DatabaseUtility.getPreviousMileage(Int32 carId) in C:\Users\radoslav.gavrailov\Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 157
+
+********** 8.12.2016 г. 17:53:04 **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at CarDiaryWeb.DatabaseUtility.getPreviousMileage(Int32 carId) in C:\Users\radoslav.gavrailov\Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 157
+
+********** 8.12.2016 г. 17:53:07 **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at CarDiaryWeb.DatabaseUtility.getPreviousMileage(Int32 carId) in C:\Users\radoslav.gavrailov\Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 157
+
+********** 8.12.2016 г. 17:53:07 **********
+Exception Type: System.FormatException
+Exception: Input string was not in a correct format.
+Source: InserFuel.aspx.cs
+Stack Trace: 
+   at System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   at System.Convert.ToDouble(String value)
+   at CarDiaryWeb.InsertFuel.checkText(String s) in C:\Users\radoslav.gavrailov\Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\InsertFuel.aspx.cs:line 498
+
+********** 8.12.2016 г. 17:53:13 **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at CarDiaryWeb.DatabaseUtility.getPreviousMileage(Int32 carId) in C:\Users\radoslav.gavrailov\Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 157
+
+********** 8.12.2016 г. 17:53:13 **********
+Exception Type: System.FormatException
+Exception: Input string was not in a correct format.
+Source: InserFuel.aspx.cs
+Stack Trace: 
+   at System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   at System.Convert.ToDouble(String value)
+   at CarDiaryWeb.InsertFuel.checkText(String s) in C:\Users\radoslav.gavrailov\Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\InsertFuel.aspx.cs:line 498
+
+********** 8.12.2016 г. 17:53:13 **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at CarDiaryWeb.DatabaseUtility.getPreviousMileage(Int32 carId) in C:\Users\radoslav.gavrailov\Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 157
+
+********** 8.12.2016 г. 17:53:16 **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at CarDiaryWeb.DatabaseUtility.getPreviousMileage(Int32 carId) in C:\Users\radoslav.gavrailov\Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 157
+
+********** 8.12.2016 г. 17:53:19 **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at CarDiaryWeb.DatabaseUtility.getPreviousMileage(Int32 carId) in C:\Users\radoslav.gavrailov\Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 157
+
+********** 8.12.2016 г. 17:53:28 **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at CarDiaryWeb.DatabaseUtility.getPreviousMileage(Int32 carId) in C:\Users\radoslav.gavrailov\Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 157
+
+********** 8.12.2016 г. 17:53:28 **********
+Exception Type: System.InvalidOperationException
+Exception: The cast to value type 'System.Int32' failed because the materialized value is null. Either the result type's generic parameter or the query must use a nullable type.
+Source: DB.cs
+Stack Trace: 
+   at System.Data.Entity.Core.Common.Internal.Materialization.Shaper.ErrorHandlingValueReader`1.GetValue(DbDataReader reader, Int32 ordinal)
+   at lambda_method(Closure , Shaper )
+   at System.Data.Entity.Core.Common.Internal.Materialization.Coordinator`1.ReadNextElement(Shaper shaper)
+   at System.Data.Entity.Core.Common.Internal.Materialization.Shaper`1.SimpleEnumerator.MoveNext()
+   at System.Data.Entity.Internal.LazyEnumerator`1.MoveNext()
+   at System.Linq.Enumerable.Single[TSource](IEnumerable`1 source)
+   at System.Data.Entity.Core.Objects.ELinq.ObjectQueryProvider.<GetElementFunction>b__3[TResult](IEnumerable`1 sequence)
+   at System.Data.Entity.Core.Objects.ELinq.ObjectQueryProvider.ExecuteSingle[TResult](IEnumerable`1 query, Expression queryRoot)
+   at System.Data.Entity.Core.Objects.ELinq.ObjectQueryProvider.System.Linq.IQueryProvider.Execute[TResult](Expression expression)
+   at System.Data.Entity.Internal.Linq.DbQueryProvider.Execute[TResult](Expression expression)
+   at System.Linq.Queryable.Max[TSource](IQueryable`1 source)
+   at CarDiaryWeb.DatabaseUtility.getFuelConsumptionLastDate(Int32 carId) in C:\Users\radoslav.gavrailov\Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 198
+
+********** 8.12.2016 г. 17:53:44 **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at CarDiaryWeb.DatabaseUtility.getPreviousMileage(Int32 carId) in C:\Users\radoslav.gavrailov\Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 157
+
+********** 8.12.2016 г. 17:53:44 **********
+Exception Type: System.FormatException
+Exception: Input string was not in a correct format.
+Source: InserFuel.aspx.cs
+Stack Trace: 
+   at System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   at System.Convert.ToDouble(String value)
+   at CarDiaryWeb.InsertFuel.checkText(String s) in C:\Users\radoslav.gavrailov\Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\InsertFuel.aspx.cs:line 498
+
+********** 8.12.2016 г. 17:53:45 **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at CarDiaryWeb.DatabaseUtility.getPreviousMileage(Int32 carId) in C:\Users\radoslav.gavrailov\Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 157
+
+********** 8.12.2016 г. 17:53:46 **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at CarDiaryWeb.DatabaseUtility.getPreviousMileage(Int32 carId) in C:\Users\radoslav.gavrailov\Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 157
+
+********** 8.12.2016 г. 17:55:01 **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at CarDiaryWeb.DatabaseUtility.getAvgCons(Int32 carId) in C:\Users\radoslav.gavrailov\Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 90
+
+********** 8.12.2016 г. 17:55:05 **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at CarDiaryWeb.DatabaseUtility.getAvgCons(Int32 carId) in C:\Users\radoslav.gavrailov\Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 90
+
+********** 8.12.2016 г. 17:55:05 **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at CarDiaryWeb.DatabaseUtility.getPreviousMileage(Int32 carId) in C:\Users\radoslav.gavrailov\Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 157
+
+********** 8.12.2016 г. 17:55:06 **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at CarDiaryWeb.DatabaseUtility.getPreviousMileage(Int32 carId) in C:\Users\radoslav.gavrailov\Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 157
+
+********** 8.12.2016 г. 17:55:12 **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at CarDiaryWeb.DatabaseUtility.getPreviousMileage(Int32 carId) in C:\Users\radoslav.gavrailov\Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 157
+
+********** 8.12.2016 г. 17:55:16 **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at CarDiaryWeb.DatabaseUtility.getPreviousMileage(Int32 carId) in C:\Users\radoslav.gavrailov\Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 157
+
+********** 8.12.2016 г. 17:55:17 **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at CarDiaryWeb.DatabaseUtility.getPreviousMileage(Int32 carId) in C:\Users\radoslav.gavrailov\Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 157
+
+********** 8.12.2016 г. 17:55:19 **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at CarDiaryWeb.DatabaseUtility.getPreviousMileage(Int32 carId) in C:\Users\radoslav.gavrailov\Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 157
+
+********** 8.12.2016 г. 17:55:19 **********
+Exception Type: System.InvalidOperationException
+Exception: The cast to value type 'System.Int32' failed because the materialized value is null. Either the result type's generic parameter or the query must use a nullable type.
+Source: DB.cs
+Stack Trace: 
+   at System.Data.Entity.Core.Common.Internal.Materialization.Shaper.ErrorHandlingValueReader`1.GetValue(DbDataReader reader, Int32 ordinal)
+   at lambda_method(Closure , Shaper )
+   at System.Data.Entity.Core.Common.Internal.Materialization.Coordinator`1.ReadNextElement(Shaper shaper)
+   at System.Data.Entity.Core.Common.Internal.Materialization.Shaper`1.SimpleEnumerator.MoveNext()
+   at System.Data.Entity.Internal.LazyEnumerator`1.MoveNext()
+   at System.Linq.Enumerable.Single[TSource](IEnumerable`1 source)
+   at System.Data.Entity.Core.Objects.ELinq.ObjectQueryProvider.<GetElementFunction>b__3[TResult](IEnumerable`1 sequence)
+   at System.Data.Entity.Core.Objects.ELinq.ObjectQueryProvider.ExecuteSingle[TResult](IEnumerable`1 query, Expression queryRoot)
+   at System.Data.Entity.Core.Objects.ELinq.ObjectQueryProvider.System.Linq.IQueryProvider.Execute[TResult](Expression expression)
+   at System.Data.Entity.Internal.Linq.DbQueryProvider.Execute[TResult](Expression expression)
+   at System.Linq.Queryable.Max[TSource](IQueryable`1 source)
+   at CarDiaryWeb.DatabaseUtility.getFuelConsumptionLastDate(Int32 carId) in C:\Users\radoslav.gavrailov\Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 198
+
+********** 12.12.2016 г. 11:26:30 **********
+Exception Type: System.InvalidOperationException
+Exception: The class 'CarDiaryWeb.fuel_consumption' has no parameterless constructor.
+Source: DB.cs
+Stack Trace: 
+   at System.Data.Entity.Core.Objects.DelegateFactory.GetConstructorForType(Type type)
+   at System.Data.Entity.Core.Common.Internal.Materialization.Translator.TranslatorVisitor.Emit_ConstructEntity(EntityType oSpaceType, IEnumerable`1 propertyBindings, Expression entityKeyReader, Expression entitySetReader, TranslatorArg arg, EntityProxyTypeInfo proxyTypeInfo)
+   at System.Data.Entity.Core.Common.Internal.Materialization.Translator.TranslatorVisitor.Visit(EntityColumnMap columnMap, TranslatorArg arg)
+   at System.Data.Entity.Core.Query.InternalTrees.EntityColumnMap.Accept[TResultType,TArgType](ColumnMapVisitorWithResults`2 visitor, TArgType arg)
+   at System.Data.Entity.Core.Common.Internal.Materialization.Translator.TranslatorVisitor.ProcessCollectionColumnMap(CollectionColumnMap columnMap, TranslatorArg arg, ColumnMap discriminatorColumnMap, Object discriminatorValue)
+   at System.Data.Entity.Core.Common.Internal.Materialization.Translator.TranslatorVisitor.Visit(SimpleCollectionColumnMap columnMap, TranslatorArg arg)
+   at System.Data.Entity.Core.Query.InternalTrees.SimpleCollectionColumnMap.Accept[TResultType,TArgType](ColumnMapVisitorWithResults`2 visitor, TArgType arg)
+   at System.Data.Entity.Core.Common.Internal.Materialization.Translator.TranslateColumnMap[T](ColumnMap columnMap, MetadataWorkspace workspace, SpanIndex spanIndex, MergeOption mergeOption, Boolean streaming, Boolean valueLayer)
+   at System.Data.Entity.Core.Objects.ObjectContext.MaterializedDataRecord[TElement](EntityCommand entityCommand, DbDataReader storeReader, Int32 resultSetIndex, ReadOnlyCollection`1 entitySets, EdmType[] edmTypes, ShaperFactory`1 shaperFactory, MergeOption mergeOption, Boolean streaming)
+   at System.Data.Entity.Core.Objects.ObjectContext.CreateFunctionObjectResult[TElement](EntityCommand entityCommand, ReadOnlyCollection`1 entitySets, EdmType[] edmTypes, ExecutionOptions executionOptions)
+   at System.Data.Entity.Core.Objects.ObjectContext.<>c__DisplayClass47`1.<ExecuteFunction>b__46()
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)
+   at System.Data.Entity.Core.Objects.ObjectContext.<>c__DisplayClass47`1.<ExecuteFunction>b__45()
+   at System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteFunction[TElement](String functionName, ExecutionOptions executionOptions, ObjectParameter[] parameters)
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteFunction[TElement](String functionName, MergeOption mergeOption, ObjectParameter[] parameters)
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteFunction[TElement](String functionName, ObjectParameter[] parameters)
+   at CarDiaryWeb.Entities.getFuelConsumptionsForCar(Nullable`1 id) in C:\Users\radoslav.gavrailov\documents\visual studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\CarDiaryModel.Context.cs:line 61
+   at CarDiaryWeb.DatabaseUtility.getFuelConsumptionsForCar(Int32 carId) in C:\Users\radoslav.gavrailov\documents\visual studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 307
+
+********** 12.12.2016 г. 11:26:32 **********
+Exception Type: System.InvalidOperationException
+Exception: The class 'CarDiaryWeb.fuel_consumption' has no parameterless constructor.
+Source: DB.cs
+Stack Trace: 
+   at System.Data.Entity.Core.Objects.DelegateFactory.GetConstructorForType(Type type)
+   at System.Data.Entity.Core.Common.Internal.Materialization.Translator.TranslatorVisitor.Emit_ConstructEntity(EntityType oSpaceType, IEnumerable`1 propertyBindings, Expression entityKeyReader, Expression entitySetReader, TranslatorArg arg, EntityProxyTypeInfo proxyTypeInfo)
+   at System.Data.Entity.Core.Common.Internal.Materialization.Translator.TranslatorVisitor.Visit(EntityColumnMap columnMap, TranslatorArg arg)
+   at System.Data.Entity.Core.Query.InternalTrees.EntityColumnMap.Accept[TResultType,TArgType](ColumnMapVisitorWithResults`2 visitor, TArgType arg)
+   at System.Data.Entity.Core.Common.Internal.Materialization.Translator.TranslatorVisitor.ProcessCollectionColumnMap(CollectionColumnMap columnMap, TranslatorArg arg, ColumnMap discriminatorColumnMap, Object discriminatorValue)
+   at System.Data.Entity.Core.Common.Internal.Materialization.Translator.TranslatorVisitor.Visit(SimpleCollectionColumnMap columnMap, TranslatorArg arg)
+   at System.Data.Entity.Core.Query.InternalTrees.SimpleCollectionColumnMap.Accept[TResultType,TArgType](ColumnMapVisitorWithResults`2 visitor, TArgType arg)
+   at System.Data.Entity.Core.Common.Internal.Materialization.Translator.TranslateColumnMap[T](ColumnMap columnMap, MetadataWorkspace workspace, SpanIndex spanIndex, MergeOption mergeOption, Boolean streaming, Boolean valueLayer)
+   at System.Data.Entity.Core.Objects.ObjectContext.MaterializedDataRecord[TElement](EntityCommand entityCommand, DbDataReader storeReader, Int32 resultSetIndex, ReadOnlyCollection`1 entitySets, EdmType[] edmTypes, ShaperFactory`1 shaperFactory, MergeOption mergeOption, Boolean streaming)
+   at System.Data.Entity.Core.Objects.ObjectContext.CreateFunctionObjectResult[TElement](EntityCommand entityCommand, ReadOnlyCollection`1 entitySets, EdmType[] edmTypes, ExecutionOptions executionOptions)
+   at System.Data.Entity.Core.Objects.ObjectContext.<>c__DisplayClass47`1.<ExecuteFunction>b__46()
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)
+   at System.Data.Entity.Core.Objects.ObjectContext.<>c__DisplayClass47`1.<ExecuteFunction>b__45()
+   at System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteFunction[TElement](String functionName, ExecutionOptions executionOptions, ObjectParameter[] parameters)
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteFunction[TElement](String functionName, MergeOption mergeOption, ObjectParameter[] parameters)
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteFunction[TElement](String functionName, ObjectParameter[] parameters)
+   at CarDiaryWeb.Entities.getFuelConsumptionsForCar(Nullable`1 id) in C:\Users\radoslav.gavrailov\documents\visual studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\CarDiaryModel.Context.cs:line 61
+   at CarDiaryWeb.DatabaseUtility.getFuelConsumptionsForCar(Int32 carId) in C:\Users\radoslav.gavrailov\documents\visual studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 307
+
+********** 12.12.2016 г. 11:26:33 **********
+Exception Type: System.InvalidOperationException
+Exception: The class 'CarDiaryWeb.fuel_consumption' has no parameterless constructor.
+Source: DB.cs
+Stack Trace: 
+   at System.Data.Entity.Core.Objects.DelegateFactory.GetConstructorForType(Type type)
+   at System.Data.Entity.Core.Common.Internal.Materialization.Translator.TranslatorVisitor.Emit_ConstructEntity(EntityType oSpaceType, IEnumerable`1 propertyBindings, Expression entityKeyReader, Expression entitySetReader, TranslatorArg arg, EntityProxyTypeInfo proxyTypeInfo)
+   at System.Data.Entity.Core.Common.Internal.Materialization.Translator.TranslatorVisitor.Visit(EntityColumnMap columnMap, TranslatorArg arg)
+   at System.Data.Entity.Core.Query.InternalTrees.EntityColumnMap.Accept[TResultType,TArgType](ColumnMapVisitorWithResults`2 visitor, TArgType arg)
+   at System.Data.Entity.Core.Common.Internal.Materialization.Translator.TranslatorVisitor.ProcessCollectionColumnMap(CollectionColumnMap columnMap, TranslatorArg arg, ColumnMap discriminatorColumnMap, Object discriminatorValue)
+   at System.Data.Entity.Core.Common.Internal.Materialization.Translator.TranslatorVisitor.Visit(SimpleCollectionColumnMap columnMap, TranslatorArg arg)
+   at System.Data.Entity.Core.Query.InternalTrees.SimpleCollectionColumnMap.Accept[TResultType,TArgType](ColumnMapVisitorWithResults`2 visitor, TArgType arg)
+   at System.Data.Entity.Core.Common.Internal.Materialization.Translator.TranslateColumnMap[T](ColumnMap columnMap, MetadataWorkspace workspace, SpanIndex spanIndex, MergeOption mergeOption, Boolean streaming, Boolean valueLayer)
+   at System.Data.Entity.Core.Objects.ObjectContext.MaterializedDataRecord[TElement](EntityCommand entityCommand, DbDataReader storeReader, Int32 resultSetIndex, ReadOnlyCollection`1 entitySets, EdmType[] edmTypes, ShaperFactory`1 shaperFactory, MergeOption mergeOption, Boolean streaming)
+   at System.Data.Entity.Core.Objects.ObjectContext.CreateFunctionObjectResult[TElement](EntityCommand entityCommand, ReadOnlyCollection`1 entitySets, EdmType[] edmTypes, ExecutionOptions executionOptions)
+   at System.Data.Entity.Core.Objects.ObjectContext.<>c__DisplayClass47`1.<ExecuteFunction>b__46()
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)
+   at System.Data.Entity.Core.Objects.ObjectContext.<>c__DisplayClass47`1.<ExecuteFunction>b__45()
+   at System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteFunction[TElement](String functionName, ExecutionOptions executionOptions, ObjectParameter[] parameters)
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteFunction[TElement](String functionName, MergeOption mergeOption, ObjectParameter[] parameters)
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteFunction[TElement](String functionName, ObjectParameter[] parameters)
+   at CarDiaryWeb.Entities.getFuelConsumptionsForCar(Nullable`1 id) in C:\Users\radoslav.gavrailov\documents\visual studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\CarDiaryModel.Context.cs:line 61
+   at CarDiaryWeb.DatabaseUtility.getFuelConsumptionsForCar(Int32 carId) in C:\Users\radoslav.gavrailov\documents\visual studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 307
+
+********** 12.12.2016 г. 11:26:34 **********
+Exception Type: System.InvalidOperationException
+Exception: The class 'CarDiaryWeb.fuel_consumption' has no parameterless constructor.
+Source: DB.cs
+Stack Trace: 
+   at System.Data.Entity.Core.Objects.DelegateFactory.GetConstructorForType(Type type)
+   at System.Data.Entity.Core.Common.Internal.Materialization.Translator.TranslatorVisitor.Emit_ConstructEntity(EntityType oSpaceType, IEnumerable`1 propertyBindings, Expression entityKeyReader, Expression entitySetReader, TranslatorArg arg, EntityProxyTypeInfo proxyTypeInfo)
+   at System.Data.Entity.Core.Common.Internal.Materialization.Translator.TranslatorVisitor.Visit(EntityColumnMap columnMap, TranslatorArg arg)
+   at System.Data.Entity.Core.Query.InternalTrees.EntityColumnMap.Accept[TResultType,TArgType](ColumnMapVisitorWithResults`2 visitor, TArgType arg)
+   at System.Data.Entity.Core.Common.Internal.Materialization.Translator.TranslatorVisitor.ProcessCollectionColumnMap(CollectionColumnMap columnMap, TranslatorArg arg, ColumnMap discriminatorColumnMap, Object discriminatorValue)
+   at System.Data.Entity.Core.Common.Internal.Materialization.Translator.TranslatorVisitor.Visit(SimpleCollectionColumnMap columnMap, TranslatorArg arg)
+   at System.Data.Entity.Core.Query.InternalTrees.SimpleCollectionColumnMap.Accept[TResultType,TArgType](ColumnMapVisitorWithResults`2 visitor, TArgType arg)
+   at System.Data.Entity.Core.Common.Internal.Materialization.Translator.TranslateColumnMap[T](ColumnMap columnMap, MetadataWorkspace workspace, SpanIndex spanIndex, MergeOption mergeOption, Boolean streaming, Boolean valueLayer)
+   at System.Data.Entity.Core.Objects.ObjectContext.MaterializedDataRecord[TElement](EntityCommand entityCommand, DbDataReader storeReader, Int32 resultSetIndex, ReadOnlyCollection`1 entitySets, EdmType[] edmTypes, ShaperFactory`1 shaperFactory, MergeOption mergeOption, Boolean streaming)
+   at System.Data.Entity.Core.Objects.ObjectContext.CreateFunctionObjectResult[TElement](EntityCommand entityCommand, ReadOnlyCollection`1 entitySets, EdmType[] edmTypes, ExecutionOptions executionOptions)
+   at System.Data.Entity.Core.Objects.ObjectContext.<>c__DisplayClass47`1.<ExecuteFunction>b__46()
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)
+   at System.Data.Entity.Core.Objects.ObjectContext.<>c__DisplayClass47`1.<ExecuteFunction>b__45()
+   at System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteFunction[TElement](String functionName, ExecutionOptions executionOptions, ObjectParameter[] parameters)
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteFunction[TElement](String functionName, MergeOption mergeOption, ObjectParameter[] parameters)
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteFunction[TElement](String functionName, ObjectParameter[] parameters)
+   at CarDiaryWeb.Entities.getFuelConsumptionsForCar(Nullable`1 id) in C:\Users\radoslav.gavrailov\documents\visual studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\CarDiaryModel.Context.cs:line 61
+   at CarDiaryWeb.DatabaseUtility.getFuelConsumptionsForCar(Int32 carId) in C:\Users\radoslav.gavrailov\documents\visual studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 307
+
+********** 12.12.2016 г. 11:26:35 **********
+Exception Type: System.InvalidOperationException
+Exception: The class 'CarDiaryWeb.fuel_consumption' has no parameterless constructor.
+Source: DB.cs
+Stack Trace: 
+   at System.Data.Entity.Core.Objects.DelegateFactory.GetConstructorForType(Type type)
+   at System.Data.Entity.Core.Common.Internal.Materialization.Translator.TranslatorVisitor.Emit_ConstructEntity(EntityType oSpaceType, IEnumerable`1 propertyBindings, Expression entityKeyReader, Expression entitySetReader, TranslatorArg arg, EntityProxyTypeInfo proxyTypeInfo)
+   at System.Data.Entity.Core.Common.Internal.Materialization.Translator.TranslatorVisitor.Visit(EntityColumnMap columnMap, TranslatorArg arg)
+   at System.Data.Entity.Core.Query.InternalTrees.EntityColumnMap.Accept[TResultType,TArgType](ColumnMapVisitorWithResults`2 visitor, TArgType arg)
+   at System.Data.Entity.Core.Common.Internal.Materialization.Translator.TranslatorVisitor.ProcessCollectionColumnMap(CollectionColumnMap columnMap, TranslatorArg arg, ColumnMap discriminatorColumnMap, Object discriminatorValue)
+   at System.Data.Entity.Core.Common.Internal.Materialization.Translator.TranslatorVisitor.Visit(SimpleCollectionColumnMap columnMap, TranslatorArg arg)
+   at System.Data.Entity.Core.Query.InternalTrees.SimpleCollectionColumnMap.Accept[TResultType,TArgType](ColumnMapVisitorWithResults`2 visitor, TArgType arg)
+   at System.Data.Entity.Core.Common.Internal.Materialization.Translator.TranslateColumnMap[T](ColumnMap columnMap, MetadataWorkspace workspace, SpanIndex spanIndex, MergeOption mergeOption, Boolean streaming, Boolean valueLayer)
+   at System.Data.Entity.Core.Objects.ObjectContext.MaterializedDataRecord[TElement](EntityCommand entityCommand, DbDataReader storeReader, Int32 resultSetIndex, ReadOnlyCollection`1 entitySets, EdmType[] edmTypes, ShaperFactory`1 shaperFactory, MergeOption mergeOption, Boolean streaming)
+   at System.Data.Entity.Core.Objects.ObjectContext.CreateFunctionObjectResult[TElement](EntityCommand entityCommand, ReadOnlyCollection`1 entitySets, EdmType[] edmTypes, ExecutionOptions executionOptions)
+   at System.Data.Entity.Core.Objects.ObjectContext.<>c__DisplayClass47`1.<ExecuteFunction>b__46()
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)
+   at System.Data.Entity.Core.Objects.ObjectContext.<>c__DisplayClass47`1.<ExecuteFunction>b__45()
+   at System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteFunction[TElement](String functionName, ExecutionOptions executionOptions, ObjectParameter[] parameters)
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteFunction[TElement](String functionName, MergeOption mergeOption, ObjectParameter[] parameters)
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteFunction[TElement](String functionName, ObjectParameter[] parameters)
+   at CarDiaryWeb.Entities.getFuelConsumptionsForCar(Nullable`1 id) in C:\Users\radoslav.gavrailov\documents\visual studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\CarDiaryModel.Context.cs:line 61
+   at CarDiaryWeb.DatabaseUtility.getFuelConsumptionsForCar(Int32 carId) in C:\Users\radoslav.gavrailov\documents\visual studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 307
+
+********** 12.12.2016 г. 11:26:35 **********
+Exception Type: System.InvalidOperationException
+Exception: The class 'CarDiaryWeb.fuel_consumption' has no parameterless constructor.
+Source: DB.cs
+Stack Trace: 
+   at System.Data.Entity.Core.Objects.DelegateFactory.GetConstructorForType(Type type)
+   at System.Data.Entity.Core.Common.Internal.Materialization.Translator.TranslatorVisitor.Emit_ConstructEntity(EntityType oSpaceType, IEnumerable`1 propertyBindings, Expression entityKeyReader, Expression entitySetReader, TranslatorArg arg, EntityProxyTypeInfo proxyTypeInfo)
+   at System.Data.Entity.Core.Common.Internal.Materialization.Translator.TranslatorVisitor.Visit(EntityColumnMap columnMap, TranslatorArg arg)
+   at System.Data.Entity.Core.Query.InternalTrees.EntityColumnMap.Accept[TResultType,TArgType](ColumnMapVisitorWithResults`2 visitor, TArgType arg)
+   at System.Data.Entity.Core.Common.Internal.Materialization.Translator.TranslatorVisitor.ProcessCollectionColumnMap(CollectionColumnMap columnMap, TranslatorArg arg, ColumnMap discriminatorColumnMap, Object discriminatorValue)
+   at System.Data.Entity.Core.Common.Internal.Materialization.Translator.TranslatorVisitor.Visit(SimpleCollectionColumnMap columnMap, TranslatorArg arg)
+   at System.Data.Entity.Core.Query.InternalTrees.SimpleCollectionColumnMap.Accept[TResultType,TArgType](ColumnMapVisitorWithResults`2 visitor, TArgType arg)
+   at System.Data.Entity.Core.Common.Internal.Materialization.Translator.TranslateColumnMap[T](ColumnMap columnMap, MetadataWorkspace workspace, SpanIndex spanIndex, MergeOption mergeOption, Boolean streaming, Boolean valueLayer)
+   at System.Data.Entity.Core.Objects.ObjectContext.MaterializedDataRecord[TElement](EntityCommand entityCommand, DbDataReader storeReader, Int32 resultSetIndex, ReadOnlyCollection`1 entitySets, EdmType[] edmTypes, ShaperFactory`1 shaperFactory, MergeOption mergeOption, Boolean streaming)
+   at System.Data.Entity.Core.Objects.ObjectContext.CreateFunctionObjectResult[TElement](EntityCommand entityCommand, ReadOnlyCollection`1 entitySets, EdmType[] edmTypes, ExecutionOptions executionOptions)
+   at System.Data.Entity.Core.Objects.ObjectContext.<>c__DisplayClass47`1.<ExecuteFunction>b__46()
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)
+   at System.Data.Entity.Core.Objects.ObjectContext.<>c__DisplayClass47`1.<ExecuteFunction>b__45()
+   at System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteFunction[TElement](String functionName, ExecutionOptions executionOptions, ObjectParameter[] parameters)
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteFunction[TElement](String functionName, MergeOption mergeOption, ObjectParameter[] parameters)
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteFunction[TElement](String functionName, ObjectParameter[] parameters)
+   at CarDiaryWeb.Entities.getFuelConsumptionsForCar(Nullable`1 id) in C:\Users\radoslav.gavrailov\documents\visual studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\CarDiaryModel.Context.cs:line 61
+   at CarDiaryWeb.DatabaseUtility.getFuelConsumptionsForCar(Int32 carId) in C:\Users\radoslav.gavrailov\documents\visual studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 307
+
+********** 12.12.2016 г. 11:28:47 **********
+Exception Type: System.InvalidOperationException
+Exception: The class 'CarDiaryWeb.fuel_consumption' has no parameterless constructor.
+Source: DB.cs
+Stack Trace: 
+   at System.Data.Entity.Core.Objects.DelegateFactory.GetConstructorForType(Type type)
+   at System.Data.Entity.Core.Common.Internal.Materialization.Translator.TranslatorVisitor.Emit_ConstructEntity(EntityType oSpaceType, IEnumerable`1 propertyBindings, Expression entityKeyReader, Expression entitySetReader, TranslatorArg arg, EntityProxyTypeInfo proxyTypeInfo)
+   at System.Data.Entity.Core.Common.Internal.Materialization.Translator.TranslatorVisitor.Visit(EntityColumnMap columnMap, TranslatorArg arg)
+   at System.Data.Entity.Core.Query.InternalTrees.EntityColumnMap.Accept[TResultType,TArgType](ColumnMapVisitorWithResults`2 visitor, TArgType arg)
+   at System.Data.Entity.Core.Common.Internal.Materialization.Translator.TranslatorVisitor.ProcessCollectionColumnMap(CollectionColumnMap columnMap, TranslatorArg arg, ColumnMap discriminatorColumnMap, Object discriminatorValue)
+   at System.Data.Entity.Core.Common.Internal.Materialization.Translator.TranslatorVisitor.Visit(SimpleCollectionColumnMap columnMap, TranslatorArg arg)
+   at System.Data.Entity.Core.Query.InternalTrees.SimpleCollectionColumnMap.Accept[TResultType,TArgType](ColumnMapVisitorWithResults`2 visitor, TArgType arg)
+   at System.Data.Entity.Core.Common.Internal.Materialization.Translator.TranslateColumnMap[T](ColumnMap columnMap, MetadataWorkspace workspace, SpanIndex spanIndex, MergeOption mergeOption, Boolean streaming, Boolean valueLayer)
+   at System.Data.Entity.Core.Objects.ObjectContext.MaterializedDataRecord[TElement](EntityCommand entityCommand, DbDataReader storeReader, Int32 resultSetIndex, ReadOnlyCollection`1 entitySets, EdmType[] edmTypes, ShaperFactory`1 shaperFactory, MergeOption mergeOption, Boolean streaming)
+   at System.Data.Entity.Core.Objects.ObjectContext.CreateFunctionObjectResult[TElement](EntityCommand entityCommand, ReadOnlyCollection`1 entitySets, EdmType[] edmTypes, ExecutionOptions executionOptions)
+   at System.Data.Entity.Core.Objects.ObjectContext.<>c__DisplayClass47`1.<ExecuteFunction>b__46()
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)
+   at System.Data.Entity.Core.Objects.ObjectContext.<>c__DisplayClass47`1.<ExecuteFunction>b__45()
+   at System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteFunction[TElement](String functionName, ExecutionOptions executionOptions, ObjectParameter[] parameters)
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteFunction[TElement](String functionName, MergeOption mergeOption, ObjectParameter[] parameters)
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteFunction[TElement](String functionName, ObjectParameter[] parameters)
+   at CarDiaryWeb.Entities.getFuelConsumptionsForCar(Nullable`1 id) in C:\Users\radoslav.gavrailov\documents\visual studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\CarDiaryModel.Context.cs:line 61
+   at CarDiaryWeb.DatabaseUtility.getFuelConsumptionsForCar(Int32 carId) in C:\Users\radoslav.gavrailov\documents\visual studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 307
+
+********** 12.12.2016 г. 11:29:08 **********
+Exception Type: System.InvalidOperationException
+Exception: The class 'CarDiaryWeb.fuel_consumption' has no parameterless constructor.
+Source: DB.cs
+Stack Trace: 
+   at System.Data.Entity.Core.Objects.DelegateFactory.GetConstructorForType(Type type)
+   at System.Data.Entity.Core.Common.Internal.Materialization.Translator.TranslatorVisitor.Emit_ConstructEntity(EntityType oSpaceType, IEnumerable`1 propertyBindings, Expression entityKeyReader, Expression entitySetReader, TranslatorArg arg, EntityProxyTypeInfo proxyTypeInfo)
+   at System.Data.Entity.Core.Common.Internal.Materialization.Translator.TranslatorVisitor.Visit(EntityColumnMap columnMap, TranslatorArg arg)
+   at System.Data.Entity.Core.Query.InternalTrees.EntityColumnMap.Accept[TResultType,TArgType](ColumnMapVisitorWithResults`2 visitor, TArgType arg)
+   at System.Data.Entity.Core.Common.Internal.Materialization.Translator.TranslatorVisitor.ProcessCollectionColumnMap(CollectionColumnMap columnMap, TranslatorArg arg, ColumnMap discriminatorColumnMap, Object discriminatorValue)
+   at System.Data.Entity.Core.Common.Internal.Materialization.Translator.TranslatorVisitor.Visit(SimpleCollectionColumnMap columnMap, TranslatorArg arg)
+   at System.Data.Entity.Core.Query.InternalTrees.SimpleCollectionColumnMap.Accept[TResultType,TArgType](ColumnMapVisitorWithResults`2 visitor, TArgType arg)
+   at System.Data.Entity.Core.Common.Internal.Materialization.Translator.TranslateColumnMap[T](ColumnMap columnMap, MetadataWorkspace workspace, SpanIndex spanIndex, MergeOption mergeOption, Boolean streaming, Boolean valueLayer)
+   at System.Data.Entity.Core.Objects.ObjectContext.MaterializedDataRecord[TElement](EntityCommand entityCommand, DbDataReader storeReader, Int32 resultSetIndex, ReadOnlyCollection`1 entitySets, EdmType[] edmTypes, ShaperFactory`1 shaperFactory, MergeOption mergeOption, Boolean streaming)
+   at System.Data.Entity.Core.Objects.ObjectContext.CreateFunctionObjectResult[TElement](EntityCommand entityCommand, ReadOnlyCollection`1 entitySets, EdmType[] edmTypes, ExecutionOptions executionOptions)
+   at System.Data.Entity.Core.Objects.ObjectContext.<>c__DisplayClass47`1.<ExecuteFunction>b__46()
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)
+   at System.Data.Entity.Core.Objects.ObjectContext.<>c__DisplayClass47`1.<ExecuteFunction>b__45()
+   at System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteFunction[TElement](String functionName, ExecutionOptions executionOptions, ObjectParameter[] parameters)
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteFunction[TElement](String functionName, MergeOption mergeOption, ObjectParameter[] parameters)
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteFunction[TElement](String functionName, ObjectParameter[] parameters)
+   at CarDiaryWeb.Entities.getFuelConsumptionsForCar(Nullable`1 id) in C:\Users\radoslav.gavrailov\documents\visual studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\CarDiaryModel.Context.cs:line 61
+   at CarDiaryWeb.DatabaseUtility.getFuelConsumptionsForCar(Int32 carId) in C:\Users\radoslav.gavrailov\documents\visual studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 307
+
+********** 12.12.2016 г. 11:30:12 **********
+Exception Type: System.InvalidOperationException
+Exception: The class 'CarDiaryWeb.fuel_consumption' has no parameterless constructor.
+Source: DB.cs
+Stack Trace: 
+   at System.Data.Entity.Core.Objects.DelegateFactory.GetConstructorForType(Type type)
+   at System.Data.Entity.Core.Common.Internal.Materialization.Translator.TranslatorVisitor.Emit_ConstructEntity(EntityType oSpaceType, IEnumerable`1 propertyBindings, Expression entityKeyReader, Expression entitySetReader, TranslatorArg arg, EntityProxyTypeInfo proxyTypeInfo)
+   at System.Data.Entity.Core.Common.Internal.Materialization.Translator.TranslatorVisitor.Visit(EntityColumnMap columnMap, TranslatorArg arg)
+   at System.Data.Entity.Core.Query.InternalTrees.EntityColumnMap.Accept[TResultType,TArgType](ColumnMapVisitorWithResults`2 visitor, TArgType arg)
+   at System.Data.Entity.Core.Common.Internal.Materialization.Translator.TranslatorVisitor.ProcessCollectionColumnMap(CollectionColumnMap columnMap, TranslatorArg arg, ColumnMap discriminatorColumnMap, Object discriminatorValue)
+   at System.Data.Entity.Core.Common.Internal.Materialization.Translator.TranslatorVisitor.Visit(SimpleCollectionColumnMap columnMap, TranslatorArg arg)
+   at System.Data.Entity.Core.Query.InternalTrees.SimpleCollectionColumnMap.Accept[TResultType,TArgType](ColumnMapVisitorWithResults`2 visitor, TArgType arg)
+   at System.Data.Entity.Core.Common.Internal.Materialization.Translator.TranslateColumnMap[T](ColumnMap columnMap, MetadataWorkspace workspace, SpanIndex spanIndex, MergeOption mergeOption, Boolean streaming, Boolean valueLayer)
+   at System.Data.Entity.Core.Objects.ObjectContext.MaterializedDataRecord[TElement](EntityCommand entityCommand, DbDataReader storeReader, Int32 resultSetIndex, ReadOnlyCollection`1 entitySets, EdmType[] edmTypes, ShaperFactory`1 shaperFactory, MergeOption mergeOption, Boolean streaming)
+   at System.Data.Entity.Core.Objects.ObjectContext.CreateFunctionObjectResult[TElement](EntityCommand entityCommand, ReadOnlyCollection`1 entitySets, EdmType[] edmTypes, ExecutionOptions executionOptions)
+   at System.Data.Entity.Core.Objects.ObjectContext.<>c__DisplayClass47`1.<ExecuteFunction>b__46()
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)
+   at System.Data.Entity.Core.Objects.ObjectContext.<>c__DisplayClass47`1.<ExecuteFunction>b__45()
+   at System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteFunction[TElement](String functionName, ExecutionOptions executionOptions, ObjectParameter[] parameters)
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteFunction[TElement](String functionName, MergeOption mergeOption, ObjectParameter[] parameters)
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteFunction[TElement](String functionName, ObjectParameter[] parameters)
+   at CarDiaryWeb.Entities.getFuelConsumptionsForCar(Nullable`1 id) in C:\Users\radoslav.gavrailov\documents\visual studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\CarDiaryModel.Context.cs:line 61
+   at CarDiaryWeb.DatabaseUtility.getFuelConsumptionsForCar(Int32 carId) in C:\Users\radoslav.gavrailov\documents\visual studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 307
+
