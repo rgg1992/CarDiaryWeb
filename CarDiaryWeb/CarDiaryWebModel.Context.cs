@@ -28,10 +28,6 @@ namespace CarDiaryWeb
         }
     
         public virtual DbSet<C__MigrationHistory> C__MigrationHistory { get; set; }
-        public virtual DbSet<AspNetRoles> AspNetRoles { get; set; }
-        public virtual DbSet<AspNetUserClaims> AspNetUserClaims { get; set; }
-        public virtual DbSet<AspNetUserLogins> AspNetUserLogins { get; set; }
-        public virtual DbSet<AspNetUsers> AspNetUsers { get; set; }
         public virtual DbSet<car> car { get; set; }
         public virtual DbSet<car_brands> car_brands { get; set; }
         public virtual DbSet<car_diary_log> car_diary_log { get; set; }
