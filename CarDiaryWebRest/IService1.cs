@@ -33,16 +33,7 @@ namespace CarDiaryWebRest
 
         [OperationContract]
         List<String> getCarModels(String brand);
-
-        //[OperationContract]
-        //List<String> getInsertedBrands(String user);
-
-        //[OperationContract]
-        //List<String> getInsertedModels(String user);
-
-        //[OperationContract]
-        //List<String> getSavedImages(String user);
-
+       
         [OperationContract]
         List<Car> getInsertedCars(String user);
 
@@ -96,6 +87,9 @@ namespace CarDiaryWebRest
 
         [OperationContract]
         Boolean deleteOtherCosts(int id);
+
+        [OperationContract]
+        Boolean checkUser(string user, string pass);
     }
 
 

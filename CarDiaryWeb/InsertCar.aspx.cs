@@ -22,10 +22,10 @@ namespace CarDiaryWeb
             RangeValidator1.MaximumValue = DateTime.Now.Year.ToString();
             RangeValidator1.ErrorMessage = "Моля въведете конкретна стойност за Година (1900 - " + DateTime.Now.Year.ToString() + ")!";
 
-            //if (!System.Web.HttpContext.Current.User.Identity.IsAuthenticated)
-            //{
-            //    IdentityHelper.RedirectToReturnUrl(/*Request.QueryString["ReturnUrl"]*/"~/Account/Login.aspx", Response);
-            //}
+            if (!System.Web.HttpContext.Current.User.Identity.IsAuthenticated)
+            {
+                IdentityHelper.RedirectToReturnUrl(/*Request.QueryString["ReturnUrl"]*/"~/Account/Login.aspx", Response);
+            }
 
             //Labelcount.Text = Application["carCount"].ToString();
             if (Application["userName"] != null)
@@ -54,7 +54,7 @@ namespace CarDiaryWeb
                 ddlBrand.AppendDataBoundItems = true;
                 try
                 {
-                    using (var context = new Entities())
+                    using (var context = new CarDiaryWebEF())
                     {
                         var brands = (from cb in context.car_brands
                                       select cb.car_brand).Distinct().ToList();
@@ -157,7 +157,7 @@ namespace CarDiaryWeb
             //    ddlModel.DataBind();
             try
             {
-                using (var context = new Entities())
+                using (var context = new CarDiaryWebEF())
                 {
                     var models = (from cb in context.car_brands
                                   where (cb.car_brand == brand)

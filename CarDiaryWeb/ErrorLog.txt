@@ -106,3 +106,1729 @@ Stack Trace:
    at System.Linq.Queryable.Max[TSource](IQueryable`1 source)
    at CarDiaryWeb.DatabaseUtility.getFuelConsumptionLastDate(Int32 carId) in C:\Users\radoslav.gavrailov\documents\visual studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 197
 
+********** 29.12.2016 г. 14:11:10 **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at System.Nullable`1.get_Value()
+   at CarDiaryWeb.DatabaseUtility.getAvgCons(Int32 carId) in D:\Old PC\My Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 89
+
+********** 29.12.2016 г. 14:11:14 **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at System.Nullable`1.get_Value()
+   at CarDiaryWeb.DatabaseUtility.getAvgCons(Int32 carId) in D:\Old PC\My Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 89
+
+********** 29.12.2016 г. 14:11:17 **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at System.Nullable`1.get_Value()
+   at CarDiaryWeb.DatabaseUtility.getAvgCons(Int32 carId) in D:\Old PC\My Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 89
+
+********** 29.12.2016 г. 14:11:17 **********
+Exception Type: System.InvalidOperationException
+Exception: The cast to value type 'System.Double' failed because the materialized value is null. Either the result type's generic parameter or the query must use a nullable type.
+Source: DB.cs
+Stack Trace: 
+   at System.Data.Entity.Core.Common.Internal.Materialization.Shaper.ErrorHandlingValueReader`1.GetValue(DbDataReader reader, Int32 ordinal)
+   at lambda_method(Closure , Shaper )
+   at System.Data.Entity.Core.Common.Internal.Materialization.Coordinator`1.ReadNextElement(Shaper shaper)
+   at System.Data.Entity.Core.Common.Internal.Materialization.Shaper`1.SimpleEnumerator.MoveNext()
+   at System.Data.Entity.Internal.LazyEnumerator`1.MoveNext()
+   at System.Linq.Enumerable.Single[TSource](IEnumerable`1 source)
+   at System.Data.Entity.Core.Objects.ELinq.ObjectQueryProvider.<GetElementFunction>b__3[TResult](IEnumerable`1 sequence)
+   at System.Data.Entity.Core.Objects.ELinq.ObjectQueryProvider.ExecuteSingle[TResult](IEnumerable`1 query, Expression queryRoot)
+   at System.Data.Entity.Core.Objects.ELinq.ObjectQueryProvider.System.Linq.IQueryProvider.Execute[TResult](Expression expression)
+   at System.Data.Entity.Internal.Linq.DbQueryProvider.Execute[TResult](Expression expression)
+   at System.Linq.Queryable.Sum(IQueryable`1 source)
+   at CarDiaryWeb.DatabaseUtility.getLitersConsumed(Int32 carId) in D:\Old PC\My Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 286
+
+********** 29.12.2016 г. 14:11:27 **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at System.Nullable`1.get_Value()
+   at CarDiaryWeb.DatabaseUtility.getAvgCons(Int32 carId) in D:\Old PC\My Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 89
+
+********** 3.1.2017 г. 10:48:01 **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at System.Nullable`1.get_Value()
+   at CarDiaryWeb.DatabaseUtility.getAvgCons(Int32 carId) in D:\Old PC\My Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 89
+
+********** 3.1.2017 г. 10:48:57 **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at System.Nullable`1.get_Value()
+   at CarDiaryWeb.DatabaseUtility.getAvgCons(Int32 carId) in D:\Old PC\My Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 89
+
+********** 3.1.2017 г. 10:49:02 **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at System.Nullable`1.get_Value()
+   at CarDiaryWeb.DatabaseUtility.getAvgCons(Int32 carId) in D:\Old PC\My Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 89
+
+********** 3.1.2017 г. 10:53:32 **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at System.Nullable`1.get_Value()
+   at CarDiaryWeb.DatabaseUtility.getAvgCons(Int32 carId) in D:\Old PC\My Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 89
+
+********** 3.1.2017 г. 10:53:52 **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at System.Nullable`1.get_Value()
+   at CarDiaryWeb.DatabaseUtility.getAvgCons(Int32 carId) in D:\Old PC\My Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 89
+
+********** 3.1.2017 г. 10:53:53 **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at System.Nullable`1.get_Value()
+   at CarDiaryWeb.DatabaseUtility.getAvgCons(Int32 carId) in D:\Old PC\My Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 89
+
+********** 3.1.2017 г. 10:53:56 **********
+Exception Type: System.InvalidOperationException
+Exception: The class 'CarDiaryWeb.fuel_consumption' has no parameterless constructor.
+Source: DB.cs
+Stack Trace: 
+   at System.Data.Entity.Core.Objects.DelegateFactory.GetConstructorForType(Type type)
+   at System.Data.Entity.Core.Common.Internal.Materialization.Translator.TranslatorVisitor.Emit_ConstructEntity(EntityType oSpaceType, IEnumerable`1 propertyBindings, Expression entityKeyReader, Expression entitySetReader, TranslatorArg arg, EntityProxyTypeInfo proxyTypeInfo)
+   at System.Data.Entity.Core.Common.Internal.Materialization.Translator.TranslatorVisitor.Visit(EntityColumnMap columnMap, TranslatorArg arg)
+   at System.Data.Entity.Core.Query.InternalTrees.EntityColumnMap.Accept[TResultType,TArgType](ColumnMapVisitorWithResults`2 visitor, TArgType arg)
+   at System.Data.Entity.Core.Common.Internal.Materialization.Translator.TranslatorVisitor.ProcessCollectionColumnMap(CollectionColumnMap columnMap, TranslatorArg arg, ColumnMap discriminatorColumnMap, Object discriminatorValue)
+   at System.Data.Entity.Core.Common.Internal.Materialization.Translator.TranslatorVisitor.Visit(SimpleCollectionColumnMap columnMap, TranslatorArg arg)
+   at System.Data.Entity.Core.Query.InternalTrees.SimpleCollectionColumnMap.Accept[TResultType,TArgType](ColumnMapVisitorWithResults`2 visitor, TArgType arg)
+   at System.Data.Entity.Core.Common.Internal.Materialization.Translator.TranslateColumnMap[T](ColumnMap columnMap, MetadataWorkspace workspace, SpanIndex spanIndex, MergeOption mergeOption, Boolean streaming, Boolean valueLayer)
+   at System.Data.Entity.Core.Objects.ObjectContext.MaterializedDataRecord[TElement](EntityCommand entityCommand, DbDataReader storeReader, Int32 resultSetIndex, ReadOnlyCollection`1 entitySets, EdmType[] edmTypes, ShaperFactory`1 shaperFactory, MergeOption mergeOption, Boolean streaming)
+   at System.Data.Entity.Core.Objects.ObjectContext.CreateFunctionObjectResult[TElement](EntityCommand entityCommand, ReadOnlyCollection`1 entitySets, EdmType[] edmTypes, ExecutionOptions executionOptions)
+   at System.Data.Entity.Core.Objects.ObjectContext.<>c__DisplayClass47`1.<ExecuteFunction>b__46()
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)
+   at System.Data.Entity.Core.Objects.ObjectContext.<>c__DisplayClass47`1.<ExecuteFunction>b__45()
+   at System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteFunction[TElement](String functionName, ExecutionOptions executionOptions, ObjectParameter[] parameters)
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteFunction[TElement](String functionName, MergeOption mergeOption, ObjectParameter[] parameters)
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteFunction[TElement](String functionName, ObjectParameter[] parameters)
+   at CarDiaryWeb.CarDiaryWebEF.getFuelConsumptionsForCar(Nullable`1 id) in D:\Old PC\My Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\CarDiaryWebModel.Context.cs:line 103
+   at CarDiaryWeb.DatabaseUtility.getFuelConsumptionsForCar(Int32 carId) in D:\Old PC\My Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 307
+
+********** 3.1.2017 г. 10:53:57 **********
+Exception Type: System.InvalidOperationException
+Exception: The class 'CarDiaryWeb.fuel_consumption' has no parameterless constructor.
+Source: DB.cs
+Stack Trace: 
+   at System.Data.Entity.Core.Objects.DelegateFactory.GetConstructorForType(Type type)
+   at System.Data.Entity.Core.Common.Internal.Materialization.Translator.TranslatorVisitor.Emit_ConstructEntity(EntityType oSpaceType, IEnumerable`1 propertyBindings, Expression entityKeyReader, Expression entitySetReader, TranslatorArg arg, EntityProxyTypeInfo proxyTypeInfo)
+   at System.Data.Entity.Core.Common.Internal.Materialization.Translator.TranslatorVisitor.Visit(EntityColumnMap columnMap, TranslatorArg arg)
+   at System.Data.Entity.Core.Query.InternalTrees.EntityColumnMap.Accept[TResultType,TArgType](ColumnMapVisitorWithResults`2 visitor, TArgType arg)
+   at System.Data.Entity.Core.Common.Internal.Materialization.Translator.TranslatorVisitor.ProcessCollectionColumnMap(CollectionColumnMap columnMap, TranslatorArg arg, ColumnMap discriminatorColumnMap, Object discriminatorValue)
+   at System.Data.Entity.Core.Common.Internal.Materialization.Translator.TranslatorVisitor.Visit(SimpleCollectionColumnMap columnMap, TranslatorArg arg)
+   at System.Data.Entity.Core.Query.InternalTrees.SimpleCollectionColumnMap.Accept[TResultType,TArgType](ColumnMapVisitorWithResults`2 visitor, TArgType arg)
+   at System.Data.Entity.Core.Common.Internal.Materialization.Translator.TranslateColumnMap[T](ColumnMap columnMap, MetadataWorkspace workspace, SpanIndex spanIndex, MergeOption mergeOption, Boolean streaming, Boolean valueLayer)
+   at System.Data.Entity.Core.Objects.ObjectContext.MaterializedDataRecord[TElement](EntityCommand entityCommand, DbDataReader storeReader, Int32 resultSetIndex, ReadOnlyCollection`1 entitySets, EdmType[] edmTypes, ShaperFactory`1 shaperFactory, MergeOption mergeOption, Boolean streaming)
+   at System.Data.Entity.Core.Objects.ObjectContext.CreateFunctionObjectResult[TElement](EntityCommand entityCommand, ReadOnlyCollection`1 entitySets, EdmType[] edmTypes, ExecutionOptions executionOptions)
+   at System.Data.Entity.Core.Objects.ObjectContext.<>c__DisplayClass47`1.<ExecuteFunction>b__46()
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)
+   at System.Data.Entity.Core.Objects.ObjectContext.<>c__DisplayClass47`1.<ExecuteFunction>b__45()
+   at System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteFunction[TElement](String functionName, ExecutionOptions executionOptions, ObjectParameter[] parameters)
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteFunction[TElement](String functionName, MergeOption mergeOption, ObjectParameter[] parameters)
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteFunction[TElement](String functionName, ObjectParameter[] parameters)
+   at CarDiaryWeb.CarDiaryWebEF.getFuelConsumptionsForCar(Nullable`1 id) in D:\Old PC\My Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\CarDiaryWebModel.Context.cs:line 103
+   at CarDiaryWeb.DatabaseUtility.getFuelConsumptionsForCar(Int32 carId) in D:\Old PC\My Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 307
+
+********** 3.1.2017 г. 14:08:31 **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at System.Nullable`1.get_Value()
+   at CarDiaryWeb.DatabaseUtility.getAvgCons(Int32 carId) in D:\Old PC\My Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 89
+
+********** 3.1.2017 г. 14:08:31 **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at System.Nullable`1.get_Value()
+   at CarDiaryWeb.DatabaseUtility.getAvgCons(Int32 carId) in D:\Old PC\My Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 89
+
+********** 3.1.2017 г. 14:08:31 **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at System.Nullable`1.get_Value()
+   at CarDiaryWeb.DatabaseUtility.getAvgCons(Int32 carId) in D:\Old PC\My Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 89
+
+********** 3.1.2017 г. 14:08:31 **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at System.Nullable`1.get_Value()
+   at CarDiaryWeb.DatabaseUtility.getAvgCons(Int32 carId) in D:\Old PC\My Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 89
+
+********** 3.1.2017 г. 14:08:31 **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at System.Nullable`1.get_Value()
+   at CarDiaryWeb.DatabaseUtility.getAvgCons(Int32 carId) in D:\Old PC\My Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 89
+
+********** 3.1.2017 г. 14:08:31 **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at System.Nullable`1.get_Value()
+   at CarDiaryWeb.DatabaseUtility.getAvgCons(Int32 carId) in D:\Old PC\My Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 89
+
+********** 3.1.2017 г. 14:08:31 **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at System.Nullable`1.get_Value()
+   at CarDiaryWeb.DatabaseUtility.getAvgCons(Int32 carId) in D:\Old PC\My Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 89
+
+********** 3.1.2017 г. 14:08:31 **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at System.Nullable`1.get_Value()
+   at CarDiaryWeb.DatabaseUtility.getAvgCons(Int32 carId) in D:\Old PC\My Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 89
+
+********** 3.1.2017 г. 14:08:31 **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at System.Nullable`1.get_Value()
+   at CarDiaryWeb.DatabaseUtility.getAvgCons(Int32 carId) in D:\Old PC\My Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 89
+
+********** 3.1.2017 г. 14:08:31 **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at System.Nullable`1.get_Value()
+   at CarDiaryWeb.DatabaseUtility.getAvgCons(Int32 carId) in D:\Old PC\My Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 89
+
+********** 3.1.2017 г. 14:08:37 **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at System.Nullable`1.get_Value()
+   at CarDiaryWeb.DatabaseUtility.getAvgCons(Int32 carId) in D:\Old PC\My Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 89
+
+********** 3.1.2017 г. 14:08:37 **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at System.Nullable`1.get_Value()
+   at CarDiaryWeb.DatabaseUtility.getAvgCons(Int32 carId) in D:\Old PC\My Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 89
+
+********** 3.1.2017 г. 14:08:37 **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at System.Nullable`1.get_Value()
+   at CarDiaryWeb.DatabaseUtility.getAvgCons(Int32 carId) in D:\Old PC\My Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 89
+
+********** 3.1.2017 г. 14:08:37 **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at System.Nullable`1.get_Value()
+   at CarDiaryWeb.DatabaseUtility.getAvgCons(Int32 carId) in D:\Old PC\My Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 89
+
+********** 3.1.2017 г. 14:08:37 **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at System.Nullable`1.get_Value()
+   at CarDiaryWeb.DatabaseUtility.getAvgCons(Int32 carId) in D:\Old PC\My Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 89
+
+********** 3.1.2017 г. 14:08:37 **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at System.Nullable`1.get_Value()
+   at CarDiaryWeb.DatabaseUtility.getAvgCons(Int32 carId) in D:\Old PC\My Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 89
+
+********** 3.1.2017 г. 14:08:37 **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at System.Nullable`1.get_Value()
+   at CarDiaryWeb.DatabaseUtility.getAvgCons(Int32 carId) in D:\Old PC\My Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 89
+
+********** 3.1.2017 г. 14:08:37 **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at System.Nullable`1.get_Value()
+   at CarDiaryWeb.DatabaseUtility.getAvgCons(Int32 carId) in D:\Old PC\My Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 89
+
+********** 3.1.2017 г. 14:08:37 **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at System.Nullable`1.get_Value()
+   at CarDiaryWeb.DatabaseUtility.getAvgCons(Int32 carId) in D:\Old PC\My Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 89
+
+********** 3.1.2017 г. 14:08:37 **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at System.Nullable`1.get_Value()
+   at CarDiaryWeb.DatabaseUtility.getAvgCons(Int32 carId) in D:\Old PC\My Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 89
+
+********** 3.1.2017 г. 14:14:27 **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at System.Nullable`1.get_Value()
+   at CarDiaryWeb.DatabaseUtility.getAvgCons(Int32 carId) in D:\Old PC\My Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 89
+
+********** 3.1.2017 г. 14:14:27 **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at System.Nullable`1.get_Value()
+   at CarDiaryWeb.DatabaseUtility.getAvgCons(Int32 carId) in D:\Old PC\My Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 89
+
+********** 3.1.2017 г. 14:14:27 **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at System.Nullable`1.get_Value()
+   at CarDiaryWeb.DatabaseUtility.getAvgCons(Int32 carId) in D:\Old PC\My Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 89
+
+********** 3.1.2017 г. 14:14:27 **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at System.Nullable`1.get_Value()
+   at CarDiaryWeb.DatabaseUtility.getAvgCons(Int32 carId) in D:\Old PC\My Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 89
+
+********** 3.1.2017 г. 14:14:27 **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at System.Nullable`1.get_Value()
+   at CarDiaryWeb.DatabaseUtility.getAvgCons(Int32 carId) in D:\Old PC\My Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 89
+
+********** 3.1.2017 г. 14:14:27 **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at System.Nullable`1.get_Value()
+   at CarDiaryWeb.DatabaseUtility.getAvgCons(Int32 carId) in D:\Old PC\My Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 89
+
+********** 3.1.2017 г. 14:14:27 **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at System.Nullable`1.get_Value()
+   at CarDiaryWeb.DatabaseUtility.getAvgCons(Int32 carId) in D:\Old PC\My Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 89
+
+********** 3.1.2017 г. 14:14:27 **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at System.Nullable`1.get_Value()
+   at CarDiaryWeb.DatabaseUtility.getAvgCons(Int32 carId) in D:\Old PC\My Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 89
+
+********** 3.1.2017 г. 14:14:27 **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at System.Nullable`1.get_Value()
+   at CarDiaryWeb.DatabaseUtility.getAvgCons(Int32 carId) in D:\Old PC\My Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 89
+
+********** 3.1.2017 г. 14:14:27 **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at System.Nullable`1.get_Value()
+   at CarDiaryWeb.DatabaseUtility.getAvgCons(Int32 carId) in D:\Old PC\My Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 89
+
+********** 3.1.2017 г. 14:15:16 **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at System.Nullable`1.get_Value()
+   at CarDiaryWeb.DatabaseUtility.getAvgCons(Int32 carId) in D:\Old PC\My Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 89
+
+********** 3.1.2017 г. 14:15:16 **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at System.Nullable`1.get_Value()
+   at CarDiaryWeb.DatabaseUtility.getAvgCons(Int32 carId) in D:\Old PC\My Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 89
+
+********** 3.1.2017 г. 14:15:16 **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at System.Nullable`1.get_Value()
+   at CarDiaryWeb.DatabaseUtility.getAvgCons(Int32 carId) in D:\Old PC\My Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 89
+
+********** 3.1.2017 г. 14:15:16 **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at System.Nullable`1.get_Value()
+   at CarDiaryWeb.DatabaseUtility.getAvgCons(Int32 carId) in D:\Old PC\My Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 89
+
+********** 3.1.2017 г. 14:15:16 **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at System.Nullable`1.get_Value()
+   at CarDiaryWeb.DatabaseUtility.getAvgCons(Int32 carId) in D:\Old PC\My Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 89
+
+********** 3.1.2017 г. 14:15:16 **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at System.Nullable`1.get_Value()
+   at CarDiaryWeb.DatabaseUtility.getAvgCons(Int32 carId) in D:\Old PC\My Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 89
+
+********** 3.1.2017 г. 14:15:16 **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at System.Nullable`1.get_Value()
+   at CarDiaryWeb.DatabaseUtility.getAvgCons(Int32 carId) in D:\Old PC\My Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 89
+
+********** 3.1.2017 г. 14:15:16 **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at System.Nullable`1.get_Value()
+   at CarDiaryWeb.DatabaseUtility.getAvgCons(Int32 carId) in D:\Old PC\My Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 89
+
+********** 3.1.2017 г. 14:15:16 **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at System.Nullable`1.get_Value()
+   at CarDiaryWeb.DatabaseUtility.getAvgCons(Int32 carId) in D:\Old PC\My Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 89
+
+********** 3.1.2017 г. 14:15:16 **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at System.Nullable`1.get_Value()
+   at CarDiaryWeb.DatabaseUtility.getAvgCons(Int32 carId) in D:\Old PC\My Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 89
+
+********** 3.1.2017 г. 14:15:16 **********
+Inner Exception Type: System.InvalidOperationException
+Inner Exception: The class 'CarDiaryWeb.fuel_consumption' has no parameterless constructor.
+Inner Source: EntityFramework
+Inner Stack Trace: 
+   at System.Data.Entity.Core.Objects.DelegateFactory.GetConstructorForType(Type type)
+   at System.Data.Entity.Core.Common.Internal.Materialization.Translator.TranslatorVisitor.Emit_ConstructEntity(EntityType oSpaceType, IEnumerable`1 propertyBindings, Expression entityKeyReader, Expression entitySetReader, TranslatorArg arg, EntityProxyTypeInfo proxyTypeInfo)
+   at System.Data.Entity.Core.Common.Internal.Materialization.Translator.TranslatorVisitor.Visit(EntityColumnMap columnMap, TranslatorArg arg)
+   at System.Data.Entity.Core.Query.InternalTrees.EntityColumnMap.Accept[TResultType,TArgType](ColumnMapVisitorWithResults`2 visitor, TArgType arg)
+   at System.Data.Entity.Core.Common.Internal.Materialization.Translator.TranslatorVisitor.ProcessCollectionColumnMap(CollectionColumnMap columnMap, TranslatorArg arg, ColumnMap discriminatorColumnMap, Object discriminatorValue)
+   at System.Data.Entity.Core.Common.Internal.Materialization.Translator.TranslatorVisitor.Visit(SimpleCollectionColumnMap columnMap, TranslatorArg arg)
+   at System.Data.Entity.Core.Query.InternalTrees.SimpleCollectionColumnMap.Accept[TResultType,TArgType](ColumnMapVisitorWithResults`2 visitor, TArgType arg)
+   at System.Data.Entity.Core.Common.Internal.Materialization.Translator.TranslateColumnMap[T](ColumnMap columnMap, MetadataWorkspace workspace, SpanIndex spanIndex, MergeOption mergeOption, Boolean streaming, Boolean valueLayer)
+Exception Type: System.Reflection.TargetInvocationException
+Exception: Exception has been thrown by the target of an invocation.
+Source: DB.cs
+Stack Trace: 
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor)
+   at System.Reflection.RuntimeMethodInfo.UnsafeInvokeInternal(Object obj, Object[] parameters, Object[] arguments)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at System.Data.Entity.Core.Common.Internal.Materialization.Translator.TranslateColumnMap(Translator translator, Type elementType, ColumnMap columnMap, MetadataWorkspace workspace, SpanIndex spanIndex, MergeOption mergeOption, Boolean streaming, Boolean valueLayer)
+   at System.Data.Entity.Core.Objects.Internal.ObjectQueryExecutionPlanFactory.Prepare(ObjectContext context, DbQueryCommandTree tree, Type elementType, MergeOption mergeOption, Boolean streaming, Span span, IEnumerable`1 compiledQueryParameters, AliasGenerator aliasGenerator)
+   at System.Data.Entity.Core.Objects.ELinq.ELinqQueryState.GetExecutionPlan(Nullable`1 forMergeOption)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.<>c__DisplayClass7.<GetResults>b__6()
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.<>c__DisplayClass7.<GetResults>b__5()
+   at System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.GetResults(Nullable`1 forMergeOption)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.<System.Collections.Generic.IEnumerable<T>.GetEnumerator>b__0()
+   at System.Data.Entity.Internal.LazyEnumerator`1.MoveNext()
+   at System.Linq.Enumerable.SingleOrDefault[TSource](IEnumerable`1 source)
+   at System.Data.Entity.Core.Objects.ELinq.ObjectQueryProvider.<GetElementFunction>b__2[TResult](IEnumerable`1 sequence)
+   at System.Data.Entity.Core.Objects.ELinq.ObjectQueryProvider.ExecuteSingle[TResult](IEnumerable`1 query, Expression queryRoot)
+   at System.Data.Entity.Core.Objects.ELinq.ObjectQueryProvider.System.Linq.IQueryProvider.Execute[TResult](Expression expression)
+   at System.Data.Entity.Internal.Linq.DbQueryProvider.Execute[TResult](Expression expression)
+   at System.Linq.Queryable.SingleOrDefault[TSource](IQueryable`1 source, Expression`1 predicate)
+   at CarDiaryWeb.DatabaseUtility.deleteCar(Int32 carId) in D:\Old PC\My Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 126
+
+********** 3.1.2017 г. 14:15:22 **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at System.Nullable`1.get_Value()
+   at CarDiaryWeb.DatabaseUtility.getAvgCons(Int32 carId) in D:\Old PC\My Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 89
+
+********** 3.1.2017 г. 14:15:22 **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at System.Nullable`1.get_Value()
+   at CarDiaryWeb.DatabaseUtility.getAvgCons(Int32 carId) in D:\Old PC\My Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 89
+
+********** 3.1.2017 г. 14:15:22 **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at System.Nullable`1.get_Value()
+   at CarDiaryWeb.DatabaseUtility.getAvgCons(Int32 carId) in D:\Old PC\My Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 89
+
+********** 3.1.2017 г. 14:15:22 **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at System.Nullable`1.get_Value()
+   at CarDiaryWeb.DatabaseUtility.getAvgCons(Int32 carId) in D:\Old PC\My Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 89
+
+********** 3.1.2017 г. 14:15:22 **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at System.Nullable`1.get_Value()
+   at CarDiaryWeb.DatabaseUtility.getAvgCons(Int32 carId) in D:\Old PC\My Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 89
+
+********** 3.1.2017 г. 14:15:22 **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at System.Nullable`1.get_Value()
+   at CarDiaryWeb.DatabaseUtility.getAvgCons(Int32 carId) in D:\Old PC\My Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 89
+
+********** 3.1.2017 г. 14:15:22 **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at System.Nullable`1.get_Value()
+   at CarDiaryWeb.DatabaseUtility.getAvgCons(Int32 carId) in D:\Old PC\My Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 89
+
+********** 3.1.2017 г. 14:15:22 **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at System.Nullable`1.get_Value()
+   at CarDiaryWeb.DatabaseUtility.getAvgCons(Int32 carId) in D:\Old PC\My Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 89
+
+********** 3.1.2017 г. 14:15:22 **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at System.Nullable`1.get_Value()
+   at CarDiaryWeb.DatabaseUtility.getAvgCons(Int32 carId) in D:\Old PC\My Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 89
+
+********** 3.1.2017 г. 14:15:22 **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at System.Nullable`1.get_Value()
+   at CarDiaryWeb.DatabaseUtility.getAvgCons(Int32 carId) in D:\Old PC\My Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 89
+
+********** 3.1.2017 г. 14:15:39 **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at System.Nullable`1.get_Value()
+   at CarDiaryWeb.DatabaseUtility.getAvgCons(Int32 carId) in D:\Old PC\My Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 89
+
+********** 3.1.2017 г. 14:15:39 **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at System.Nullable`1.get_Value()
+   at CarDiaryWeb.DatabaseUtility.getAvgCons(Int32 carId) in D:\Old PC\My Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 89
+
+********** 3.1.2017 г. 14:15:39 **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at System.Nullable`1.get_Value()
+   at CarDiaryWeb.DatabaseUtility.getAvgCons(Int32 carId) in D:\Old PC\My Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 89
+
+********** 3.1.2017 г. 14:15:39 **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at System.Nullable`1.get_Value()
+   at CarDiaryWeb.DatabaseUtility.getAvgCons(Int32 carId) in D:\Old PC\My Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 89
+
+********** 3.1.2017 г. 14:15:39 **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at System.Nullable`1.get_Value()
+   at CarDiaryWeb.DatabaseUtility.getAvgCons(Int32 carId) in D:\Old PC\My Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 89
+
+********** 3.1.2017 г. 14:15:39 **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at System.Nullable`1.get_Value()
+   at CarDiaryWeb.DatabaseUtility.getAvgCons(Int32 carId) in D:\Old PC\My Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 89
+
+********** 3.1.2017 г. 14:15:39 **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at System.Nullable`1.get_Value()
+   at CarDiaryWeb.DatabaseUtility.getAvgCons(Int32 carId) in D:\Old PC\My Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 89
+
+********** 3.1.2017 г. 14:15:39 **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at System.Nullable`1.get_Value()
+   at CarDiaryWeb.DatabaseUtility.getAvgCons(Int32 carId) in D:\Old PC\My Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 89
+
+********** 3.1.2017 г. 14:15:39 **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at System.Nullable`1.get_Value()
+   at CarDiaryWeb.DatabaseUtility.getAvgCons(Int32 carId) in D:\Old PC\My Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 89
+
+********** 3.1.2017 г. 14:15:39 **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at System.Nullable`1.get_Value()
+   at CarDiaryWeb.DatabaseUtility.getAvgCons(Int32 carId) in D:\Old PC\My Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 89
+
+********** 3.1.2017 г. 14:16:49 **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at System.Nullable`1.get_Value()
+   at CarDiaryWeb.DatabaseUtility.getAvgCons(Int32 carId) in D:\Old PC\My Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 89
+
+********** 3.1.2017 г. 14:16:50 **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at System.Nullable`1.get_Value()
+   at CarDiaryWeb.DatabaseUtility.getAvgCons(Int32 carId) in D:\Old PC\My Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 89
+
+********** 3.1.2017 г. 14:16:50 **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at System.Nullable`1.get_Value()
+   at CarDiaryWeb.DatabaseUtility.getAvgCons(Int32 carId) in D:\Old PC\My Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 89
+
+********** 3.1.2017 г. 14:16:50 **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at System.Nullable`1.get_Value()
+   at CarDiaryWeb.DatabaseUtility.getAvgCons(Int32 carId) in D:\Old PC\My Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 89
+
+********** 3.1.2017 г. 14:16:50 **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at System.Nullable`1.get_Value()
+   at CarDiaryWeb.DatabaseUtility.getAvgCons(Int32 carId) in D:\Old PC\My Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 89
+
+********** 3.1.2017 г. 14:16:50 **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at System.Nullable`1.get_Value()
+   at CarDiaryWeb.DatabaseUtility.getAvgCons(Int32 carId) in D:\Old PC\My Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 89
+
+********** 3.1.2017 г. 14:16:50 **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at System.Nullable`1.get_Value()
+   at CarDiaryWeb.DatabaseUtility.getAvgCons(Int32 carId) in D:\Old PC\My Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 89
+
+********** 3.1.2017 г. 14:16:50 **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at System.Nullable`1.get_Value()
+   at CarDiaryWeb.DatabaseUtility.getAvgCons(Int32 carId) in D:\Old PC\My Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 89
+
+********** 3.1.2017 г. 14:16:50 **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at System.Nullable`1.get_Value()
+   at CarDiaryWeb.DatabaseUtility.getAvgCons(Int32 carId) in D:\Old PC\My Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 89
+
+********** 3.1.2017 г. 14:16:50 **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at System.Nullable`1.get_Value()
+   at CarDiaryWeb.DatabaseUtility.getAvgCons(Int32 carId) in D:\Old PC\My Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 89
+
+********** 3.1.2017 г. 14:17:10 **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at System.Nullable`1.get_Value()
+   at CarDiaryWeb.DatabaseUtility.getAvgCons(Int32 carId) in D:\Old PC\My Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 89
+
+********** 3.1.2017 г. 14:17:10 **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at System.Nullable`1.get_Value()
+   at CarDiaryWeb.DatabaseUtility.getAvgCons(Int32 carId) in D:\Old PC\My Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 89
+
+********** 3.1.2017 г. 14:17:10 **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at System.Nullable`1.get_Value()
+   at CarDiaryWeb.DatabaseUtility.getAvgCons(Int32 carId) in D:\Old PC\My Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 89
+
+********** 3.1.2017 г. 14:17:10 **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at System.Nullable`1.get_Value()
+   at CarDiaryWeb.DatabaseUtility.getAvgCons(Int32 carId) in D:\Old PC\My Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 89
+
+********** 3.1.2017 г. 14:17:10 **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at System.Nullable`1.get_Value()
+   at CarDiaryWeb.DatabaseUtility.getAvgCons(Int32 carId) in D:\Old PC\My Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 89
+
+********** 3.1.2017 г. 14:17:10 **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at System.Nullable`1.get_Value()
+   at CarDiaryWeb.DatabaseUtility.getAvgCons(Int32 carId) in D:\Old PC\My Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 89
+
+********** 3.1.2017 г. 14:17:10 **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at System.Nullable`1.get_Value()
+   at CarDiaryWeb.DatabaseUtility.getAvgCons(Int32 carId) in D:\Old PC\My Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 89
+
+********** 3.1.2017 г. 14:17:10 **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at System.Nullable`1.get_Value()
+   at CarDiaryWeb.DatabaseUtility.getAvgCons(Int32 carId) in D:\Old PC\My Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 89
+
+********** 3.1.2017 г. 14:17:10 **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at System.Nullable`1.get_Value()
+   at CarDiaryWeb.DatabaseUtility.getAvgCons(Int32 carId) in D:\Old PC\My Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 89
+
+********** 3.1.2017 г. 14:17:10 **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at System.Nullable`1.get_Value()
+   at CarDiaryWeb.DatabaseUtility.getAvgCons(Int32 carId) in D:\Old PC\My Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 89
+
+********** 3.1.2017 г. 14:17:34 **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at System.Nullable`1.get_Value()
+   at CarDiaryWeb.DatabaseUtility.getAvgCons(Int32 carId) in D:\Old PC\My Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 89
+
+********** 3.1.2017 г. 14:17:34 **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at System.Nullable`1.get_Value()
+   at CarDiaryWeb.DatabaseUtility.getAvgCons(Int32 carId) in D:\Old PC\My Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 89
+
+********** 3.1.2017 г. 14:17:34 **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at System.Nullable`1.get_Value()
+   at CarDiaryWeb.DatabaseUtility.getAvgCons(Int32 carId) in D:\Old PC\My Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 89
+
+********** 3.1.2017 г. 14:17:34 **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at System.Nullable`1.get_Value()
+   at CarDiaryWeb.DatabaseUtility.getAvgCons(Int32 carId) in D:\Old PC\My Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 89
+
+********** 3.1.2017 г. 14:17:34 **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at System.Nullable`1.get_Value()
+   at CarDiaryWeb.DatabaseUtility.getAvgCons(Int32 carId) in D:\Old PC\My Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 89
+
+********** 3.1.2017 г. 14:17:34 **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at System.Nullable`1.get_Value()
+   at CarDiaryWeb.DatabaseUtility.getAvgCons(Int32 carId) in D:\Old PC\My Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 89
+
+********** 3.1.2017 г. 14:17:34 **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at System.Nullable`1.get_Value()
+   at CarDiaryWeb.DatabaseUtility.getAvgCons(Int32 carId) in D:\Old PC\My Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 89
+
+********** 3.1.2017 г. 14:17:34 **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at System.Nullable`1.get_Value()
+   at CarDiaryWeb.DatabaseUtility.getAvgCons(Int32 carId) in D:\Old PC\My Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 89
+
+********** 3.1.2017 г. 14:17:34 **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at System.Nullable`1.get_Value()
+   at CarDiaryWeb.DatabaseUtility.getAvgCons(Int32 carId) in D:\Old PC\My Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 89
+
+********** 3.1.2017 г. 14:17:37 **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at System.Nullable`1.get_Value()
+   at CarDiaryWeb.DatabaseUtility.getAvgCons(Int32 carId) in D:\Old PC\My Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 89
+
+********** 3.1.2017 г. 14:17:37 **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at System.Nullable`1.get_Value()
+   at CarDiaryWeb.DatabaseUtility.getAvgCons(Int32 carId) in D:\Old PC\My Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 89
+
+********** 3.1.2017 г. 14:17:37 **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at System.Nullable`1.get_Value()
+   at CarDiaryWeb.DatabaseUtility.getAvgCons(Int32 carId) in D:\Old PC\My Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 89
+
+********** 3.1.2017 г. 14:17:37 **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at System.Nullable`1.get_Value()
+   at CarDiaryWeb.DatabaseUtility.getAvgCons(Int32 carId) in D:\Old PC\My Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 89
+
+********** 3.1.2017 г. 14:17:37 **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at System.Nullable`1.get_Value()
+   at CarDiaryWeb.DatabaseUtility.getAvgCons(Int32 carId) in D:\Old PC\My Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 89
+
+********** 3.1.2017 г. 14:17:37 **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at System.Nullable`1.get_Value()
+   at CarDiaryWeb.DatabaseUtility.getAvgCons(Int32 carId) in D:\Old PC\My Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 89
+
+********** 3.1.2017 г. 14:17:37 **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at System.Nullable`1.get_Value()
+   at CarDiaryWeb.DatabaseUtility.getAvgCons(Int32 carId) in D:\Old PC\My Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 89
+
+********** 3.1.2017 г. 14:17:37 **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at System.Nullable`1.get_Value()
+   at CarDiaryWeb.DatabaseUtility.getAvgCons(Int32 carId) in D:\Old PC\My Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 89
+
+********** 3.1.2017 г. 14:17:37 **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at System.Nullable`1.get_Value()
+   at CarDiaryWeb.DatabaseUtility.getAvgCons(Int32 carId) in D:\Old PC\My Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 89
+
+********** 3.1.2017 г. 14:17:39 **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at System.Nullable`1.get_Value()
+   at CarDiaryWeb.DatabaseUtility.getAvgCons(Int32 carId) in D:\Old PC\My Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 89
+
+********** 3.1.2017 г. 14:17:39 **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at System.Nullable`1.get_Value()
+   at CarDiaryWeb.DatabaseUtility.getAvgCons(Int32 carId) in D:\Old PC\My Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 89
+
+********** 3.1.2017 г. 14:17:39 **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at System.Nullable`1.get_Value()
+   at CarDiaryWeb.DatabaseUtility.getAvgCons(Int32 carId) in D:\Old PC\My Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 89
+
+********** 3.1.2017 г. 14:17:39 **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at System.Nullable`1.get_Value()
+   at CarDiaryWeb.DatabaseUtility.getAvgCons(Int32 carId) in D:\Old PC\My Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 89
+
+********** 3.1.2017 г. 14:17:39 **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at System.Nullable`1.get_Value()
+   at CarDiaryWeb.DatabaseUtility.getAvgCons(Int32 carId) in D:\Old PC\My Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 89
+
+********** 3.1.2017 г. 14:17:39 **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at System.Nullable`1.get_Value()
+   at CarDiaryWeb.DatabaseUtility.getAvgCons(Int32 carId) in D:\Old PC\My Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 89
+
+********** 3.1.2017 г. 14:17:39 **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at System.Nullable`1.get_Value()
+   at CarDiaryWeb.DatabaseUtility.getAvgCons(Int32 carId) in D:\Old PC\My Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 89
+
+********** 3.1.2017 г. 14:17:39 **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at System.Nullable`1.get_Value()
+   at CarDiaryWeb.DatabaseUtility.getAvgCons(Int32 carId) in D:\Old PC\My Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 89
+
+********** 3.1.2017 г. 14:17:44 **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at System.Nullable`1.get_Value()
+   at CarDiaryWeb.DatabaseUtility.getAvgCons(Int32 carId) in D:\Old PC\My Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 89
+
+********** 3.1.2017 г. 14:17:44 **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at System.Nullable`1.get_Value()
+   at CarDiaryWeb.DatabaseUtility.getAvgCons(Int32 carId) in D:\Old PC\My Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 89
+
+********** 3.1.2017 г. 14:17:44 **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at System.Nullable`1.get_Value()
+   at CarDiaryWeb.DatabaseUtility.getAvgCons(Int32 carId) in D:\Old PC\My Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 89
+
+********** 3.1.2017 г. 14:17:44 **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at System.Nullable`1.get_Value()
+   at CarDiaryWeb.DatabaseUtility.getAvgCons(Int32 carId) in D:\Old PC\My Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 89
+
+********** 3.1.2017 г. 14:17:44 **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at System.Nullable`1.get_Value()
+   at CarDiaryWeb.DatabaseUtility.getAvgCons(Int32 carId) in D:\Old PC\My Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 89
+
+********** 3.1.2017 г. 14:17:44 **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at System.Nullable`1.get_Value()
+   at CarDiaryWeb.DatabaseUtility.getAvgCons(Int32 carId) in D:\Old PC\My Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 89
+
+********** 3.1.2017 г. 14:17:44 **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at System.Nullable`1.get_Value()
+   at CarDiaryWeb.DatabaseUtility.getAvgCons(Int32 carId) in D:\Old PC\My Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 89
+
+********** 3.1.2017 г. 14:17:44 **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at System.Nullable`1.get_Value()
+   at CarDiaryWeb.DatabaseUtility.getAvgCons(Int32 carId) in D:\Old PC\My Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 89
+
+********** 3.1.2017 г. 14:17:44 **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at System.Nullable`1.get_Value()
+   at CarDiaryWeb.DatabaseUtility.getAvgCons(Int32 carId) in D:\Old PC\My Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 89
+
+********** 3.1.2017 г. 14:17:44 **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at System.Nullable`1.get_Value()
+   at CarDiaryWeb.DatabaseUtility.getAvgCons(Int32 carId) in D:\Old PC\My Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 89
+
+********** 3.1.2017 г. 14:17:44 **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at System.Nullable`1.get_Value()
+   at CarDiaryWeb.DatabaseUtility.getAvgCons(Int32 carId) in D:\Old PC\My Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 89
+
+********** 3.1.2017 г. 14:17:44 **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at System.Nullable`1.get_Value()
+   at CarDiaryWeb.DatabaseUtility.getAvgCons(Int32 carId) in D:\Old PC\My Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 89
+
+********** 3.1.2017 г. 14:17:44 **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at System.Nullable`1.get_Value()
+   at CarDiaryWeb.DatabaseUtility.getAvgCons(Int32 carId) in D:\Old PC\My Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 89
+
+********** 3.1.2017 г. 14:17:44 **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at System.Nullable`1.get_Value()
+   at CarDiaryWeb.DatabaseUtility.getAvgCons(Int32 carId) in D:\Old PC\My Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 89
+
+********** 3.1.2017 г. 14:17:44 **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at System.Nullable`1.get_Value()
+   at CarDiaryWeb.DatabaseUtility.getAvgCons(Int32 carId) in D:\Old PC\My Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 89
+
+********** 3.1.2017 г. 14:17:46 **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at System.Nullable`1.get_Value()
+   at CarDiaryWeb.DatabaseUtility.getAvgCons(Int32 carId) in D:\Old PC\My Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 89
+
+********** 3.1.2017 г. 14:17:46 **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at System.Nullable`1.get_Value()
+   at CarDiaryWeb.DatabaseUtility.getAvgCons(Int32 carId) in D:\Old PC\My Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 89
+
+********** 3.1.2017 г. 14:17:46 **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at System.Nullable`1.get_Value()
+   at CarDiaryWeb.DatabaseUtility.getAvgCons(Int32 carId) in D:\Old PC\My Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 89
+
+********** 3.1.2017 г. 14:17:46 **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at System.Nullable`1.get_Value()
+   at CarDiaryWeb.DatabaseUtility.getAvgCons(Int32 carId) in D:\Old PC\My Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 89
+
+********** 3.1.2017 г. 14:17:46 **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at System.Nullable`1.get_Value()
+   at CarDiaryWeb.DatabaseUtility.getAvgCons(Int32 carId) in D:\Old PC\My Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 89
+
+********** 3.1.2017 г. 14:17:46 **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at System.Nullable`1.get_Value()
+   at CarDiaryWeb.DatabaseUtility.getAvgCons(Int32 carId) in D:\Old PC\My Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 89
+
+********** 3.1.2017 г. 14:17:46 **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at System.Nullable`1.get_Value()
+   at CarDiaryWeb.DatabaseUtility.getAvgCons(Int32 carId) in D:\Old PC\My Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 89
+
+********** 3.1.2017 г. 14:17:46 **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at System.Nullable`1.get_Value()
+   at CarDiaryWeb.DatabaseUtility.getAvgCons(Int32 carId) in D:\Old PC\My Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 89
+
+********** 3.1.2017 г. 14:17:46 **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at System.Nullable`1.get_Value()
+   at CarDiaryWeb.DatabaseUtility.getAvgCons(Int32 carId) in D:\Old PC\My Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 89
+
+********** 3.1.2017 г. 14:17:46 **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at System.Nullable`1.get_Value()
+   at CarDiaryWeb.DatabaseUtility.getAvgCons(Int32 carId) in D:\Old PC\My Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 89
+
+********** 3.1.2017 г. 14:17:46 **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at System.Nullable`1.get_Value()
+   at CarDiaryWeb.DatabaseUtility.getAvgCons(Int32 carId) in D:\Old PC\My Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 89
+
+********** 3.1.2017 г. 14:17:46 **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at System.Nullable`1.get_Value()
+   at CarDiaryWeb.DatabaseUtility.getAvgCons(Int32 carId) in D:\Old PC\My Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 89
+
+********** 3.1.2017 г. 14:17:46 **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at System.Nullable`1.get_Value()
+   at CarDiaryWeb.DatabaseUtility.getAvgCons(Int32 carId) in D:\Old PC\My Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 89
+
+********** 3.1.2017 г. 14:17:47 **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at System.Nullable`1.get_Value()
+   at CarDiaryWeb.DatabaseUtility.getAvgCons(Int32 carId) in D:\Old PC\My Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 89
+
+********** 3.1.2017 г. 14:17:47 **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at System.Nullable`1.get_Value()
+   at CarDiaryWeb.DatabaseUtility.getAvgCons(Int32 carId) in D:\Old PC\My Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 89
+
+********** 3.1.2017 г. 14:17:47 **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at System.Nullable`1.get_Value()
+   at CarDiaryWeb.DatabaseUtility.getAvgCons(Int32 carId) in D:\Old PC\My Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 89
+
+********** 3.1.2017 г. 14:17:47 **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at System.Nullable`1.get_Value()
+   at CarDiaryWeb.DatabaseUtility.getAvgCons(Int32 carId) in D:\Old PC\My Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 89
+
+********** 3.1.2017 г. 14:17:47 **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at System.Nullable`1.get_Value()
+   at CarDiaryWeb.DatabaseUtility.getAvgCons(Int32 carId) in D:\Old PC\My Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 89
+
+********** 3.1.2017 г. 14:17:47 **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at System.Nullable`1.get_Value()
+   at CarDiaryWeb.DatabaseUtility.getAvgCons(Int32 carId) in D:\Old PC\My Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 89
+
+********** 3.1.2017 г. 14:17:47 **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at System.Nullable`1.get_Value()
+   at CarDiaryWeb.DatabaseUtility.getAvgCons(Int32 carId) in D:\Old PC\My Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 89
+
+********** 3.1.2017 г. 14:17:47 **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at System.Nullable`1.get_Value()
+   at CarDiaryWeb.DatabaseUtility.getAvgCons(Int32 carId) in D:\Old PC\My Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 89
+
+********** 3.1.2017 г. 14:17:47 **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at System.Nullable`1.get_Value()
+   at CarDiaryWeb.DatabaseUtility.getAvgCons(Int32 carId) in D:\Old PC\My Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 89
+
+********** 3.1.2017 г. 14:17:47 **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at System.Nullable`1.get_Value()
+   at CarDiaryWeb.DatabaseUtility.getAvgCons(Int32 carId) in D:\Old PC\My Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 89
+
+********** 3.1.2017 г. 14:17:47 **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at System.Nullable`1.get_Value()
+   at CarDiaryWeb.DatabaseUtility.getAvgCons(Int32 carId) in D:\Old PC\My Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 89
+
+********** 3.1.2017 г. 14:17:48 **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at System.Nullable`1.get_Value()
+   at CarDiaryWeb.DatabaseUtility.getAvgCons(Int32 carId) in D:\Old PC\My Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 89
+
+********** 3.1.2017 г. 14:17:48 **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at System.Nullable`1.get_Value()
+   at CarDiaryWeb.DatabaseUtility.getAvgCons(Int32 carId) in D:\Old PC\My Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 89
+
+********** 3.1.2017 г. 14:17:48 **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at System.Nullable`1.get_Value()
+   at CarDiaryWeb.DatabaseUtility.getAvgCons(Int32 carId) in D:\Old PC\My Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 89
+
+********** 3.1.2017 г. 14:17:48 **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at System.Nullable`1.get_Value()
+   at CarDiaryWeb.DatabaseUtility.getAvgCons(Int32 carId) in D:\Old PC\My Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 89
+
+********** 3.1.2017 г. 14:17:48 **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at System.Nullable`1.get_Value()
+   at CarDiaryWeb.DatabaseUtility.getAvgCons(Int32 carId) in D:\Old PC\My Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 89
+
+********** 3.1.2017 г. 14:17:48 **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at System.Nullable`1.get_Value()
+   at CarDiaryWeb.DatabaseUtility.getAvgCons(Int32 carId) in D:\Old PC\My Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 89
+
+********** 3.1.2017 г. 14:17:48 **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at System.Nullable`1.get_Value()
+   at CarDiaryWeb.DatabaseUtility.getAvgCons(Int32 carId) in D:\Old PC\My Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 89
+
+********** 3.1.2017 г. 14:17:48 **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at System.Nullable`1.get_Value()
+   at CarDiaryWeb.DatabaseUtility.getAvgCons(Int32 carId) in D:\Old PC\My Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 89
+
+********** 3.1.2017 г. 14:17:48 **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at System.Nullable`1.get_Value()
+   at CarDiaryWeb.DatabaseUtility.getAvgCons(Int32 carId) in D:\Old PC\My Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 89
+
+********** 3.1.2017 г. 14:17:49 **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at System.Nullable`1.get_Value()
+   at CarDiaryWeb.DatabaseUtility.getAvgCons(Int32 carId) in D:\Old PC\My Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 89
+
+********** 3.1.2017 г. 14:17:49 **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at System.Nullable`1.get_Value()
+   at CarDiaryWeb.DatabaseUtility.getAvgCons(Int32 carId) in D:\Old PC\My Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 89
+
+********** 3.1.2017 г. 14:17:49 **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at System.Nullable`1.get_Value()
+   at CarDiaryWeb.DatabaseUtility.getAvgCons(Int32 carId) in D:\Old PC\My Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 89
+
+********** 3.1.2017 г. 14:17:49 **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at System.Nullable`1.get_Value()
+   at CarDiaryWeb.DatabaseUtility.getAvgCons(Int32 carId) in D:\Old PC\My Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 89
+
+********** 3.1.2017 г. 14:17:49 **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at System.Nullable`1.get_Value()
+   at CarDiaryWeb.DatabaseUtility.getAvgCons(Int32 carId) in D:\Old PC\My Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 89
+
+********** 3.1.2017 г. 14:17:49 **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at System.Nullable`1.get_Value()
+   at CarDiaryWeb.DatabaseUtility.getAvgCons(Int32 carId) in D:\Old PC\My Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 89
+
+********** 3.1.2017 г. 14:17:49 **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at System.Nullable`1.get_Value()
+   at CarDiaryWeb.DatabaseUtility.getAvgCons(Int32 carId) in D:\Old PC\My Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 89
+
+********** 3.1.2017 г. 14:17:49 **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at System.Nullable`1.get_Value()
+   at CarDiaryWeb.DatabaseUtility.getAvgCons(Int32 carId) in D:\Old PC\My Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 89
+
+********** 3.1.2017 г. 14:17:49 **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at System.Nullable`1.get_Value()
+   at CarDiaryWeb.DatabaseUtility.getAvgCons(Int32 carId) in D:\Old PC\My Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 89
+
+********** 3.1.2017 г. 14:17:49 **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at System.Nullable`1.get_Value()
+   at CarDiaryWeb.DatabaseUtility.getAvgCons(Int32 carId) in D:\Old PC\My Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 89
+
+********** 3.1.2017 г. 14:17:49 **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at System.Nullable`1.get_Value()
+   at CarDiaryWeb.DatabaseUtility.getAvgCons(Int32 carId) in D:\Old PC\My Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 89
+
+********** 3.1.2017 г. 14:17:49 **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at System.Nullable`1.get_Value()
+   at CarDiaryWeb.DatabaseUtility.getAvgCons(Int32 carId) in D:\Old PC\My Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 89
+
+********** 3.1.2017 г. 14:17:50 **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at System.Nullable`1.get_Value()
+   at CarDiaryWeb.DatabaseUtility.getAvgCons(Int32 carId) in D:\Old PC\My Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 89
+
+********** 3.1.2017 г. 14:17:50 **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at System.Nullable`1.get_Value()
+   at CarDiaryWeb.DatabaseUtility.getAvgCons(Int32 carId) in D:\Old PC\My Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 89
+
+********** 3.1.2017 г. 14:17:50 **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at System.Nullable`1.get_Value()
+   at CarDiaryWeb.DatabaseUtility.getAvgCons(Int32 carId) in D:\Old PC\My Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 89
+
+********** 3.1.2017 г. 14:17:51 **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at System.Nullable`1.get_Value()
+   at CarDiaryWeb.DatabaseUtility.getAvgCons(Int32 carId) in D:\Old PC\My Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 89
+

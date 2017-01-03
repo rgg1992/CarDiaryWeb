@@ -15,22 +15,23 @@ namespace CarDiaryWeb
     public partial class fuel_consumption
     {
 
-        public fuel_consumption (int carID, string refuelDate, int mileage, string fuelType, int distance, double liters, double unitPrice, double totalCost, double avgCons)
-        {
-            this.car_id = carID;
-            this.refuel_date = refuelDate;
-            this.mileage = mileage;
-            this.fuel_type = fuelType;
-            this.distance = distance;
-            this.liters = liters;
-            this.unit_price = unitPrice;
-            this.total_cost = totalCost;
-            this.average_cons_per_100_km = avgCons;
-        }
-
         public fuel_consumption()
         {
-            
+
+        }
+
+        public fuel_consumption(int car_id,string date, int mileage, string fuel, int distance, double liters, double unit_price, double total_cost, double average)
+        {
+            this.car_id = car_id;
+            this.refuel_date = date;
+            this.mileage = mileage;
+            this.fuel_type = fuel;
+            this.distance = distance;
+            this.liters = liters;
+            this.unit_price = unit_price;
+            this.total_cost = total_cost;
+            this.average_cons_per_100_km = average;
+                 
         }
 
         public int id { get; set; }

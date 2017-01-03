@@ -18,7 +18,7 @@ namespace CarDiaryWeb
             try
             {
 
-                using (var context = new Entities())
+                using (var context = new CarDiaryWebEF())
                 {
                     var countLQ = (from cr in context.car
                                    where (cr.user_name == user)
@@ -40,7 +40,7 @@ namespace CarDiaryWeb
             int car_id = 0;
             try
             {
-                using (var context = new Entities())
+                using (var context = new CarDiaryWebEF())
                 {
                     var cars = context.Set<car>();
                     cars.Add(car);
@@ -63,7 +63,7 @@ namespace CarDiaryWeb
         public car readCar(int carId, string user)
         {
             var carDb = new car();
-            using (var context = new Entities())
+            using (var context = new CarDiaryWebEF())
             {
                 var carLQ = from cr in context.car
                             where (cr.id == carId)
@@ -80,7 +80,7 @@ namespace CarDiaryWeb
             double avgCons = 0;
             double average;
 
-            using (var context = new Entities())
+            using (var context = new CarDiaryWebEF())
             {
                 var courseList = context.getAvgCons(carId);
                 try
@@ -104,7 +104,7 @@ namespace CarDiaryWeb
         {
             List<int> carIDs = new List<int>();
 
-            using (var context = new Entities())
+            using (var context = new CarDiaryWebEF())
             {
                 var carsList = context.getCarIDsForUser(user);
 
@@ -117,29 +117,78 @@ namespace CarDiaryWeb
 
         public bool deleteCar(int carId)
         {
-
-            using (var context = new Entities())
+            
+            bool delete = false;
+            try
             {
-                //Had to go this route since EF Code First doesn't support output parameters 
-                //returned from sprocs very well at this point
-                using (context.Database.Connection)
+                using (var context = new CarDiaryWebEF())
                 {
-                    context.Database.Connection.Open();
-                    System.Data.Common.DbCommand cmd = context.Database.Connection.CreateCommand();
-                    cmd.CommandText = "deleteCarInfo";
-                    cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.Parameters.Add(new SqlParameter("carId", carId));
-                    var resultParam = new SqlParameter("result", 0) { Direction = ParameterDirection.Output };
-                    cmd.Parameters.Add(resultParam);
+                    var itemToRemove = context.fuel_consumption.SingleOrDefault(fc => fc.car_id == carId);
 
-                    var reader = cmd.ExecuteReader();
+                    if (itemToRemove != null)
+                    {
+                        context.fuel_consumption.Remove(itemToRemove);
+                        context.SaveChanges();
+                        //delete = true;
+                    }
 
-                    int result = (resultParam.Value == null) ? 0 : Convert.ToInt32(resultParam.Value);
-                    if (result == 1)
-                        return true;
-                    else return false;
                 }
             }
+            catch (Exception ex)
+            {
+                delete = false;
+                // Log the exception.
+                ExceptionUtility.LogException(ex, "DB.cs");
+                return delete;
+            }
+
+            //bool delete = false;
+            try
+            {
+                using (var context = new CarDiaryWebEF())
+                {
+                    var itemToRemove = context.other_costs.SingleOrDefault(oc => oc.car_id == carId);
+
+                    if (itemToRemove != null)
+                    {
+                        context.other_costs.Remove(itemToRemove);
+                        context.SaveChanges();
+                        //delete = true;
+                    }
+
+                }
+            }
+            catch (Exception ex)
+            {
+                delete = false;
+                // Log the exception.
+                ExceptionUtility.LogException(ex, "DB.cs");
+                return delete;
+            }
+
+            try
+            {
+                using (var context = new CarDiaryWebEF())
+                {
+                    var itemToRemove = context.car.SingleOrDefault(c => c.id == carId);
+
+                    if (itemToRemove != null)
+                    {
+                        context.car.Remove(itemToRemove);
+                        context.SaveChanges();
+                        delete = true;
+                    }
+
+                }
+            }
+            catch (Exception ex)
+            {
+                delete = false;
+                // Log the exception.
+                ExceptionUtility.LogException(ex, "DB.cs");
+                return delete;
+            }
+            return delete;
         }
 
         public int getPreviousMileage(int carId)
@@ -147,7 +196,7 @@ namespace CarDiaryWeb
             int prevMileage = 0;
             try
             {
-                using (var context = new Entities())
+                using (var context = new CarDiaryWebEF())
                 {
                     var prevMileageLQ = (from fc in context.fuel_consumption
                                          where (fc.car_id == carId)
@@ -169,7 +218,7 @@ namespace CarDiaryWeb
             string fuel = "";
             try
             {
-                using (var context = new Entities())
+                using (var context = new CarDiaryWebEF())
                 {
                     var fuelTypeLQ = (from cr in context.car
                                       where (cr.id == carId)
@@ -192,7 +241,7 @@ namespace CarDiaryWeb
             int fuelId = 0;
             try
             {
-                using (var context = new Entities())
+                using (var context = new CarDiaryWebEF())
                 {
                     fuelId = (from fc in context.fuel_consumption
                               where (fc.car_id == carId)
@@ -219,7 +268,7 @@ namespace CarDiaryWeb
             bool insert = false;
             try
             {
-                using (var context = new Entities())
+                using (var context = new CarDiaryWebEF())
                 {
                     var fuels = context.Set<fuel_consumption>();
                     fuels.Add(fuelCons);
@@ -245,7 +294,7 @@ namespace CarDiaryWeb
             bool update = false;
             try
             {
-                using (var context = new Entities())
+                using (var context = new CarDiaryWebEF())
                 {
                     var result = context.car.SingleOrDefault(c => c.id == carId);
 
@@ -281,7 +330,7 @@ namespace CarDiaryWeb
             double liters = 0;
             try
             {
-                using (var context = new Entities())
+                using (var context = new CarDiaryWebEF())
                 {
                     liters = (from fc in context.fuel_consumption
                               where (fc.car_id == carId)
@@ -302,7 +351,7 @@ namespace CarDiaryWeb
             List<fuel_consumption> fuelCons = new List<fuel_consumption>();
             try
             {
-                using (var context = new Entities())
+                using (var context = new CarDiaryWebEF())
                 {
                     var fuelConsList = context.getFuelConsumptionsForCar(carId);
 
@@ -323,7 +372,7 @@ namespace CarDiaryWeb
             bool delete = false;
             try
             {
-                using (var context = new Entities())
+                using (var context = new CarDiaryWebEF())
                 {
                     var itemToRemove = context.fuel_consumption.SingleOrDefault(fc => fc.id == fuelID);
 
@@ -350,7 +399,7 @@ namespace CarDiaryWeb
             bool insert = false;
             try
             {
-                using (var context = new Entities())
+                using (var context = new CarDiaryWebEF())
                 {
                     var others = context.Set<other_costs>();
                     others.Add(input);
@@ -375,7 +424,7 @@ namespace CarDiaryWeb
             List<other_costs> others = new List<other_costs>();
             try
             {
-                using (var context = new Entities())
+                using (var context = new CarDiaryWebEF())
                 {
                     var otherCostsList = context.getOtherCostsForCar(carId.ToString());
 
@@ -396,7 +445,7 @@ namespace CarDiaryWeb
             bool delete = false;
             try
             {
-                using (var context = new Entities())
+                using (var context = new CarDiaryWebEF())
                 {
                     var itemToRemove = context.other_costs.SingleOrDefault(oc => oc.id == id);
 
@@ -425,7 +474,7 @@ namespace CarDiaryWeb
             List<Tuple<Double?, DateTime?>> list = new List<Tuple<Double?, DateTime?>>();
             try
             {
-                using (var context = new Entities())
+                using (var context = new CarDiaryWebEF())
                 {
                     var totalCostList = context.getTotalCostPerMonth(carId);
 
@@ -455,7 +504,7 @@ namespace CarDiaryWeb
             item.car_model = model;
             try
             {
-                using (var context = new Entities())
+                using (var context = new CarDiaryWebEF())
                 {
                     var carBrands = context.Set<car_brands>();
                     carBrands.Add(item);

@@ -4,6 +4,7 @@ using System.Web.UI;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Owin;
+using CarDiaryWeb.Models;
 
 namespace CarDiaryWeb.Account
 {
@@ -32,35 +33,43 @@ namespace CarDiaryWeb.Account
         {
             if (IsValid)
             {
-                // Validate the user password
-                //var manager = new UserManager();
-                //ApplicationUser user = manager.Find(UserName.Text, Password.Text);
-                //if (user != null)
-                //{
-                //    IdentityHelper.SignIn(manager, user, RememberMe.Checked);
-                //    // call db to get number of saved cars for logged in user
-                //    userName = UserName.Text;
-                //    if (!userName.Equals(""))
-                //    {
-                //        Application["userName"] = userName;
+                //Validate the user password
+                 // Validate the user password
+                var manager = Context.GetOwinContext().GetUserManager<ApplicationUserManager>();
+                var signinManager = Context.GetOwinContext().GetUserManager<ApplicationSignInManager>();
 
-                //        loadNextPage(userName);
-                //    }
-                //}
-                //else
-                //{
-                //    FailureText.Text = "Invalid username or password.";
-                //    ErrorMessage.Visible = true;
-                //}
-                userName = "test";
-                Application["userName"] = userName;
+                // This doen't count login failures towards account lockout
+                // To enable password failures to trigger lockout, change to shouldLockout: true
+                var result = signinManager.PasswordSignIn(UserName.Text, Password.Text, RememberMe.Checked, shouldLockout: false);
 
-                loadNextPage(userName);
+                switch (result)
+                {
+                    case SignInStatus.Success:
+                        IdentityHelper.RedirectToReturnUrl(Request.QueryString["ReturnUrl"], Response);
+                        userName = UserName.Text;
+                        if (!userName.Equals(""))
+                        {
+                            Application["userName"] = userName;
+
+                            loadNextPage(userName);
+                        }
+                        break;
+                    default:
+                        FailureText.Text = "Невалидно потребителско име или парола.";
+                        ErrorMessage.Visible = true;
+                        break;
+                }
+
+                //userName = "test";
+                //Application["userName"] = userName;
+                if (!userName.Equals(""))
+                    loadNextPage(userName);
             }
             }
 
         protected void loadNextPage(string userName)
         {
+            
             int carCount = db.getCarCountForUser(userName);
             Application["carCount"] = carCount;
             Application["carID"] = null;

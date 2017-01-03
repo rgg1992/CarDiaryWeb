@@ -17,15 +17,14 @@ namespace CarDiaryWeb
         protected void Page_Init(object sender, EventArgs e)
         {
 
-            user = "test";
-            Application["userName"] = user;
-
+            //user = "test";
+            //Application["userName"] = user;
 
             if (Application["userName"] != null)
                 user = Application["userName"].ToString();
-            else //if(User.Identity.Name != null)
+            else if(User.Identity.Name != null && !User.Identity.Name.Equals("")) 
                 user = User.Identity.Name;
-            //else IdentityHelper.RedirectToReturnUrl(/*Request.QueryString["ReturnUrl"]*/"~/Account/Login.aspx", Response);
+            else IdentityHelper.RedirectToReturnUrl(/*Request.QueryString["ReturnUrl"]*/"~/Account/Login.aspx", Response);
 
 
             Application["carID"] = null;
@@ -41,8 +40,8 @@ namespace CarDiaryWeb
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            user = "test";
-            Application["userName"] = user;
+            //user = "test";
+            //Application["userName"] = user;
             //if (!System.Web.HttpContext.Current.User.Identity.IsAuthenticated)
             //{
             //    IdentityHelper.RedirectToReturnUrl(/*Request.QueryString["ReturnUrl"]*/"~/Account/Login.aspx", Response);

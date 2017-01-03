@@ -188,20 +188,21 @@
     <Content Include="About.aspx" />
     <Content Include="Account\Login.aspx" />
     <Content Include="Account\Manage.aspx" />
+    <Content Include="Account\ManageLogins.aspx" />
     <Content Include="Account\OpenAuthProviders.ascx" />
     <Content Include="Account\Register.aspx" />
+    <Content Include="CarDiaryWebModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>CarDiaryWebModel.edmx</DependentUpon>
+      <LastGenOutput>CarDiaryWebModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="CarDiaryWebModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>CarDiaryWebModel.edmx</DependentUpon>
+      <LastGenOutput>CarDiaryWebModel.cs</LastGenOutput>
+    </Content>
     <Content Include="FuelHistory.aspx" />
     <Content Include="Images\car.png" />
-    <Content Include="CarDiaryModel.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>CarDiaryModel.edmx</DependentUpon>
-      <LastGenOutput>CarDiaryModel.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="CarDiaryModel.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>CarDiaryModel.edmx</DependentUpon>
-      <LastGenOutput>CarDiaryModel.cs</LastGenOutput>
-    </Content>
     <Content Include="CarProfile.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap.css" />
@@ -215,12 +216,12 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <EntityDeploy Include="CarDiaryModel.edmx">
+    <EntityDeploy Include="CarDiaryWebModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>CarDiaryModel.Designer.cs</LastGenOutput>
+      <LastGenOutput>CarDiaryWebModel.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <Content Include="CarDiaryModel.edmx.diagram">
-      <DependentUpon>CarDiaryModel.edmx</DependentUpon>
+    <Content Include="CarDiaryWebModel.edmx.diagram">
+      <DependentUpon>CarDiaryWebModel.edmx</DependentUpon>
     </Content>
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Images\delete.png" />
@@ -296,6 +297,13 @@
     <Compile Include="Account\Manage.aspx.designer.cs">
       <DependentUpon>Manage.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Account\ManageLogins.aspx.cs">
+      <DependentUpon>ManageLogins.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\ManageLogins.aspx.designer.cs">
+      <DependentUpon>ManageLogins.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Account\OpenAuthProviders.ascx.cs">
       <DependentUpon>OpenAuthProviders.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -310,7 +318,37 @@
     <Compile Include="Account\Register.aspx.designer.cs">
       <DependentUpon>Register.aspx</DependentUpon>
     </Compile>
+    <Compile Include="AspNetRoles.cs">
+      <DependentUpon>CarDiaryWebModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AspNetUserClaims.cs">
+      <DependentUpon>CarDiaryWebModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AspNetUserLogins.cs">
+      <DependentUpon>CarDiaryWebModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AspNetUsers.cs">
+      <DependentUpon>CarDiaryWebModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CarDiaryWebModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CarDiaryWebModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CarDiaryWebModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CarDiaryWebModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CarDiaryWebModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CarDiaryWebModel.edmx</DependentUpon>
+    </Compile>
     <Compile Include="CarInformation.cs" />
+    <Compile Include="C__MigrationHistory.cs">
+      <DependentUpon>CarDiaryWebModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="DatabaseUtility.cs" />
     <Compile Include="ExceptionUtility.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
@@ -325,22 +363,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="car.cs">
-      <DependentUpon>CarDiaryModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="CarDiaryModel.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>CarDiaryModel.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="CarDiaryModel.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>CarDiaryModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="CarDiaryModel.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>CarDiaryModel.edmx</DependentUpon>
+      <DependentUpon>CarDiaryWebModel.tt</DependentUpon>
     </Compile>
     <Compile Include="CarProfile.aspx.cs">
       <DependentUpon>CarProfile.aspx</DependentUpon>
@@ -350,10 +373,10 @@
       <DependentUpon>CarProfile.aspx</DependentUpon>
     </Compile>
     <Compile Include="car_brands.cs">
-      <DependentUpon>CarDiaryModel.tt</DependentUpon>
+      <DependentUpon>CarDiaryWebModel.tt</DependentUpon>
     </Compile>
     <Compile Include="car_diary_log.cs">
-      <DependentUpon>CarDiaryModel.tt</DependentUpon>
+      <DependentUpon>CarDiaryWebModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Contact.aspx.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
@@ -370,16 +393,16 @@
       <DependentUpon>FuelHistory.aspx</DependentUpon>
     </Compile>
     <Compile Include="fuel_consumption.cs">
-      <DependentUpon>CarDiaryModel.tt</DependentUpon>
+      <DependentUpon>CarDiaryWebModel.tt</DependentUpon>
     </Compile>
     <Compile Include="getFuelConsumptionsForCar_Result.cs">
-      <DependentUpon>CarDiaryModel.tt</DependentUpon>
+      <DependentUpon>CarDiaryWebModel.tt</DependentUpon>
     </Compile>
     <Compile Include="getOtherCostsForCar_Result.cs">
-      <DependentUpon>CarDiaryModel.tt</DependentUpon>
+      <DependentUpon>CarDiaryWebModel.tt</DependentUpon>
     </Compile>
     <Compile Include="getTotalCostPerMonth_Result.cs">
-      <DependentUpon>CarDiaryModel.tt</DependentUpon>
+      <DependentUpon>CarDiaryWebModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -407,7 +430,7 @@
     </Compile>
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="other_costs.cs">
-      <DependentUpon>CarDiaryModel.tt</DependentUpon>
+      <DependentUpon>CarDiaryWebModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Site.Master.cs">
@@ -433,7 +456,7 @@
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
     </Compile>
     <Compile Include="v_FuelCons.cs">
-      <DependentUpon>CarDiaryModel.tt</DependentUpon>
+      <DependentUpon>CarDiaryWebModel.tt</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

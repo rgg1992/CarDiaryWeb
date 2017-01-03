@@ -21,19 +21,18 @@ namespace CarDiaryWeb
             this.other_costs = new HashSet<other_costs>();
         }
 
-        public car(string brand, string model, int year, string engine, string fuel, int horsePowers, string image,string user)
+        public car(string brand,string model,int year,string engine,string fuel,int h_powers,string image, string user)
         {
             this.brand = brand;
             this.model = model;
             this.year = year;
             this.engine = engine;
             this.fuel = fuel;
-            this.h_powers = horsePowers;
+            this.h_powers = h_powers;
             this.image = image;
             this.user_name = user;
         }
-
-
+    
         public int id { get; set; }
         public string brand { get; set; }
         public string model { get; set; }

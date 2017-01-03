@@ -31,32 +31,14 @@ namespace CarDiaryWeb.Account
             return manager.HasPassword(User.Identity.GetUserId());
         }
 
-        //public bool HasPhoneNumber { get; private set; }
-
-        //public bool TwoFactorEnabled { get; private set; }
-
-        //public bool TwoFactorBrowserRemembered { get; private set; }
-
-        //public int LoginsCount { get; set; }
-
         protected void Page_Load()
         {
             var manager = Context.GetOwinContext().GetUserManager<ApplicationUserManager>();
 
-            //HasPhoneNumber = String.IsNullOrEmpty(manager.GetPhoneNumber(User.Identity.GetUserId()));
-
-            // Enable this after setting up two-factor authentientication
-            //PhoneNumber.Text = manager.GetPhoneNumber(User.Identity.GetUserId()) ?? String.Empty;
-
-            //TwoFactorEnabled = manager.GetTwoFactorEnabled(User.Identity.GetUserId());
-
-            //LoginsCount = manager.GetLogins(User.Identity.GetUserId()).Count;
-
-            var authenticationManager = HttpContext.Current.GetOwinContext().Authentication;
-
             if (!IsPostBack)
             {
                 // Determine the sections to render
+                
                 if (HasPassword(manager))
                 {
                     changePasswordHolder.Visible = true;
@@ -66,6 +48,7 @@ namespace CarDiaryWeb.Account
                     setPassword.Visible = true;
                     changePasswordHolder.Visible = false;
                 }
+                CanRemoveExternalLogins = manager.GetLogins(User.Identity.GetUserId()).Count() > 1;
 
                 // Render success message
                 var message = Request.QueryString["m"];
@@ -83,52 +66,6 @@ namespace CarDiaryWeb.Account
                 }
             }
         }
-
-
-        private void AddErrors(IdentityResult result)
-        {
-            foreach (var error in result.Errors)
-            {
-                ModelState.AddModelError("", error);
-            }
-        }
-
-        // Remove phonenumber from user
-        protected void RemovePhone_Click(object sender, EventArgs e)
-        {
-            var manager = Context.GetOwinContext().GetUserManager<ApplicationUserManager>();
-            var signInManager = Context.GetOwinContext().Get<ApplicationSignInManager>();
-            var result = manager.SetPhoneNumber(User.Identity.GetUserId(), null);
-            if (!result.Succeeded)
-            {
-                return;
-            }
-            var user = manager.FindById(User.Identity.GetUserId());
-            if (user != null)
-            {
-                signInManager.SignIn(user, isPersistent: false, rememberBrowser: false);
-                Response.Redirect("/Account/Manage?m=RemovePhoneNumberSuccess");
-            }
-        }
-
-        // DisableTwoFactorAuthentication
-        protected void TwoFactorDisable_Click(object sender, EventArgs e)
-        {
-            var manager = Context.GetOwinContext().GetUserManager<ApplicationUserManager>();
-            manager.SetTwoFactorEnabled(User.Identity.GetUserId(), false);
-
-            Response.Redirect("/Account/Manage");
-        }
-
-        //EnableTwoFactorAuthentication 
-        protected void TwoFactorEnable_Click(object sender, EventArgs e)
-        {
-            var manager = Context.GetOwinContext().GetUserManager<ApplicationUserManager>();
-            manager.SetTwoFactorEnabled(User.Identity.GetUserId(), true);
-
-            Response.Redirect("/Account/Manage");
-        }
-
 
         protected void ChangePassword_Click(object sender, EventArgs e)
         {
@@ -165,6 +102,37 @@ namespace CarDiaryWeb.Account
                 {
                     AddErrors(result);
                 }
+            }
+        }
+
+        public IEnumerable<UserLoginInfo> GetLogins()
+        {
+            var manager = Context.GetOwinContext().GetUserManager<ApplicationUserManager>();
+            var accounts = manager.GetLogins(User.Identity.GetUserId());
+            CanRemoveExternalLogins = accounts.Count() > 1 || HasPassword(manager);
+            return accounts;
+        }
+
+        public void RemoveLogin(string loginProvider, string providerKey)
+        {
+            var manager = Context.GetOwinContext().GetUserManager<ApplicationUserManager>();
+            var signInManager = Context.GetOwinContext().Get<ApplicationSignInManager>();
+            var result = manager.RemoveLogin(User.Identity.GetUserId(), new UserLoginInfo(loginProvider, providerKey));
+            string msg = String.Empty;
+            if (result.Succeeded)
+            {
+                var user = manager.FindById(User.Identity.GetUserId());
+                signInManager.SignIn(user, isPersistent: false, rememberBrowser: false);
+                msg = "?m=RemoveLoginSuccess";
+            }
+            Response.Redirect("~/Account/Manage" + msg);
+        }
+
+        private void AddErrors(IdentityResult result)
+        {
+            foreach (var error in result.Errors)
+            {
+                ModelState.AddModelError("", error);
             }
         }
 
