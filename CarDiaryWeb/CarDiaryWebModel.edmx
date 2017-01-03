@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="CarDiaryWebModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="CarDiaryWebModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="__MigrationHistory">
           <Key>
             <PropertyRef Name="MigrationId" />
@@ -79,6 +79,7 @@
           <Property Name="h_powers" Type="int" Nullable="false" />
           <Property Name="image" Type="nvarchar" MaxLength="500" />
           <Property Name="user_name" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="blobimage" Type="varbinary(max)" />
         </EntityType>
         <EntityType Name="car_brands">
           <Key>
@@ -289,8 +290,7 @@ warning 6002: The table/view 'aspnet-CarDiaryWeb-20161208095329.dbo.v_FuelCons' 
             <End Role="AspNetUserRoles" EntitySet="AspNetUserRoles" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="CarDiaryWebModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -368,6 +368,7 @@ warning 6002: The table/view 'aspnet-CarDiaryWeb-20161208095329.dbo.v_FuelCons' 
           <Property Name="user_name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <NavigationProperty Name="fuel_consumption" Relationship="Self.FK__fuel_cons__car_i__3F466844" FromRole="car" ToRole="fuel_consumption" />
           <NavigationProperty Name="other_costs" Relationship="Self.FK__other_cos__car_i__403A8C7D" FromRole="car" ToRole="other_costs" />
+          <Property Name="blobimage" Type="Binary" MaxLength="Max" FixedLength="false" />
         </EntityType>
         <EntityType Name="car_brands">
           <Key>
@@ -526,19 +527,19 @@ warning 6002: The table/view 'aspnet-CarDiaryWeb-20161208095329.dbo.v_FuelCons' 
             <Parameter Name="New_car_ID" Mode="InOut" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="getAvgCons" ReturnType="Collection(Double)">
-            <Parameter Name="id" Mode="In" Type="Int32" />
+          <Parameter Name="id" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="getCarIDsForUser" ReturnType="Collection(Int32)">
-            <Parameter Name="user" Mode="In" Type="String" />
+          <Parameter Name="user" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="getFuelConsumptionsForCar" EntitySet="fuel_consumption" ReturnType="Collection(CarDiaryWebModel.fuel_consumption)">
-            <Parameter Name="id" Mode="In" Type="Int32" />
+          <Parameter Name="id" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="getOtherCostsForCar" EntitySet="other_costs" ReturnType="Collection(CarDiaryWebModel.other_costs)">
-            <Parameter Name="id" Mode="In" Type="String" />
+          <Parameter Name="id" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="getTotalCostPerMonth" ReturnType="Collection(CarDiaryWebModel.getTotalCostPerMonth_Result)">
-            <Parameter Name="id" Mode="In" Type="Int32" />
+          <Parameter Name="id" Mode="In" Type="Int32" />
           </FunctionImport>
         </EntityContainer>
         <ComplexType Name="getFuelConsumptionsForCar_Result">
@@ -630,6 +631,7 @@ warning 6002: The table/view 'aspnet-CarDiaryWeb-20161208095329.dbo.v_FuelCons' 
           <EntitySetMapping Name="car">
             <EntityTypeMapping TypeName="CarDiaryWebModel.car">
               <MappingFragment StoreEntitySet="car">
+                <ScalarProperty Name="blobimage" ColumnName="blobimage" />
                 <ScalarProperty Name="id" ColumnName="id" />
                 <ScalarProperty Name="brand" ColumnName="brand" />
                 <ScalarProperty Name="model" ColumnName="model" />

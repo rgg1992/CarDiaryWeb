@@ -244,3 +244,8 @@ ModelManifest.xml
 # FAKE - F# Make
 .fake/
 /CarDiaryWebRest
+/CarDiaryWeb/Photos/testtest
+/CarDiaryWeb/AspNetUsers.cs
+/CarDiaryWeb/AspNetUserLogins.cs
+/CarDiaryWeb/AspNetUserClaims.cs
+/CarDiaryWeb/AspNetRoles.cs

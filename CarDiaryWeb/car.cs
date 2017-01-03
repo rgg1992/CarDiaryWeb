@@ -20,8 +20,8 @@ namespace CarDiaryWeb
             this.fuel_consumption = new HashSet<fuel_consumption>();
             this.other_costs = new HashSet<other_costs>();
         }
-
-        public car(string brand,string model,int year,string engine,string fuel,int h_powers,string image, string user)
+    
+        public car(string brand, string model, int year,string engine, string fuel, int h_powers,string image, string user)
         {
             this.brand = brand;
             this.model = model;
@@ -32,7 +32,7 @@ namespace CarDiaryWeb
             this.image = image;
             this.user_name = user;
         }
-    
+
         public int id { get; set; }
         public string brand { get; set; }
         public string model { get; set; }
@@ -42,6 +42,7 @@ namespace CarDiaryWeb
         public int h_powers { get; set; }
         public string image { get; set; }
         public string user_name { get; set; }
+        public byte[] blobimage { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<fuel_consumption> fuel_consumption { get; set; }

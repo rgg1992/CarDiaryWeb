@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.IO;
+using System.Drawing;
 
 namespace CarDiaryWeb
 {
@@ -293,6 +294,14 @@ namespace CarDiaryWeb
                                             {
                                                 int car_id = db.insertCar(car, userName);
                                                 Application["carID"] = car_id;
+                                                //rado
+                                                System.Drawing.Image img = System.Drawing.Image.FromFile(@"D:\Old PC\My Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\" + profileImage.ImageUrl.Substring(1));
+                                                byte[] arr;
+                                                ImageConverter converter = new ImageConverter();
+                                                arr = (byte[])converter.ConvertTo(img, typeof(byte[]));
+                                                db.updateCarImage(car_id, arr);
+                                                //todo remove image from file system
+                                                //rado
                                                 IdentityHelper.RedirectToReturnUrl(/*Request.QueryString["ReturnUrl"]*/"~/CarProfile.aspx", Response);
                                             }
                                             else

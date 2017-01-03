@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing.Imaging;
 using System.Globalization;
+using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -124,7 +126,21 @@ namespace CarDiaryWeb
             cell.Width = 300;
 
             ImageButton img = new ImageButton();
-            img.ImageUrl = car.image;
+            //rado
+            if (car.blobimage != null)
+            {
+                byte[] image = car.blobimage;
+                MemoryStream ms1 = new MemoryStream(image);
+                System.Drawing.Image dbImage = System.Drawing.Image.FromStream(ms1);
+                //String dbImageUrl = "~/Photos/" + car.user_name + "/Photo" + car.id;
+                String dbImageUrl = @"D:/Old PC/My Documents/Visual Studio 2015/Projects/CarDiaryWeb/CarDiaryWeb/Photos/" + car.user_name + "/Photo" + car.id + ".jpg";
+                dbImage.Save(dbImageUrl, ImageFormat.Jpeg);
+                //rado
+                //img.ImageUrl = car.image;
+                img.ImageUrl = "~/Photos/" + car.user_name + "/Photo" + car.id + ".jpg";
+            }
+            else
+                img.ImageUrl = car.image;
             img.Width = 300;
             img.Height = 150;
             img.Style.Add("min-height", "150px");

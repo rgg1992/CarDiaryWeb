@@ -523,5 +523,34 @@ namespace CarDiaryWeb
             return brand_id;
         }
 
+        public Boolean updateCarImage(int car_id, byte[] image)
+        {
+            bool update = false;
+            try
+            {
+                using (var context = new CarDiaryWebEF())
+                {
+                    var result = context.car.SingleOrDefault(c => c.id == car_id);
+
+                    if (result != null)
+                    {
+                        result.blobimage = image;
+                        context.SaveChanges();
+                    }
+
+                }
+
+                update = true;
+            }
+            catch (Exception ex)
+            {
+                update = false;
+                // Log the exception.
+                ExceptionUtility.LogException(ex, "DB.cs");
+            }
+
+            return update;
+        }
+
     }
 }
