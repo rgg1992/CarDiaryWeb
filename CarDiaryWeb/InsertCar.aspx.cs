@@ -6,6 +6,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.IO;
 using System.Drawing;
+using System.Drawing.Imaging;
 
 namespace CarDiaryWeb
 {
@@ -93,7 +94,18 @@ namespace CarDiaryWeb
             tbYear.Text = car.year.ToString();
             tbEngine.Text = car.engine;
             tbHorsePowers.Text = car.h_powers.ToString();
-            profileImage.ImageUrl = car.image;
+            if (car.image != null)
+            {
+                byte[] image = car.image;
+                MemoryStream ms1 = new MemoryStream(image);
+                System.Drawing.Image dbImage = System.Drawing.Image.FromStream(ms1);
+                //String dbImageUrl = "~/Photos/" + car.user_name + "/Photo" + car.id;
+                String dbImageUrl = @"C:/Users/Radoslav Gavrailov/Source/Repos/CarDiaryWeb/CarDiaryWeb/Photos/" + car.user_name + "/Photo" + car.id + ".jpg";
+                dbImage.Save(dbImageUrl, ImageFormat.Jpeg);
+                //rado
+                //img.ImageUrl = car.image;
+                profileImage.ImageUrl = "~/Photos/" + car.user_name + "/Photo" + car.id + ".jpg";
+            }
             btnAddCar.Text = "Редактирай";
             brand = car.brand;
             ddlBrand.SelectedIndex = ddlBrand.Items.IndexOf(ddlBrand.Items.FindByText(brand));
@@ -288,18 +300,23 @@ namespace CarDiaryWeb
                                         horsePowers = Int32.Parse(tbHorsePowers.Text);
                                         if (horsePowers > 0 && horsePowers < 2000)
                                         {
-                                            image = profileImage.ImageUrl;
-                                            car car = new car(brand, model, year, engine, fuel, horsePowers, image, userName);
+                                            //image = profileImage.ImageUrl;
+                                            System.Drawing.Image img = System.Drawing.Image.FromFile(@"C:\Users\Radoslav Gavrailov\Source\Repos\CarDiaryWeb\CarDiaryWeb\" + profileImage.ImageUrl.Substring(1));
+                                            byte[] arr;
+                                            ImageConverter converter = new ImageConverter();
+                                            arr = (byte[])converter.ConvertTo(img, typeof(byte[]));
+                                            img.Dispose();
+                                            car car = new car(brand, model, year, engine, fuel, horsePowers, arr, userName);
                                             if (!Convert.ToBoolean(Application["update"].ToString()))
                                             {
                                                 int car_id = db.insertCar(car, userName);
                                                 Application["carID"] = car_id;
-                                                //rado
-                                                System.Drawing.Image img = System.Drawing.Image.FromFile(@"D:\Old PC\My Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\" + profileImage.ImageUrl.Substring(1));
-                                                byte[] arr;
-                                                ImageConverter converter = new ImageConverter();
-                                                arr = (byte[])converter.ConvertTo(img, typeof(byte[]));
-                                                db.updateCarImage(car_id, arr);
+                                                ////rado
+                                                //System.Drawing.Image img = System.Drawing.Image.FromFile(@"D:\Old PC\My Documents\Visual Studio 2015\Projects\CarDiaryWeb\CarDiaryWeb\" + profileImage.ImageUrl.Substring(1));
+                                                //byte[] arr;
+                                                //ImageConverter converter = new ImageConverter();
+                                                //arr = (byte[])converter.ConvertTo(img, typeof(byte[]));
+                                                //db.updateCarImage(car_id, arr);
                                                 //todo remove image from file system
                                                 //rado
                                                 IdentityHelper.RedirectToReturnUrl(/*Request.QueryString["ReturnUrl"]*/"~/CarProfile.aspx", Response);

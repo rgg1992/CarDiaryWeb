@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -30,7 +31,18 @@ namespace CarDiaryWeb
         private void loadInitialData()
         {
             car car = db.readCar(car_id, user);
-            imgProfile.ImageUrl = car.image;
+            if (car.image != null)
+            {
+                byte[] image = car.image;
+                MemoryStream ms1 = new MemoryStream(image);
+                System.Drawing.Image dbImage = System.Drawing.Image.FromStream(ms1);
+                //String dbImageUrl = "~/Photos/" + car.user_name + "/Photo" + car.id;
+                String dbImageUrl = @"C:/Users/Radoslav Gavrailov/Source\Repos/CarDiaryWeb/CarDiaryWeb/Photos/" + car.user_name + "/Photo" + car.id + ".jpg";
+                dbImage.Save(dbImageUrl, System.Drawing.Imaging.ImageFormat.Jpeg);
+                //rado
+                //img.ImageUrl = car.image;
+                imgProfile.ImageUrl = "~/Photos/" + car.user_name + "/Photo" + car.id + ".jpg";
+            }
             lbCarTitle.Text = car.brand + " " + car.model;
             lbConsumptionInfo.Text = "Разход (" + car.fuel + "):";
 

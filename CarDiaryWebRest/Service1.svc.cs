@@ -19,16 +19,22 @@ namespace CarDiaryWebRest
         private const int PBKDF2IterCount = 1000; // default for Rfc2898DeriveBytes
         private const int PBKDF2SubkeyLength = 256 / 8; // 256 bits
         private const int SaltSize = 128 / 8; // 128 bits
-        public Car readCar(int value)
+        public Car readCar(int value,string user)
         {
             //string url = HttpContext.Current.Request.Url.AbsoluteUri;
             Car carResult = new Car();
             string constring = System.Configuration.ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;
             using (SqlConnection conn = new SqlConnection(constring))
             {
-
-
-                SqlCommand sql = new SqlCommand("SELECT * FROM car where id=" + value, conn);
+                SqlCommand sql;
+                if (value != 999999)
+                {
+                    sql = new SqlCommand("SELECT * FROM car where id=" + value, conn);
+                }
+                else
+                {
+                    sql = new SqlCommand("SELECT * FROM car where user_name='" + user + "';", conn);
+                }
 
                 conn.Open();
 
@@ -42,9 +48,10 @@ namespace CarDiaryWebRest
                     carResult.engine = dr[4].ToString();
                     carResult.fuel = dr[5].ToString();
                     carResult.h_powers = Int32.Parse(dr[6].ToString());
+                    //TODO
                     carResult.image = dr[7].ToString();
                     carResult.user_name = dr[8].ToString();
-                    carResult.id = value;
+                    carResult.id = Int32.Parse(dr[0].ToString());
                 }
 
                 conn.Close();
@@ -82,7 +89,7 @@ namespace CarDiaryWebRest
                     if (string.IsNullOrEmpty(car.image))
                         cmd.Parameters.Add("@image", SqlDbType.NVarChar).Value = DBNull.Value;
                     else
-                    cmd.Parameters.Add("@image", SqlDbType.NVarChar).Value = car.image;
+                        cmd.Parameters.Add("@image", SqlDbType.NVarChar).Value = car.image;
 
                     cmd.Parameters.Add("@user", SqlDbType.NVarChar).Value = car.user_name;
 
@@ -103,13 +110,13 @@ namespace CarDiaryWebRest
             }
 
             return car_id;
-            
+
         }
 
         public int readAllCars(String user)
         {
             //string url = HttpContext.Current.Request.Url.AbsoluteUri;
-            int carCount=0;
+            int carCount = 0;
             string constring = System.Configuration.ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;
             using (SqlConnection conn = new SqlConnection(constring))
             {
@@ -153,7 +160,7 @@ namespace CarDiaryWebRest
 
                     while (dr.Read())
                     {
-                        for (int i=0; i<dr.FieldCount;i++)
+                        for (int i = 0; i < dr.FieldCount; i++)
                         {
                             carBrand = dr.GetValue(i).ToString();
                             carBrandsList.Add(carBrand);
@@ -163,7 +170,7 @@ namespace CarDiaryWebRest
                 }
                 catch (Exception ex)
                 {
-
+                    String str = ex.Message;
                 }
             }
 
@@ -208,117 +215,117 @@ namespace CarDiaryWebRest
             return carModelsList;
         }
 
-/*        public List<String> getInsertedBrands(String user)
-        {
-            //string url = HttpContext.Current.Request.Url.AbsoluteUri;
-            List<String> insertedBrandsList = new List<String>();
-            String insertedBrand;
-            string constring = System.Configuration.ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;
-            using (SqlConnection conn = new SqlConnection(constring))
-            {
-                try
+        /*        public List<String> getInsertedBrands(String user)
                 {
-
-                    SqlCommand sql = new SqlCommand("SELECT brand FROM car where user_name = '" + user + "' order by id;", conn);
-
-                    conn.Open();
-
-                    SqlDataReader dr = sql.ExecuteReader();
-
-                    while (dr.Read())
+                    //string url = HttpContext.Current.Request.Url.AbsoluteUri;
+                    List<String> insertedBrandsList = new List<String>();
+                    String insertedBrand;
+                    string constring = System.Configuration.ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;
+                    using (SqlConnection conn = new SqlConnection(constring))
                     {
-                        for (int i = 0; i < dr.FieldCount; i++)
+                        try
                         {
-                            insertedBrand = dr.GetValue(i).ToString();
-                            insertedBrandsList.Add(insertedBrand);
+
+                            SqlCommand sql = new SqlCommand("SELECT brand FROM car where user_name = '" + user + "' order by id;", conn);
+
+                            conn.Open();
+
+                            SqlDataReader dr = sql.ExecuteReader();
+
+                            while (dr.Read())
+                            {
+                                for (int i = 0; i < dr.FieldCount; i++)
+                                {
+                                    insertedBrand = dr.GetValue(i).ToString();
+                                    insertedBrandsList.Add(insertedBrand);
+                                }
+                            }
+                            conn.Close();
+                        }
+                        catch (Exception ex)
+                        {
+
                         }
                     }
-                    conn.Close();
+
+                    //return string.Format("You entered: {0}", value);
+                    return insertedBrandsList;
                 }
-                catch (Exception ex)
+
+                public List<String> getInsertedModels(String user)
                 {
-
-                }
-            }
-
-            //return string.Format("You entered: {0}", value);
-            return insertedBrandsList;
-        }
-
-        public List<String> getInsertedModels(String user)
-        {
-            //string url = HttpContext.Current.Request.Url.AbsoluteUri;
-            List<String> insertedModelsList = new List<String>();
-            String insertedModel;
-            string constring = System.Configuration.ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;
-            using (SqlConnection conn = new SqlConnection(constring))
-            {
-                try
-                {
-
-                    SqlCommand sql = new SqlCommand("SELECT model FROM car where user_name = '" + user + "' order by id;", conn);
-
-                    conn.Open();
-
-                    SqlDataReader dr = sql.ExecuteReader();
-
-                    while (dr.Read())
+                    //string url = HttpContext.Current.Request.Url.AbsoluteUri;
+                    List<String> insertedModelsList = new List<String>();
+                    String insertedModel;
+                    string constring = System.Configuration.ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;
+                    using (SqlConnection conn = new SqlConnection(constring))
                     {
-                        for (int i = 0; i < dr.FieldCount; i++)
+                        try
                         {
-                            insertedModel = dr.GetValue(i).ToString();
-                            insertedModelsList.Add(insertedModel);
+
+                            SqlCommand sql = new SqlCommand("SELECT model FROM car where user_name = '" + user + "' order by id;", conn);
+
+                            conn.Open();
+
+                            SqlDataReader dr = sql.ExecuteReader();
+
+                            while (dr.Read())
+                            {
+                                for (int i = 0; i < dr.FieldCount; i++)
+                                {
+                                    insertedModel = dr.GetValue(i).ToString();
+                                    insertedModelsList.Add(insertedModel);
+                                }
+                            }
+                            conn.Close();
+                        }
+                        catch (Exception ex)
+                        {
+
                         }
                     }
-                    conn.Close();
+
+                    //return string.Format("You entered: {0}", value);
+                    return insertedModelsList;
                 }
-                catch (Exception ex)
+
+                public List<String> getSavedImages(String user)
                 {
-
-                }
-            }
-
-            //return string.Format("You entered: {0}", value);
-            return insertedModelsList;
-        }
-
-        public List<String> getSavedImages(String user)
-        {
-            //string url = HttpContext.Current.Request.Url.AbsoluteUri;
-            List<String> savedImagesList = new List<String>();
-            String savedImage;
-            string constring = System.Configuration.ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;
-            using (SqlConnection conn = new SqlConnection(constring))
-            {
-                try
-                {
-
-                    SqlCommand sql = new SqlCommand("SELECT image FROM car where user_name = '" + user + "' order by id;", conn);
-
-                    conn.Open();
-
-                    SqlDataReader dr = sql.ExecuteReader();
-
-                    while (dr.Read())
+                    //string url = HttpContext.Current.Request.Url.AbsoluteUri;
+                    List<String> savedImagesList = new List<String>();
+                    String savedImage;
+                    string constring = System.Configuration.ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;
+                    using (SqlConnection conn = new SqlConnection(constring))
                     {
-                        for (int i = 0; i < dr.FieldCount; i++)
+                        try
                         {
-                            savedImage = dr.GetValue(i).ToString();
-                            savedImagesList.Add(savedImage);
+
+                            SqlCommand sql = new SqlCommand("SELECT image FROM car where user_name = '" + user + "' order by id;", conn);
+
+                            conn.Open();
+
+                            SqlDataReader dr = sql.ExecuteReader();
+
+                            while (dr.Read())
+                            {
+                                for (int i = 0; i < dr.FieldCount; i++)
+                                {
+                                    savedImage = dr.GetValue(i).ToString();
+                                    savedImagesList.Add(savedImage);
+                                }
+                            }
+                            conn.Close();
+                        }
+                        catch (Exception ex)
+                        {
+
                         }
                     }
-                    conn.Close();
-                }
-                catch (Exception ex)
-                {
 
+                    //return string.Format("You entered: {0}", value);
+                    return savedImagesList;
                 }
-            }
-
-            //return string.Format("You entered: {0}", value);
-            return savedImagesList;
-        }
-        */
+                */
         public List<Car> getInsertedCars(String user)
         {
             //string url = HttpContext.Current.Request.Url.AbsoluteUri;
@@ -375,9 +382,9 @@ namespace CarDiaryWebRest
                     conn.Open();
 
                     sql.ExecuteNonQuery();
-                    
+
                     conn.Close();
-                   // return true;
+                    // return true;
                 }
                 catch (Exception ex)
                 {
@@ -446,7 +453,7 @@ namespace CarDiaryWebRest
         public Boolean addCarBrand(String brand, String model)
         {
             //string url = HttpContext.Current.Request.Url.AbsoluteUri;
-           // int car_id = 0;
+            // int car_id = 0;
             string constring = System.Configuration.ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;
             try
             {
@@ -463,7 +470,7 @@ namespace CarDiaryWebRest
                     conn.Close();
 
                 }
-                
+
             }
             catch (Exception ex)
             {
@@ -535,7 +542,7 @@ namespace CarDiaryWebRest
 
                 }
             }
-            
+
             return avg;
         }
 
@@ -575,7 +582,7 @@ namespace CarDiaryWebRest
 
                 }
             }
-            
+
             //return string.Format("You entered: {0}", value);
             return fuelInfo;
         }
@@ -746,7 +753,7 @@ namespace CarDiaryWebRest
         public String getFuelConsumptionLastDate(int car_id)
         {
             //string url = HttpContext.Current.Request.Url.AbsoluteUri;
-            String lastDate="";
+            String lastDate = "";
             string constring = System.Configuration.ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;
             using (SqlConnection conn = new SqlConnection(constring))
             {
@@ -834,7 +841,7 @@ namespace CarDiaryWebRest
                 using (SqlConnection conn = new SqlConnection(constring))
                 {
 
-                    SqlCommand cmd = new SqlCommand("UPDATE car SET brand = @brand, model = @model, year = @year, engine = @engine, fuel = @fuel, h_powers = @h_powers, image = @image where id = "+ car.id, conn);
+                    SqlCommand cmd = new SqlCommand("UPDATE car SET brand = @brand, model = @model, year = @year, engine = @engine, fuel = @fuel, h_powers = @h_powers, image = @image where id = " + car.id, conn);
 
                     cmd.Parameters.Add("@brand", SqlDbType.NVarChar).Value = car.brand;
                     cmd.Parameters.Add("@model", SqlDbType.NVarChar).Value = car.model;
@@ -843,7 +850,7 @@ namespace CarDiaryWebRest
                     cmd.Parameters.Add("@fuel", SqlDbType.NVarChar).Value = car.fuel;
                     cmd.Parameters.Add("@h_powers", SqlDbType.Int).Value = car.h_powers;
                     cmd.Parameters.Add("@image", SqlDbType.NVarChar).Value = car.image;
-                    
+
                     conn.Open();
                     cmd.ExecuteNonQuery();
                     conn.Close();
@@ -930,7 +937,7 @@ namespace CarDiaryWebRest
                     hashedPassword = (string)sql.ExecuteScalar();
 
                     conn.Close();
-                                        
+
                 }
                 catch (Exception ex)
                 {
@@ -940,7 +947,7 @@ namespace CarDiaryWebRest
 
             if (hashedPassword != null && !hashedPassword.Equals(""))
             {
-                return VerifyHashedPassword(hashedPassword,pass);
+                return VerifyHashedPassword(hashedPassword, pass);
             }
             else
             {
@@ -1003,6 +1010,123 @@ namespace CarDiaryWebRest
                 areSame &= (a[i] == b[i]);
             }
             return areSame;
+        }
+
+        public Boolean userExists(string user)
+        {
+            //string url = HttpContext.Current.Request.Url.AbsoluteUri;
+            int numUsers = 0;
+            string constring = System.Configuration.ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;
+            using (SqlConnection conn = new SqlConnection(constring))
+            {
+                try
+                {
+
+                    SqlCommand sql = new SqlCommand("SELECT count(*) from AspNetUsers WHERE UserName = '" + user + "';", conn);
+
+                    conn.Open();
+
+                    numUsers = (int)sql.ExecuteScalar();
+
+                    conn.Close();
+                }
+                catch (Exception ex)
+                {
+
+                }
+            }
+
+            if (numUsers > 0)
+            {
+                return true;
+            }
+            else return false;
+        }
+
+        public Boolean registerUser(string user, string pass)
+        {
+            string hashedPassword;
+            string constring = System.Configuration.ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;
+            using (SqlConnection conn = new SqlConnection(constring))
+            {
+                try
+                {
+                    hashedPassword = generatePass(pass);
+
+                    SqlCommand cmd = new SqlCommand("INSERT INTO AspNetUsers (Id,Email,EmailConfirmed,PasswordHash,SecurityStamp,PhoneNumber,PhoneNumberConfirmed,TwoFactorEnabled,LockoutEndDateUtc,LockoutEnabled,AccessFailedCount,UserName) " 
+                        + " VALUES (@id, @email,@emailconf,@pass,@secur,@phone,@phoneConf,@twoFactor,@lock,@lockEnab,@count,@user)", conn);
+
+                    cmd.Parameters.Add("@id", SqlDbType.NVarChar).Value = Guid.NewGuid().ToString();
+                    cmd.Parameters.Add("@email", SqlDbType.NVarChar).Value = user + "@test.bg";
+                    cmd.Parameters.Add("@emailconf", SqlDbType.Bit).Value = 0;
+                    cmd.Parameters.Add("@pass", SqlDbType.NVarChar).Value = hashedPassword;
+                    cmd.Parameters.Add("@secur", SqlDbType.NVarChar).Value = Guid.NewGuid().ToString("D");
+                    cmd.Parameters.Add("@phone", SqlDbType.NVarChar).Value = DBNull.Value;
+                    cmd.Parameters.Add("@phoneConf", SqlDbType.Bit).Value = 0;
+                    cmd.Parameters.Add("@twoFactor", SqlDbType.Bit).Value = 0;
+                    cmd.Parameters.Add("@lock", SqlDbType.DateTime).Value = DBNull.Value;
+                    cmd.Parameters.Add("@lockEnab", SqlDbType.Bit).Value = 1;
+                    cmd.Parameters.Add("@count", SqlDbType.Int).Value = 0;
+                    cmd.Parameters.Add("@user", SqlDbType.NVarChar).Value = user;
+
+                    conn.Open();
+                    cmd.ExecuteNonQuery();
+                    conn.Close();
+
+                }
+                catch (Exception ex)
+                {
+                    return false;
+                }
+            }
+
+            return true;
+        }
+
+        private String generatePass(String password)
+        {
+            byte[] salt;
+            byte[] buffer2;
+            if (password == null)
+            {
+                throw new ArgumentNullException("password");
+            }
+            using (Rfc2898DeriveBytes bytes = new Rfc2898DeriveBytes(password, 0x10, 0x3e8))
+            {
+                salt = bytes.Salt;
+                buffer2 = bytes.GetBytes(0x20);
+            }
+            byte[] dst = new byte[0x31];
+            Buffer.BlockCopy(salt, 0, dst, 1, 0x10);
+            Buffer.BlockCopy(buffer2, 0, dst, 0x11, 0x20);
+            return Convert.ToBase64String(dst);
+        }
+
+        public String getFuelType(int car_id)
+        {
+            //string url = HttpContext.Current.Request.Url.AbsoluteUri;
+            String fuel = "";
+            string constring = System.Configuration.ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;
+            using (SqlConnection conn = new SqlConnection(constring))
+            {
+                try
+                {
+
+                    SqlCommand sql = new SqlCommand("SELECT fuel from car WHERE id = " + car_id, conn);
+
+                    conn.Open();
+
+                    fuel = (String)sql.ExecuteScalar();
+
+                    conn.Close();
+                }
+                catch (Exception ex)
+                {
+
+                }
+            }
+
+            return fuel;
         }
 
     }

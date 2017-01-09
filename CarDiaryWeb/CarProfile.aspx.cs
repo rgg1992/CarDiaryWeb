@@ -127,20 +127,20 @@ namespace CarDiaryWeb
 
             ImageButton img = new ImageButton();
             //rado
-            if (car.blobimage != null)
+            if (car.image != null)
             {
-                byte[] image = car.blobimage;
+                byte[] image = car.image;
                 MemoryStream ms1 = new MemoryStream(image);
                 System.Drawing.Image dbImage = System.Drawing.Image.FromStream(ms1);
                 //String dbImageUrl = "~/Photos/" + car.user_name + "/Photo" + car.id;
-                String dbImageUrl = @"D:/Old PC/My Documents/Visual Studio 2015/Projects/CarDiaryWeb/CarDiaryWeb/Photos/" + car.user_name + "/Photo" + car.id + ".jpg";
+                String dbImageUrl = @"C:/Users/Radoslav Gavrailov/Source/Repos/CarDiaryWeb/CarDiaryWeb/Photos/" + car.user_name + "/Photo" + car.id + ".jpg";
                 dbImage.Save(dbImageUrl, ImageFormat.Jpeg);
                 //rado
                 //img.ImageUrl = car.image;
                 img.ImageUrl = "~/Photos/" + car.user_name + "/Photo" + car.id + ".jpg";
             }
-            else
-                img.ImageUrl = car.image;
+            //else
+            //    img.ImageUrl = car.image;
             img.Width = 300;
             img.Height = 150;
             img.Style.Add("min-height", "150px");

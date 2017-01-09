@@ -20,7 +20,7 @@ namespace CarDiaryWebRest
         //CompositeType GetDataUsingDataContract(CompositeType composite);
 
         [OperationContract]
-        Car readCar(int value);
+        Car readCar(int value,string user);
 
         [OperationContract]
         int createCar(Car car);
@@ -90,6 +90,15 @@ namespace CarDiaryWebRest
 
         [OperationContract]
         Boolean checkUser(string user, string pass);
+
+        [OperationContract]
+        Boolean registerUser(string user, string pass);
+
+        [OperationContract]
+        Boolean userExists(string user);
+
+        [OperationContract]
+        string getFuelType(int car_id);
     }
 
 

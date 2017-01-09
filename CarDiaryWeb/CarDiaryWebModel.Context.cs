@@ -27,54 +27,11 @@ namespace CarDiaryWeb
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<C__MigrationHistory> C__MigrationHistory { get; set; }
-        public virtual DbSet<AspNetRoles> AspNetRoles { get; set; }
-        public virtual DbSet<AspNetUserClaims> AspNetUserClaims { get; set; }
-        public virtual DbSet<AspNetUserLogins> AspNetUserLogins { get; set; }
-        public virtual DbSet<AspNetUsers> AspNetUsers { get; set; }
         public virtual DbSet<car> car { get; set; }
         public virtual DbSet<car_brands> car_brands { get; set; }
-        public virtual DbSet<car_diary_log> car_diary_log { get; set; }
         public virtual DbSet<fuel_consumption> fuel_consumption { get; set; }
         public virtual DbSet<other_costs> other_costs { get; set; }
         public virtual DbSet<v_FuelCons> v_FuelCons { get; set; }
-    
-        public virtual int createCar(string brand, string model, Nullable<int> year, string engine, string fuel, Nullable<int> h_powers, string image, string user, ObjectParameter new_car_ID)
-        {
-            var brandParameter = brand != null ?
-                new ObjectParameter("brand", brand) :
-                new ObjectParameter("brand", typeof(string));
-    
-            var modelParameter = model != null ?
-                new ObjectParameter("model", model) :
-                new ObjectParameter("model", typeof(string));
-    
-            var yearParameter = year.HasValue ?
-                new ObjectParameter("year", year) :
-                new ObjectParameter("year", typeof(int));
-    
-            var engineParameter = engine != null ?
-                new ObjectParameter("engine", engine) :
-                new ObjectParameter("engine", typeof(string));
-    
-            var fuelParameter = fuel != null ?
-                new ObjectParameter("fuel", fuel) :
-                new ObjectParameter("fuel", typeof(string));
-    
-            var h_powersParameter = h_powers.HasValue ?
-                new ObjectParameter("h_powers", h_powers) :
-                new ObjectParameter("h_powers", typeof(int));
-    
-            var imageParameter = image != null ?
-                new ObjectParameter("image", image) :
-                new ObjectParameter("image", typeof(string));
-    
-            var userParameter = user != null ?
-                new ObjectParameter("user", user) :
-                new ObjectParameter("user", typeof(string));
-    
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("createCar", brandParameter, modelParameter, yearParameter, engineParameter, fuelParameter, h_powersParameter, imageParameter, userParameter, new_car_ID);
-        }
     
         public virtual ObjectResult<Nullable<double>> getAvgCons(Nullable<int> id)
         {

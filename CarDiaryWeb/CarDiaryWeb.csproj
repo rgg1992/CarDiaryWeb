@@ -318,16 +318,7 @@
     <Compile Include="Account\Register.aspx.designer.cs">
       <DependentUpon>Register.aspx</DependentUpon>
     </Compile>
-    <Compile Include="AspNetRoles.cs">
-      <DependentUpon>CarDiaryWebModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="AspNetUserClaims.cs">
-      <DependentUpon>CarDiaryWebModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="AspNetUserLogins.cs">
-      <DependentUpon>CarDiaryWebModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="AspNetUsers.cs">
+    <Compile Include="car.cs">
       <DependentUpon>CarDiaryWebModel.tt</DependentUpon>
     </Compile>
     <Compile Include="CarDiaryWebModel.Context.cs">
@@ -346,7 +337,7 @@
       <DependentUpon>CarDiaryWebModel.edmx</DependentUpon>
     </Compile>
     <Compile Include="CarInformation.cs" />
-    <Compile Include="C__MigrationHistory.cs">
+    <Compile Include="car_brands.cs">
       <DependentUpon>CarDiaryWebModel.tt</DependentUpon>
     </Compile>
     <Compile Include="DatabaseUtility.cs" />
@@ -362,21 +353,12 @@
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
-    <Compile Include="car.cs">
-      <DependentUpon>CarDiaryWebModel.tt</DependentUpon>
-    </Compile>
     <Compile Include="CarProfile.aspx.cs">
       <DependentUpon>CarProfile.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="CarProfile.aspx.designer.cs">
       <DependentUpon>CarProfile.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="car_brands.cs">
-      <DependentUpon>CarDiaryWebModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="car_diary_log.cs">
-      <DependentUpon>CarDiaryWebModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Contact.aspx.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
@@ -460,8 +442,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Code\" />
-    <Folder Include="App_Data\" />
+    <Folder Include="App_Code\App_Data\" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />

@@ -11,7 +11,7 @@ namespace CarDiaryWeb
 {
     using System;
     using System.Collections.Generic;
-
+    
     public partial class fuel_consumption
     {
         public fuel_consumption()
@@ -19,7 +19,7 @@ namespace CarDiaryWeb
 
         }
 
-        public fuel_consumption(int car_id, string date, int mileage, string fuel, int distance, double liters,double unit_price, double total, double avg)
+        public fuel_consumption(int car_id, string date, int mileage, string fuel, int distance, double liters, double unit_price, double total, double avg)
         {
             this.car_id = car_id;
             this.refuel_date = date;
