@@ -62,7 +62,7 @@ namespace CarDiaryWebRest
             return carResult;
         }
 
-        public int createCar(Car car)
+        public int createCar(String brand, String model, String engine, String fuel, int year, int h_powers, String image, String user)
         {
             //string url = HttpContext.Current.Request.Url.AbsoluteUri;
             int car_id = 0;
@@ -80,18 +80,18 @@ namespace CarDiaryWebRest
 
                     outPutVal.Direction = ParameterDirection.Output;
                     cmd.Parameters.Add(outPutVal);
-                    cmd.Parameters.Add("@brand", SqlDbType.NVarChar).Value = car.brand;
-                    cmd.Parameters.Add("@model", SqlDbType.NVarChar).Value = car.model;
-                    cmd.Parameters.Add("@year", SqlDbType.Int).Value = car.year;
-                    cmd.Parameters.Add("@engine", SqlDbType.NVarChar).Value = car.engine;
-                    cmd.Parameters.Add("@fuel", SqlDbType.NVarChar).Value = car.fuel;
-                    cmd.Parameters.Add("@h_powers", SqlDbType.Int).Value = car.h_powers;
-                    if (string.IsNullOrEmpty(car.image))
-                        cmd.Parameters.Add("@image", SqlDbType.NVarChar).Value = DBNull.Value;
+                    cmd.Parameters.Add("@brand", SqlDbType.NVarChar).Value = brand;
+                    cmd.Parameters.Add("@model", SqlDbType.NVarChar).Value = model;
+                    cmd.Parameters.Add("@year", SqlDbType.Int).Value = year;
+                    cmd.Parameters.Add("@engine", SqlDbType.NVarChar).Value = engine;
+                    cmd.Parameters.Add("@fuel", SqlDbType.NVarChar).Value = fuel;
+                    cmd.Parameters.Add("@h_powers", SqlDbType.Int).Value = h_powers;
+                    if (string.IsNullOrEmpty(image))
+                        cmd.Parameters.Add("@image", SqlDbType.VarBinary).Value = DBNull.Value;
                     else
-                        cmd.Parameters.Add("@image", SqlDbType.NVarChar).Value = car.image;
+                        cmd.Parameters.Add("@image", SqlDbType.VarBinary).Value = image;
 
-                    cmd.Parameters.Add("@user", SqlDbType.NVarChar).Value = car.user_name;
+                    cmd.Parameters.Add("@user", SqlDbType.NVarChar).Value = user;
 
 
                     conn.Open();
@@ -481,7 +481,7 @@ namespace CarDiaryWebRest
 
         }
 
-        public Boolean addRefueling(FuelConsumption refueling)
+        public Boolean addRefueling(int car_id, string date, int mileage, string fuel_type,int distance, double liters, double unit_price, double total_cost, double average_cons_per_100_km)
         {
             //string url = HttpContext.Current.Request.Url.AbsoluteUri;
             // int car_id = 0;
@@ -493,15 +493,15 @@ namespace CarDiaryWebRest
 
                     SqlCommand cmd = new SqlCommand("INSERT INTO fuel_consumption (car_id,refuel_date,mileage,fuel_type,distance,liters,unit_price,total_cost,average_cons_per_100_km) VALUES (@car_id, @date,@mileage,@fuel,@distance,@liters,@unit_price,@total,@avg)", conn);
 
-                    cmd.Parameters.Add("@car_id", SqlDbType.Int).Value = refueling.car_id;
-                    cmd.Parameters.Add("@date", SqlDbType.NVarChar).Value = refueling.refuel_date;
-                    cmd.Parameters.Add("@mileage", SqlDbType.Int).Value = refueling.mileage;
-                    cmd.Parameters.Add("@fuel", SqlDbType.NVarChar).Value = refueling.fuel_type;
-                    cmd.Parameters.Add("@distance", SqlDbType.Int).Value = refueling.distance;
-                    cmd.Parameters.Add("@liters", SqlDbType.Float).Value = refueling.liters;
-                    cmd.Parameters.Add("@unit_price", SqlDbType.Float).Value = refueling.unit_price;
-                    cmd.Parameters.Add("@total", SqlDbType.Float).Value = refueling.total_cost;
-                    cmd.Parameters.Add("@avg", SqlDbType.Float).Value = refueling.average_cons_per_100_km;
+                    cmd.Parameters.Add("@car_id", SqlDbType.Int).Value = car_id;
+                    cmd.Parameters.Add("@date", SqlDbType.NVarChar).Value = date;
+                    cmd.Parameters.Add("@mileage", SqlDbType.Int).Value = mileage;
+                    cmd.Parameters.Add("@fuel", SqlDbType.NVarChar).Value = fuel_type;
+                    cmd.Parameters.Add("@distance", SqlDbType.Int).Value = distance;
+                    cmd.Parameters.Add("@liters", SqlDbType.Float).Value = liters;
+                    cmd.Parameters.Add("@unit_price", SqlDbType.Float).Value = unit_price;
+                    cmd.Parameters.Add("@total", SqlDbType.Float).Value = total_cost;
+                    cmd.Parameters.Add("@avg", SqlDbType.Float).Value = average_cons_per_100_km;
 
                     conn.Open();
                     cmd.ExecuteNonQuery();
@@ -633,6 +633,7 @@ namespace CarDiaryWebRest
 
                     while (dr.Read())
                     {
+                        fuelConsumption.id = Int32.Parse(dr[0].ToString());
                         fuelConsumption.car_id = car_id;
                         fuelConsumption.refuel_date = dr[2].ToString();
                         fuelConsumption.mileage = Int32.Parse(dr[3].ToString());
@@ -669,7 +670,7 @@ namespace CarDiaryWebRest
             return fuelConsumptionsList;
         }
 
-        public Boolean addOtherCost(OtherCosts cost)
+        public Boolean addOtherCost(int car_id, string category, string cost_date, int mileage,double total_cost, string notes)
         {
             //string url = HttpContext.Current.Request.Url.AbsoluteUri;
             // int car_id = 0;
@@ -681,15 +682,12 @@ namespace CarDiaryWebRest
 
                     SqlCommand cmd = new SqlCommand("INSERT INTO other_costs (car_id,category,cost_date,mileage,total_cost,notes) VALUES (@car_id, @category,@date,@mileage,@total,@notes)", conn);
 
-                    cmd.Parameters.Add("@car_id", SqlDbType.Int).Value = cost.car_id;
-                    cmd.Parameters.Add("@category", SqlDbType.NVarChar).Value = cost.category;
-                    cmd.Parameters.Add("@date", SqlDbType.NVarChar).Value = cost.cost_date;
-                    if (cost.mileage == null)
-                        cmd.Parameters.Add("@mileage", SqlDbType.Int).Value = DBNull.Value;
-                    else
-                        cmd.Parameters.Add("@mileage", SqlDbType.Int).Value = cost.mileage;
-                    cmd.Parameters.Add("@total", SqlDbType.Float).Value = cost.total_cost;
-                    cmd.Parameters.Add("@notes", SqlDbType.NVarChar).Value = cost.notes;
+                    cmd.Parameters.Add("@car_id", SqlDbType.Int).Value = car_id;
+                    cmd.Parameters.Add("@category", SqlDbType.NVarChar).Value = category;
+                    cmd.Parameters.Add("@date", SqlDbType.NVarChar).Value = cost_date;
+                    cmd.Parameters.Add("@mileage", SqlDbType.Int).Value = mileage;
+                    cmd.Parameters.Add("@total", SqlDbType.Float).Value = total_cost;
+                    cmd.Parameters.Add("@notes", SqlDbType.NVarChar).Value = notes;
 
                     conn.Open();
                     cmd.ExecuteNonQuery();
@@ -735,6 +733,7 @@ namespace CarDiaryWebRest
                             temp = temp.Replace(".", ",");
                         otherCost.total_cost = Double.Parse(temp);
                         otherCost.notes = dr[6].ToString();
+                        otherCost.id = Int32.Parse(dr[0].ToString());
                         otherCostsList.Add(otherCost);
                         otherCost = new OtherCosts();
                     }
@@ -831,7 +830,7 @@ namespace CarDiaryWebRest
             return numOtherCost;
         }
 
-        public Boolean updateCar(Car car)
+        public Boolean updateCar(int car_id, String brand, String model, String engine, String fuel, int year, int h_powers, String image, String user)
         {
             //string url = HttpContext.Current.Request.Url.AbsoluteUri;
             // int car_id = 0;
@@ -841,15 +840,18 @@ namespace CarDiaryWebRest
                 using (SqlConnection conn = new SqlConnection(constring))
                 {
 
-                    SqlCommand cmd = new SqlCommand("UPDATE car SET brand = @brand, model = @model, year = @year, engine = @engine, fuel = @fuel, h_powers = @h_powers, image = @image where id = " + car.id, conn);
+                    SqlCommand cmd = new SqlCommand("UPDATE car SET brand = @brand, model = @model, year = @year, engine = @engine, fuel = @fuel, h_powers = @h_powers, image = @image where id = " + car_id, conn);
 
-                    cmd.Parameters.Add("@brand", SqlDbType.NVarChar).Value = car.brand;
-                    cmd.Parameters.Add("@model", SqlDbType.NVarChar).Value = car.model;
-                    cmd.Parameters.Add("@year", SqlDbType.Int).Value = car.year;
-                    cmd.Parameters.Add("@engine", SqlDbType.NVarChar).Value = car.engine;
-                    cmd.Parameters.Add("@fuel", SqlDbType.NVarChar).Value = car.fuel;
-                    cmd.Parameters.Add("@h_powers", SqlDbType.Int).Value = car.h_powers;
-                    cmd.Parameters.Add("@image", SqlDbType.NVarChar).Value = car.image;
+                    cmd.Parameters.Add("@brand", SqlDbType.NVarChar).Value = brand;
+                    cmd.Parameters.Add("@model", SqlDbType.NVarChar).Value = model;
+                    cmd.Parameters.Add("@year", SqlDbType.Int).Value = year;
+                    cmd.Parameters.Add("@engine", SqlDbType.NVarChar).Value = engine;
+                    cmd.Parameters.Add("@fuel", SqlDbType.NVarChar).Value = fuel;
+                    cmd.Parameters.Add("@h_powers", SqlDbType.Int).Value = h_powers;
+                    if (string.IsNullOrEmpty(image))
+                        cmd.Parameters.Add("@image", SqlDbType.VarBinary).Value = DBNull.Value;
+                    else
+                        cmd.Parameters.Add("@image", SqlDbType.VarBinary).Value = image;
 
                     conn.Open();
                     cmd.ExecuteNonQuery();

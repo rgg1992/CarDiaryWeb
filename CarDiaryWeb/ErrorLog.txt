@@ -2336,3 +2336,12 @@ Stack Trace:
    at System.Linq.Queryable.Max[TSource](IQueryable`1 source)
    at CarDiaryWeb.DatabaseUtility.getFuelConsumptionLastDate(Int32 carId) in C:\Users\Radoslav Gavrailov\Source\Repos\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 246
 
+********** 1/17/2017 7:21:54 PM **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at System.Nullable`1.get_Value()
+   at CarDiaryWeb.DatabaseUtility.getAvgCons(Int32 carId) in C:\Users\Radoslav Gavrailov\Source\Repos\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 89
+

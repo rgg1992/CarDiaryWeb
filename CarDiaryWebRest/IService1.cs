@@ -23,7 +23,7 @@ namespace CarDiaryWebRest
         Car readCar(int value,string user);
 
         [OperationContract]
-        int createCar(Car car);
+        int createCar(String brand, String model, String engine, String fuel, int year, int h_powers, String image, String user);
 
         [OperationContract]
         int readAllCars(String user);
@@ -56,7 +56,7 @@ namespace CarDiaryWebRest
         FuelInformation getFuelInformation(int car_id);
 
         [OperationContract]
-        Boolean addRefueling(FuelConsumption refueling);
+        Boolean addRefueling(int car_id, string date, int mileage, string fuel_type, int distance, double liters, double unit_price, double total_cost, double average_cons_per_100_km);
 
         [OperationContract]
         int getPreviousMileage(int car_id);
@@ -65,7 +65,7 @@ namespace CarDiaryWebRest
         List<FuelConsumption> getFuelConsumptionList(int car_id);
 
         [OperationContract]
-        Boolean addOtherCost(OtherCosts cost);
+        Boolean addOtherCost(int car_id, string category, string cost_date, int mileage, double total_cost, string notes);
 
         [OperationContract]
         List<OtherCosts> getOtherCostsList(int car_id);
@@ -80,7 +80,7 @@ namespace CarDiaryWebRest
         int getNumberOfOtherCosts(int car_id);
 
         [OperationContract]
-        Boolean updateCar(Car car);
+        Boolean updateCar(int car_id, String brand, String model, String engine, String fuel, int year, int h_powers, String image, String user);
 
         [OperationContract]
         Boolean deleteFuelCons(int id);
