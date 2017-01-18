@@ -13,7 +13,7 @@ namespace CarDiaryWebRest
 
         }
 
-        public Car(string brand, string model, int year, string engine, string fuel, int horsePowers, string image, string user)
+        public Car(string brand, string model, int year, string engine, string fuel, int horsePowers, byte[] image, string user)
         {
             this.brand = brand;
             this.model = model;
@@ -33,7 +33,7 @@ namespace CarDiaryWebRest
         public string engine { get; set; }
         public string fuel { get; set; }
         public int h_powers { get; set; }
-        public string image { get; set; }
+        public byte[] image { get; set; }
         public string user_name { get; set; }
 
 

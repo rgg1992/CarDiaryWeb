@@ -2345,3 +2345,185 @@ Stack Trace:
    at System.Nullable`1.get_Value()
    at CarDiaryWeb.DatabaseUtility.getAvgCons(Int32 carId) in C:\Users\Radoslav Gavrailov\Source\Repos\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 89
 
+********** 1/18/2017 4:19:12 PM **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at System.Nullable`1.get_Value()
+   at CarDiaryWeb.DatabaseUtility.getAvgCons(Int32 carId) in C:\Users\Radoslav Gavrailov\Source\Repos\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 89
+
+********** 1/18/2017 4:19:12 PM **********
+Inner Exception Type: System.Data.SqlClient.SqlException
+Inner Exception: The conversion of a nvarchar data type to a datetime data type resulted in an out-of-range value.
+Inner Source: .Net SqlClient Data Provider
+Inner Stack Trace: 
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at System.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at System.Data.SqlClient.SqlDataReader.Read()
+   at System.Data.Entity.Core.Common.Internal.Materialization.Shaper`1.StoreRead()
+Exception Type: System.Data.Entity.Core.EntityCommandExecutionException
+Exception: An error occurred while reading from the store provider's data reader. See the inner exception for details.
+Source: DB.cs
+Stack Trace: 
+   at System.Data.Entity.Core.Common.Internal.Materialization.Shaper`1.HandleReaderException(Exception e)
+   at System.Data.Entity.Core.Common.Internal.Materialization.Shaper`1.StoreRead()
+   at System.Data.Entity.Core.Common.Internal.Materialization.Shaper`1.SimpleEnumerator.MoveNext()
+   at CarDiaryWeb.DatabaseUtility.getTotalCostPerMonth(Int32 carId) in C:\Users\Radoslav Gavrailov\Source\Repos\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 481
+
+********** 1/18/2017 4:35:54 PM **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at System.Nullable`1.get_Value()
+   at CarDiaryWeb.DatabaseUtility.getAvgCons(Int32 carId) in C:\Users\Radoslav Gavrailov\Source\Repos\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 89
+
+********** 1/18/2017 4:35:54 PM **********
+Inner Exception Type: System.Data.SqlClient.SqlException
+Inner Exception: The conversion of a nvarchar data type to a datetime data type resulted in an out-of-range value.
+Inner Source: .Net SqlClient Data Provider
+Inner Stack Trace: 
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at System.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at System.Data.SqlClient.SqlDataReader.Read()
+   at System.Data.Entity.Core.Common.Internal.Materialization.Shaper`1.StoreRead()
+Exception Type: System.Data.Entity.Core.EntityCommandExecutionException
+Exception: An error occurred while reading from the store provider's data reader. See the inner exception for details.
+Source: DB.cs
+Stack Trace: 
+   at System.Data.Entity.Core.Common.Internal.Materialization.Shaper`1.HandleReaderException(Exception e)
+   at System.Data.Entity.Core.Common.Internal.Materialization.Shaper`1.StoreRead()
+   at System.Data.Entity.Core.Common.Internal.Materialization.Shaper`1.SimpleEnumerator.MoveNext()
+   at CarDiaryWeb.DatabaseUtility.getTotalCostPerMonth(Int32 carId) in C:\Users\Radoslav Gavrailov\Source\Repos\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 481
+
+********** 1/18/2017 4:35:57 PM **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at System.Nullable`1.get_Value()
+   at CarDiaryWeb.DatabaseUtility.getAvgCons(Int32 carId) in C:\Users\Radoslav Gavrailov\Source\Repos\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 89
+
+********** 1/18/2017 4:35:57 PM **********
+Exception Type: System.InvalidOperationException
+Exception: The cast to value type 'System.Double' failed because the materialized value is null. Either the result type's generic parameter or the query must use a nullable type.
+Source: DB.cs
+Stack Trace: 
+   at System.Data.Entity.Core.Common.Internal.Materialization.Shaper.ErrorHandlingValueReader`1.GetValue(DbDataReader reader, Int32 ordinal)
+   at lambda_method(Closure , Shaper )
+   at System.Data.Entity.Core.Common.Internal.Materialization.Coordinator`1.ReadNextElement(Shaper shaper)
+   at System.Data.Entity.Core.Common.Internal.Materialization.Shaper`1.SimpleEnumerator.MoveNext()
+   at System.Data.Entity.Internal.LazyEnumerator`1.MoveNext()
+   at System.Linq.Enumerable.Single[TSource](IEnumerable`1 source)
+   at System.Data.Entity.Core.Objects.ELinq.ObjectQueryProvider.<GetElementFunction>b__3[TResult](IEnumerable`1 sequence)
+   at System.Data.Entity.Core.Objects.ELinq.ObjectQueryProvider.ExecuteSingle[TResult](IEnumerable`1 query, Expression queryRoot)
+   at System.Data.Entity.Core.Objects.ELinq.ObjectQueryProvider.System.Linq.IQueryProvider.Execute[TResult](Expression expression)
+   at System.Data.Entity.Internal.Linq.DbQueryProvider.Execute[TResult](Expression expression)
+   at System.Linq.Queryable.Sum(IQueryable`1 source)
+   at CarDiaryWeb.DatabaseUtility.getLitersConsumed(Int32 carId) in C:\Users\Radoslav Gavrailov\Source\Repos\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 335
+
+********** 1/18/2017 4:36:08 PM **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at System.Nullable`1.get_Value()
+   at CarDiaryWeb.DatabaseUtility.getAvgCons(Int32 carId) in C:\Users\Radoslav Gavrailov\Source\Repos\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 89
+
+********** 1/18/2017 4:36:08 PM **********
+Inner Exception Type: System.Data.SqlClient.SqlException
+Inner Exception: The conversion of a nvarchar data type to a datetime data type resulted in an out-of-range value.
+Inner Source: .Net SqlClient Data Provider
+Inner Stack Trace: 
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at System.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at System.Data.SqlClient.SqlDataReader.Read()
+   at System.Data.Entity.Core.Common.Internal.Materialization.Shaper`1.StoreRead()
+Exception Type: System.Data.Entity.Core.EntityCommandExecutionException
+Exception: An error occurred while reading from the store provider's data reader. See the inner exception for details.
+Source: DB.cs
+Stack Trace: 
+   at System.Data.Entity.Core.Common.Internal.Materialization.Shaper`1.HandleReaderException(Exception e)
+   at System.Data.Entity.Core.Common.Internal.Materialization.Shaper`1.StoreRead()
+   at System.Data.Entity.Core.Common.Internal.Materialization.Shaper`1.SimpleEnumerator.MoveNext()
+   at CarDiaryWeb.DatabaseUtility.getTotalCostPerMonth(Int32 carId) in C:\Users\Radoslav Gavrailov\Source\Repos\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 481
+
+********** 1/18/2017 4:36:11 PM **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at System.Nullable`1.get_Value()
+   at CarDiaryWeb.DatabaseUtility.getAvgCons(Int32 carId) in C:\Users\Radoslav Gavrailov\Source\Repos\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 89
+
+********** 1/18/2017 4:36:11 PM **********
+Inner Exception Type: System.Data.SqlClient.SqlException
+Inner Exception: The conversion of a nvarchar data type to a datetime data type resulted in an out-of-range value.
+Inner Source: .Net SqlClient Data Provider
+Inner Stack Trace: 
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at System.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at System.Data.SqlClient.SqlDataReader.Read()
+   at System.Data.Entity.Core.Common.Internal.Materialization.Shaper`1.StoreRead()
+Exception Type: System.Data.Entity.Core.EntityCommandExecutionException
+Exception: An error occurred while reading from the store provider's data reader. See the inner exception for details.
+Source: DB.cs
+Stack Trace: 
+   at System.Data.Entity.Core.Common.Internal.Materialization.Shaper`1.HandleReaderException(Exception e)
+   at System.Data.Entity.Core.Common.Internal.Materialization.Shaper`1.StoreRead()
+   at System.Data.Entity.Core.Common.Internal.Materialization.Shaper`1.SimpleEnumerator.MoveNext()
+   at CarDiaryWeb.DatabaseUtility.getTotalCostPerMonth(Int32 carId) in C:\Users\Radoslav Gavrailov\Source\Repos\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 481
+
+********** 1/18/2017 4:37:26 PM **********
+Exception Type: System.InvalidOperationException
+Exception: Nullable object must have a value.
+Source: DB.cs
+Stack Trace: 
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at System.Nullable`1.get_Value()
+   at CarDiaryWeb.DatabaseUtility.getAvgCons(Int32 carId) in C:\Users\Radoslav Gavrailov\Source\Repos\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 89
+
+********** 1/18/2017 4:37:26 PM **********
+Inner Exception Type: System.Data.SqlClient.SqlException
+Inner Exception: The conversion of a nvarchar data type to a datetime data type resulted in an out-of-range value.
+Inner Source: .Net SqlClient Data Provider
+Inner Stack Trace: 
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at System.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at System.Data.SqlClient.SqlDataReader.Read()
+   at System.Data.Entity.Core.Common.Internal.Materialization.Shaper`1.StoreRead()
+Exception Type: System.Data.Entity.Core.EntityCommandExecutionException
+Exception: An error occurred while reading from the store provider's data reader. See the inner exception for details.
+Source: DB.cs
+Stack Trace: 
+   at System.Data.Entity.Core.Common.Internal.Materialization.Shaper`1.HandleReaderException(Exception e)
+   at System.Data.Entity.Core.Common.Internal.Materialization.Shaper`1.StoreRead()
+   at System.Data.Entity.Core.Common.Internal.Materialization.Shaper`1.SimpleEnumerator.MoveNext()
+   at CarDiaryWeb.DatabaseUtility.getTotalCostPerMonth(Int32 carId) in C:\Users\Radoslav Gavrailov\Source\Repos\CarDiaryWeb\CarDiaryWeb\DatabaseUtility.cs:line 481
+

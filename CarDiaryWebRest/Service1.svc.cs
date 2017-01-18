@@ -36,27 +36,35 @@ namespace CarDiaryWebRest
                     sql = new SqlCommand("SELECT * FROM car where user_name='" + user + "';", conn);
                 }
 
-                conn.Open();
+                try {
+                    conn.Open();
 
-                SqlDataReader dr = sql.ExecuteReader();
+                    SqlDataReader dr = sql.ExecuteReader();
 
-                if (dr.Read())
-                {
-                    carResult.brand = dr[1].ToString();
-                    carResult.model = dr[2].ToString();
-                    carResult.year = Int32.Parse(dr[3].ToString());
-                    carResult.engine = dr[4].ToString();
-                    carResult.fuel = dr[5].ToString();
-                    carResult.h_powers = Int32.Parse(dr[6].ToString());
-                    //TODO
-                    carResult.image = dr[7].ToString();
-                    carResult.user_name = dr[8].ToString();
-                    carResult.id = Int32.Parse(dr[0].ToString());
+                    if (dr.Read())
+                    {
+                        carResult.brand = dr[1].ToString();
+                        carResult.model = dr[2].ToString();
+                        carResult.year = Int32.Parse(dr[3].ToString());
+                        carResult.engine = dr[4].ToString();
+                        carResult.fuel = dr[5].ToString();
+                        carResult.h_powers = Int32.Parse(dr[6].ToString());
+                        if(dr[7]!=System.DBNull.Value)
+                            carResult.image = (byte[])dr[7];
+                        //carResult.image = dr[7].ToString();
+                        carResult.user_name = dr[8].ToString();
+                        carResult.id = Int32.Parse(dr[0].ToString());
+                    }
+
+                    conn.Close();
+
                 }
-
-                conn.Close();
-
+                catch (Exception ex)
+                {
+                    String excc = ex.ToString();
+                }
             }
+           
 
             //return string.Format("You entered: {0}", value);
             return carResult;
@@ -351,7 +359,8 @@ namespace CarDiaryWebRest
                         insertedCar.engine = dr[4].ToString();
                         insertedCar.fuel = dr[5].ToString();
                         insertedCar.h_powers = Int32.Parse(dr[6].ToString());
-                        insertedCar.image = dr[7].ToString();
+                        if (dr[7] != System.DBNull.Value)
+                            insertedCar.image = (byte[])dr[7];
                         insertedCar.user_name = dr[8].ToString();
                         insertedCar.id = Int32.Parse(dr[0].ToString());
                         insertedCarsList.Add(insertedCar);
@@ -1129,6 +1138,40 @@ namespace CarDiaryWebRest
             }
 
             return fuel;
+        }
+
+        public Boolean updateCarImage(byte[] image, int car_id)
+        {
+            //string url = HttpContext.Current.Request.Url.AbsoluteUri;
+            // int car_id = 0;
+            string constring = System.Configuration.ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(constring))
+                {
+
+                    SqlCommand cmd = new SqlCommand("UPDATE car SET image = @image where id = " + car_id, conn);
+
+                   
+                    if (image == null)
+                        cmd.Parameters.Add("@image", SqlDbType.VarBinary).Value = DBNull.Value;
+                    else
+                        cmd.Parameters.Add("@image", SqlDbType.VarBinary).Value = image;
+
+                    conn.Open();
+                    cmd.ExecuteNonQuery();
+                    conn.Close();
+
+                }
+
+            }
+            catch (Exception ex)
+            {
+                return false;
+            }
+
+            return true;
+
         }
 
     }

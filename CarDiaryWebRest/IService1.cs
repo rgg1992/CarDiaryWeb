@@ -99,6 +99,9 @@ namespace CarDiaryWebRest
 
         [OperationContract]
         string getFuelType(int car_id);
+
+        [OperationContract]
+        Boolean updateCarImage(byte[] image, int car_id);
     }
 
 
