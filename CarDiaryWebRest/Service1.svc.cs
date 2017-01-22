@@ -543,6 +543,7 @@ namespace CarDiaryWebRest
                     conn.Open();
 
                     avg = (double)sql.ExecuteScalar();
+                    avg = Double.Parse(avg.ToString("0.##"));
 
                     conn.Close();
                 }
@@ -578,9 +579,9 @@ namespace CarDiaryWebRest
                         fuelInfo.min_cons = Double.Parse(dr[2].ToString());
                         fuelInfo.distance = Int32.Parse(dr[3].ToString());
                         String price = dr[4].ToString();
-                        if (price.Contains("."))
-                            price = price.Replace(".", ",");
-                        fuelInfo.price_per_km = Double.Parse(price);
+                        if (price.Contains(","))
+                            price = price.Replace(",", ".");
+                        fuelInfo.price_per_km = price;
                     }
 
 
@@ -649,21 +650,21 @@ namespace CarDiaryWebRest
                         fuelConsumption.fuel_type = dr[4].ToString();
                         fuelConsumption.distance = Int32.Parse(dr[5].ToString());
                         string temp = dr[6].ToString();
-                        if (temp.Contains("."))
-                            temp = temp.Replace(".", ",");
-                        fuelConsumption.liters = Double.Parse(temp);
+                        if (temp.Contains(","))
+                            temp = temp.Replace(",", ".");
+                        fuelConsumption.liters = temp;
                         temp = dr[7].ToString();
-                        if (temp.Contains("."))
-                            temp = temp.Replace(".", ",");
-                        fuelConsumption.unit_price = Double.Parse(temp);
+                        if (temp.Contains(","))
+                            temp = temp.Replace(",", ".");
+                        fuelConsumption.unit_price = temp;
                         temp = dr[8].ToString();
-                        if (temp.Contains("."))
-                            temp = temp.Replace(".", ",");
-                        fuelConsumption.total_cost = Double.Parse(temp);
+                        if (temp.Contains(","))
+                            temp = temp.Replace(",", ".");
+                        fuelConsumption.total_cost = temp;
                         temp = dr[9].ToString();
-                        if (temp.Contains("."))
-                            temp = temp.Replace(".", ",");
-                        fuelConsumption.average_cons_per_100_km = Double.Parse(temp);
+                        if (temp.Contains(","))
+                            temp = temp.Replace(",", ".");
+                        fuelConsumption.average_cons_per_100_km = temp;
                         fuelConsumptionsList.Add(fuelConsumption);
                         fuelConsumption = new FuelConsumption();
                     }
@@ -738,9 +739,9 @@ namespace CarDiaryWebRest
                         otherCost.cost_date = dr[3].ToString();
                         otherCost.mileage = Int32.Parse(dr[4].ToString());
                         string temp = dr[5].ToString();
-                        if (temp.Contains("."))
-                            temp = temp.Replace(".", ",");
-                        otherCost.total_cost = Double.Parse(temp);
+                        if (temp.Contains(","))
+                            temp = temp.Replace(",", ".");
+                        otherCost.total_cost = temp;
                         otherCost.notes = dr[6].ToString();
                         otherCost.id = Int32.Parse(dr[0].ToString());
                         otherCostsList.Add(otherCost);

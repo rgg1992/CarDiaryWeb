@@ -95,10 +95,10 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Car.cs" />
-    <Compile Include="FuelConsumption.cs" />
-    <Compile Include="FuelInformation.cs" />
-    <Compile Include="OtherCosts.cs" />
+    <Compile Include="Classes\Car.cs" />
+    <Compile Include="Classes\FuelConsumption.cs" />
+    <Compile Include="Classes\FuelInformation.cs" />
+    <Compile Include="Classes\OtherCosts.cs" />
     <Compile Include="Service1.svc.cs">
       <DependentUpon>Service1.svc</DependentUpon>
     </Compile>

@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="InsertFuel.aspx.cs" Inherits="CarDiaryWeb.InsertFuel" %>
+﻿<%@ Page Title="Добави зареждане" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="InsertFuel.aspx.cs" Inherits="CarDiaryWeb.InsertFuel" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6/jquery.min.js" type="text/javascript"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js" type="text/javascript"></script>

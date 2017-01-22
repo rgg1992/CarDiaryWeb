@@ -123,14 +123,10 @@ namespace CarDiaryWeb
             {
                 using (var context = new CarDiaryWebEF())
                 {
-                    var itemToRemove = context.fuel_consumption.SingleOrDefault(fc => fc.car_id == carId);
-
-                    if (itemToRemove != null)
-                    {
-                        context.fuel_consumption.Remove(itemToRemove);
+                        context.fuel_consumption.RemoveRange(context.fuel_consumption.Where(x=> x.car_id == carId));
                         context.SaveChanges();
                         //delete = true;
-                    }
+                    
 
                 }
             }
@@ -147,14 +143,8 @@ namespace CarDiaryWeb
             {
                 using (var context = new CarDiaryWebEF())
                 {
-                    var itemToRemove = context.other_costs.SingleOrDefault(oc => oc.car_id == carId);
-
-                    if (itemToRemove != null)
-                    {
-                        context.other_costs.Remove(itemToRemove);
-                        context.SaveChanges();
-                        //delete = true;
-                    }
+                    context.other_costs.RemoveRange(context.other_costs.Where(x => x.car_id == carId));
+                    context.SaveChanges();
 
                 }
             }

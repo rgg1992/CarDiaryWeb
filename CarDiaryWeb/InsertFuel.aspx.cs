@@ -143,9 +143,9 @@ namespace CarDiaryWeb
             string FilePath;
 
             // Name of application you created
-            ApplicationId = "CarDiary_ORM";
+            ApplicationId = "APP_CarDiaryWeb";
             // The password from e-mail sent by server after application was created
-            Password = "V5jzlhr0FCm4ANOsnoTkEuV7";
+            Password = "hWs91QPonnyZSX8t0YkEnaRB";
 
             FilePath = "~/Photos/" + userName + "/Invoices/" + photo;
 

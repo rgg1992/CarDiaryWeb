@@ -226,6 +226,7 @@
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Images\delete.png" />
     <Content Include="Images\icon_note.png" />
+    <Content Include="Images\loader.gif" />
     <Content Include="Images\No_image.png" />
     <Content Include="Images\no_photo.png" />
     <Content Include="InsertCar.aspx" />
@@ -282,7 +283,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AbbyyReader.cs" />
+    <Compile Include="Classes\AbbyyReader.cs" />
     <Compile Include="Account\Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -336,12 +337,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>CarDiaryWebModel.edmx</DependentUpon>
     </Compile>
-    <Compile Include="CarInformation.cs" />
+    <Compile Include="Classes\CarInformation.cs" />
     <Compile Include="car_brands.cs">
       <DependentUpon>CarDiaryWebModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="DatabaseUtility.cs" />
-    <Compile Include="ExceptionUtility.cs" />
+    <Compile Include="Classes\DatabaseUtility.cs" />
+    <Compile Include="Classes\ExceptionUtility.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="About.aspx.cs">
       <DependentUpon>About.aspx</DependentUpon>
