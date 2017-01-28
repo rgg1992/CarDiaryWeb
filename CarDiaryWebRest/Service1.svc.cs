@@ -95,10 +95,14 @@ namespace CarDiaryWebRest
                     cmd.Parameters.Add("@fuel", SqlDbType.NVarChar).Value = fuel;
                     cmd.Parameters.Add("@h_powers", SqlDbType.Int).Value = h_powers;
                     if (string.IsNullOrEmpty(image))
+                        //if (image == null)
                         cmd.Parameters.Add("@image", SqlDbType.VarBinary).Value = DBNull.Value;
                     else
-                        cmd.Parameters.Add("@image", SqlDbType.VarBinary).Value = image;
-
+                    {
+                        byte[] bytes = new byte[image.Length * sizeof(char)];
+                        System.Buffer.BlockCopy(image.ToCharArray(), 0, bytes, 0, bytes.Length);
+                        cmd.Parameters.Add("@image", SqlDbType.VarBinary).Value = bytes;
+                    }
                     cmd.Parameters.Add("@user", SqlDbType.NVarChar).Value = user;
 
 
@@ -850,7 +854,7 @@ namespace CarDiaryWebRest
                 using (SqlConnection conn = new SqlConnection(constring))
                 {
 
-                    SqlCommand cmd = new SqlCommand("UPDATE car SET brand = @brand, model = @model, year = @year, engine = @engine, fuel = @fuel, h_powers = @h_powers, image = @image where id = " + car_id, conn);
+                    SqlCommand cmd = new SqlCommand("UPDATE car SET brand = @brand, model = @model, year = @year, engine = @engine, fuel = @fuel, h_powers = @h_powers where id = " + car_id, conn);
 
                     cmd.Parameters.Add("@brand", SqlDbType.NVarChar).Value = brand;
                     cmd.Parameters.Add("@model", SqlDbType.NVarChar).Value = model;
@@ -858,10 +862,10 @@ namespace CarDiaryWebRest
                     cmd.Parameters.Add("@engine", SqlDbType.NVarChar).Value = engine;
                     cmd.Parameters.Add("@fuel", SqlDbType.NVarChar).Value = fuel;
                     cmd.Parameters.Add("@h_powers", SqlDbType.Int).Value = h_powers;
-                    if (string.IsNullOrEmpty(image))
-                        cmd.Parameters.Add("@image", SqlDbType.VarBinary).Value = DBNull.Value;
-                    else
-                        cmd.Parameters.Add("@image", SqlDbType.VarBinary).Value = image;
+                    //if (string.IsNullOrEmpty(image))
+                    //    cmd.Parameters.Add("@image", SqlDbType.VarBinary).Value = DBNull.Value;
+                    //else
+                    //    cmd.Parameters.Add("@image", SqlDbType.VarBinary).Value = image;
 
                     conn.Open();
                     cmd.ExecuteNonQuery();
